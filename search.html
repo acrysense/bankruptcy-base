@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Банкрот База</title>
+	<meta property="og:title" content="Банкрот База">
+	<meta property="og:description" content="Описание">
+	<meta property="og:url" content="/">
+	<meta property="og:site_name" content="Банкрот База">
+	<!-- styles -->
+	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!-- header -->
+		<header class="header" id="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<a href="index.html" class="header__logotype">
+						<picture>
+							<source srcset="img/logotype.svg" media="(min-width: 744px)">
+							<img src="img/logotype-mobile.svg" alt="Банкрот База">
+						</picture>
+					</a>
+					<div class="c-menu header__menu" id="c-menu">
+						<button class="c-menu__trigger" id="hamburger-toggle">
+							<div class="c-menu__trigger-icon">
+								<span class="c-menu__trigger-inner"></span>
+								<span class="c-menu__trigger-inner"></span>
+								<span class="c-menu__trigger-inner"></span>
+							</div>
+							<span class="c-menu__trigger-title">Меню</span>
+						</button>
+						<div class="c-menu__dropdown">
+							<div class="c-menu__container">
+								<div class="c-menu__block c-menu__block--tablet">
+									<ul class="c-menu__list">
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Расширенный поиск</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Категории</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Регионы</a>
+										</li>
+										<div class="c-menu__item">
+											<div class="c-menu__link-trigger">
+												<a href="#" class="c-menu__link">
+													<span>Реестры</span>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-caret"></use>
+													</svg>
+												</a>
+												<div class="c-menu__link-dropdown">
+													<ul class="c-menu__sublist">
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Должники</a>
+														</li>
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Арбитражные управляющие</a>
+														</li>
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Организаторы торгов</a>
+														</li>
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Торговые площадки</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Материалы</a>
+										</li>
+									</ul>
+								</div>
+								<div class="c-menu__block">
+									<ul class="c-menu__list">
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Поддержка пользователей</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Рекламодателям</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Частные вопросы</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Правила оплаты и возврата</a>
+										</li>
+									</ul>
+								</div>
+								<div class="c-menu__block c-menu__block--mobile c-menu__block--border">
+									<div class="c-menu__buttons">
+										<a href="#" class="c-menu__link">Войти</a>
+										<a href="#" class="c-menu__btn btn btn--border">Регистрация</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav class="nav header__nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">Расширенный поиск</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Категории</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Регионы</a>
+							</li>
+							<li class="nav__item">
+								<div class="nav__trigger">
+									<a href="#" class="nav__link">
+										<span>Реестры</span>
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-caret"></use>
+										</svg>
+									</a>
+									<div class="nav__dropdown">
+										<ul class="nav__sublist">
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Должники</a>
+											</li>
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Арбитражные управляющие</a>
+											</li>
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Организаторы торгов</a>
+											</li>
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Торговые площадки</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Материалы</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__controls">
+						<div class="c-notification header__notification" id="c-notification">
+							<a href="#" class="c-notification__trigger" id="c-notification-trigger">
+								<svg class="c-notification__trigger-icon">
+									<use xlink:href="img/sprite.svg#icon-notification"></use>
+								</svg>
+								<span class="c-notification__trigger-new"></span>
+							</a>
+							<div class="c-notification__dropdown">
+								<div class="c-notification__container">
+									<div class="c-notification__tabs">
+										<ul class="c-notification__tabs-list">
+											<li class="c-notification__tabs-item is--active">
+												<button class="c-notification__tabs-button">Лоты</button>
+											</li>
+											<li class="c-notification__tabs-item">
+												<button class="c-notification__tabs-button">Прочее</button>
+											</li>
+										</ul>
+										<div class="c-notification__tabs-wrapper is--active">
+											<div class="c-notification__info">
+												<a href="#" class="c-notification__more">Прочитать все</a>
+											</div>
+											<ul class="c-notification__list">
+												<li class="c-notification__item">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="c-notification__tabs-wrapper">
+											<div class="c-notification__info">
+												<a href="#" class="c-notification__more">Прочитать все</a>
+											</div>
+											<ul class="c-notification__list">
+												<li class="c-notification__item">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="header__buttons">
+							<a href="#" class="header__link">Войти</a>
+							<a href="#" class="header__btn btn btn--border">Регистрация</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- end of header -->
+		<!-- content -->
+		<div class="wrapper__content">
+			<!-- search -->
+			<section class="search" id="search">
+				<div class="container">
+					<div class="search__wrap">
+						<div class="search__left">
+							<h1 class="search__heading">Поиск лотов</h1>
+						</div>
+						<div class="search__right">
+							<div class="search-controls search__controls">
+								<form action="#" class="search-controls__form">
+									<div class="search-controls__group">
+										<svg class="search-controls__icon">
+											<use xlink:href="img/sprite.svg#icon-search"></use>
+										</svg>
+										<input type="text" class="search-controls__input" placeholder="Введите ключевое слово">
+										<div class="search-controls__filter" id="search-filter">
+											<button class="search-controls__trigger" id="search-filter-trigger">
+												<svg class="search-controls__trigger-icon">
+													<use xlink:href="img/sprite.svg#icon-filter-lines-center"></use>
+												</svg>
+											</button>
+											<div class="search-controls__dropdown">
+												<ul class="search-controls__list">
+													<li class="search-controls__item">
+														<button class="search-controls__option">Слова в любом порядке</button>
+													</li>
+													<li class="search-controls__item">
+														<button class="search-controls__option">Точное совпадение</button>
+													</li>
+													<li class="search-controls__item">
+														<button class="search-controls__option">Любое из слов</button>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="search-controls__inner">
+										<button class="search-controls__btn btn btn--sm btn--orange">Поиск</button>
+									</div>
+								</form>
+							</div>
+							<div class="search-tags search__tags">
+								<div class="search-tags__wrapper">
+									<div class="search-tags__checkboxes">
+										<label for="sort-with-photo" class="square-checkbox search-tags__checkbox">
+											<input type="checkbox" id="sort-with-photo" class="square-checkbox__input">
+											<div class="square-checkbox__group">
+												<div class="square-checkbox__icon"></div>
+												<div class="square-checkbox__label">
+													<div class="square-checkbox__inner">
+														<span class="square-checkbox__title">C фото</span>
+														<div class="c-sm-info square-checkbox__info">
+															<button class="c-sm-info__trigger">
+																<svg class="c-sm-info__trigger-icon">
+																	<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
+																</svg>
+															</button>
+															<div class="c-sm-info__dropdown">
+																<p class="c-sm-info__text">Большинство лотов размещается без фото. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</label>
+										<label for="sort-with-report" class="square-checkbox search-tags__checkbox">
+											<input type="checkbox" id="sort-with-report" class="square-checkbox__input">
+											<div class="square-checkbox__group">
+												<div class="square-checkbox__icon"></div>
+												<div class="square-checkbox__label">
+													<div class="square-checkbox__inner">
+														<span class="square-checkbox__title">C отчетом</span>
+														<div class="c-sm-info square-checkbox__info">
+															<button class="c-sm-info__trigger">
+																<svg class="c-sm-info__trigger-icon">
+																	<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
+																</svg>
+															</button>
+															<div class="c-sm-info__dropdown">
+																<p class="c-sm-info__text">Большинство лотов размещаются без отчетов. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</label>
+									</div>
+									<ul class="search-tags__list">
+										<li class="search-tags__item is--active">
+											<button class="search-tags__option">
+												<span>Все</span>
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-close"></use>
+												</svg>
+											</button>
+										</li>
+										<li class="search-tags__item">
+											<button class="search-tags__option">
+												<span> Торги по банкротству</span>
+											</button>
+										</li>
+										<li class="search-tags__item">
+											<button class="search-tags__option">
+												<span>Арестованное имущество</span>
+											</button>
+										</li>
+										<li class="search-tags__item">
+											<button class="search-tags__option">
+												<span>Приватизация</span>
+											</button>
+										</li>
+										<li class="search-tags__item">
+											<button class="search-tags__option">
+												<span>Коммерческие торги</span>
+											</button>
+										</li>
+									</ul>
+									<div class="search-save search-tags__save">
+										<button class="search-save__trigger">
+											<svg class="search-save__trigger-icon">
+												<use xlink:href="img/sprite.svg#icon-star-bold"></use>
+											</svg>
+										</button>
+										<div class="search-save__dropdown">
+											<p class="search-save__text">Сохранить и подписаться на поиск</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="search__wrap">
+						<div class="search__left">
+							<form action="#" class="search__filter search-filter">
+								<div class="search-filter__main"></div>
+								<div class="search-filter__buttons">
+									<button class="search-filter__btn btn">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-star"></use>
+										</svg>
+										<span>Cохранить и подписаться на поиск</span>
+									</button>
+									<button class="search-filter__btn btn btn--border">Cбросить все фильтры</button>
+								</div>
+							</form>
+						</div>
+						<div class="search__right">
+							<div class="search-sort search__sort">
+								<div class="search-sort__wrapper">
+									<div class="search-sort__group">
+										<span class="search-sort__subtitle">Сортировать по:</span>
+										<select class="search-sort__select"></select>
+									</div>
+									<div class="search-sort__group search-sort__group--mobile-none">
+										<label for="sort-with-photo" class="square-checkbox search-sort__checkbox">
+											<input type="checkbox" id="sort-with-photo" class="square-checkbox__input">
+											<div class="square-checkbox__group">
+												<div class="square-checkbox__icon"></div>
+												<div class="square-checkbox__label">
+													<div class="square-checkbox__inner">
+														<span class="square-checkbox__title">C фото</span>
+														<div class="c-sm-info square-checkbox__info">
+															<button class="c-sm-info__trigger">
+																<svg class="c-sm-info__trigger-icon">
+																	<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
+																</svg>
+															</button>
+															<div class="c-sm-info__dropdown">
+																<p class="c-sm-info__text">Большинство лотов размещается без фото. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</label>
+										<label for="sort-with-report" class="square-checkbox search-sort__checkbox">
+											<input type="checkbox" id="sort-with-report" class="square-checkbox__input">
+											<div class="square-checkbox__group">
+												<div class="square-checkbox__icon"></div>
+												<div class="square-checkbox__label">
+													<div class="square-checkbox__inner">
+														<span class="square-checkbox__title">C отчетом</span>
+														<div class="c-sm-info square-checkbox__info">
+															<button class="c-sm-info__trigger">
+																<svg class="c-sm-info__trigger-icon">
+																	<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
+																</svg>
+															</button>
+															<div class="c-sm-info__dropdown">
+																<p class="c-sm-info__text">Большинство лотов размещаются без отчетов. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="search__wrapper">
+								<div class="search-card search__item">
+									<div class="search-card__wrap">
+										<div class="search-card__top">
+											<div class="search-card__inner">
+												<span class="search-card__lot">Лот №618715, торги №368836</span>
+												<div class="search-card__viewed">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-eye"></use>
+													</svg>
+													<span><span>5</span> просмотров</span>
+												</div>
+											</div>
+											<h3 class="search-card__heading">Квартира общей площадью 51,60 кв.м, кадастровый номер 03:23:010558:1352. </h3>
+											<div class="search-card__inner">
+												<ul class="search-card__tags">
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+												</ul>
+												<div class="search-card__controls">
+													<button class="search-card__control" aria-label="Избранное">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-star"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Включить уведомления">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-bell"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Поделиться">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-share"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__main">
+											<div class="search-card__inner search-card__inner--nowrap">
+												<span class="search-card__status">Объявлены</span>
+												<div class="c-tags search-card__tags">
+													<ul class="c-tags__list">
+														<li class="c-tags__item">
+															<span class="c-tags__value">АУКЦИОН</span>
+														</li>
+														<li class="c-tags__item">
+															<span class="c-tags__value">ФССП</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="search-card__wrapper">
+												<picture class="search-card__img">
+													<img src="img/search-card-01.jpg" alt="Image">
+												</picture>
+												<div class="search-card__body">
+													<div class="search-card__content content">
+														<p>Продажа имущества, находящегося в собственности города Москвы, нежилое помещение по адресу: город Москва, Соколово-Мещерская улица, дом 14, подвал № 0, м/мh 29, площадь 12,6 кв.м</p>
+														<p>
+															<b>Кадастровый номер:</b>
+															<a href="#" class="copy-link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-copy"></use>
+																</svg>
+																<span>534535345345354</span>
+															</a>
+															посредством публичного предложения
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="search-card__info search-card__info--tablet">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Город / регион</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-location"></use>
+														</svg>
+														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__bottom">
+											<div class="search-card__info">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Начальная цена</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-tranding-up-blue"></use>
+														</svg>
+														<span>2 710 400,00 ₽</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок с</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок до</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item search-card__info-item--tablet-none">
+													<span class="search-card__help">Город / регион</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-location"></use>
+														</svg>
+														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="search-card search-card--accent search__item">
+									<div class="search-card__wrap">
+										<div class="search-card__top">
+											<div class="search-card__inner">
+												<span class="search-card__lot">Лот №618715, торги №368836</span>
+												<div class="search-card__viewed">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-eye"></use>
+													</svg>
+													<span><span>5</span> просмотров</span>
+												</div>
+											</div>
+											<h3 class="search-card__heading">Квартира общей площадью 51,60 кв.м, кадастровый номер 03:23:010558:1352. </h3>
+											<div class="search-card__inner">
+												<ul class="search-card__tags">
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+												</ul>
+												<div class="search-card__controls">
+													<button class="search-card__control" aria-label="Избранное">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-star"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Включить уведомления">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-bell"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Поделиться">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-share"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__main">
+											<div class="search-card__inner search-card__inner--nowrap">
+												<span class="search-card__status">Объявлены</span>
+												<div class="c-tags search-card__tags">
+													<ul class="c-tags__list">
+														<li class="c-tags__item">
+															<span class="c-tags__value">АУКЦИОН</span>
+														</li>
+														<li class="c-tags__item">
+															<span class="c-tags__value">ФССП</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="search-card__wrapper">
+												<picture class="search-card__img">
+													<img src="img/search-card-02.jpg" alt="Image">
+												</picture>
+												<div class="search-card__body">
+													<div class="search-card__content content">
+														<p>Продажа имущества, находящегося в собственности города Москвы, нежилое помещение по адресу: город Москва, Соколово-Мещерская улица, дом 14, подвал № 0, м/мh 29, площадь 12,6 кв.м</p>
+														<p>
+															<b>Кадастровый номер:</b>
+															<a href="#" class="copy-link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-copy"></use>
+																</svg>
+																<span>534535345345354</span>
+															</a>
+															посредством публичного предложения
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="search-card__info search-card__info--tablet">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Город / регион</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-location"></use>
+														</svg>
+														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__bottom">
+											<div class="search-card__info">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Начальная цена</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-tranding-up-blue"></use>
+														</svg>
+														<span>2 710 400,00 ₽</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок с</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок до</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item search-card__info-item--tablet-none">
+													<span class="search-card__help">Город / регион</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-location"></use>
+														</svg>
+														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="search-card search__item">
+									<div class="search-card__wrap">
+										<div class="search-card__top">
+											<div class="search-card__inner">
+												<span class="search-card__lot">Лот №618715, торги №368836</span>
+												<div class="search-card__viewed">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-eye"></use>
+													</svg>
+													<span><span>5</span> просмотров</span>
+												</div>
+											</div>
+											<h3 class="search-card__heading">Квартира общей площадью 51,60 кв.м, кадастровый номер 03:23:010558:1352. </h3>
+											<div class="search-card__inner">
+												<ul class="search-card__tags">
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+												</ul>
+												<div class="search-card__controls">
+													<button class="search-card__control" aria-label="Избранное">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-star"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Включить уведомления">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-bell"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Поделиться">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-share"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__main">
+											<div class="search-card__inner search-card__inner--nowrap">
+												<span class="search-card__status">Объявлены</span>
+												<div class="c-tags search-card__tags">
+													<ul class="c-tags__list">
+														<li class="c-tags__item">
+															<span class="c-tags__value">АУКЦИОН</span>
+														</li>
+														<li class="c-tags__item">
+															<span class="c-tags__value">ФССП</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="search-card__wrapper">
+												<picture class="search-card__img">
+													<img src="img/search-card-01.jpg" alt="Image">
+												</picture>
+												<div class="search-card__body">
+													<div class="search-card__content content">
+														<p>Продажа имущества, находящегося в собственности города Москвы, нежилое помещение по адресу: город Москва, Соколово-Мещерская улица, дом 14, подвал № 0, м/мh 29, площадь 12,6 кв.м</p>
+														<p>
+															<b>Кадастровый номер:</b>
+															<a href="#" class="copy-link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-copy"></use>
+																</svg>
+																<span>534535345345354</span>
+															</a>
+															посредством публичного предложения
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="search-card__info search-card__info--tablet">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Город / регион</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-location"></use>
+														</svg>
+														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__bottom">
+											<div class="search-card__info">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Начальная цена</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-tranding-up-blue"></use>
+														</svg>
+														<span>2 710 400,00 ₽</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок с</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок до</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item search-card__info-item--tablet-none">
+													<span class="search-card__help">Город / регион</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-location"></use>
+														</svg>
+														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="search-card search__item">
+									<div class="search-card__wrap">
+										<div class="search-card__top">
+											<div class="search-card__inner">
+												<span class="search-card__lot">Лот №618715, торги №368836</span>
+												<div class="search-card__viewed">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-eye"></use>
+													</svg>
+													<span><span>5</span> просмотров</span>
+												</div>
+											</div>
+											<h3 class="search-card__heading">Квартира общей площадью 51,60 кв.м, кадастровый номер 03:23:010558:1352. </h3>
+											<div class="search-card__inner">
+												<ul class="search-card__tags">
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+												</ul>
+												<div class="search-card__controls">
+													<button class="search-card__control" aria-label="Избранное">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-star"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Включить уведомления">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-bell"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Поделиться">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-share"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__main">
+											<div class="search-card__inner search-card__inner--nowrap">
+												<span class="search-card__status">Объявлены</span>
+												<div class="c-tags search-card__tags">
+													<ul class="c-tags__list">
+														<li class="c-tags__item">
+															<span class="c-tags__value">АУКЦИОН</span>
+														</li>
+														<li class="c-tags__item">
+															<span class="c-tags__value">ФССП</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="search-card__wrapper">
+												<picture class="search-card__img">
+													<img src="img/search-card-03.jpg" alt="Image">
+												</picture>
+												<div class="search-card__body">
+													<div class="search-card__content content">
+														<p>Продажа имущества, находящегося в собственности города Москвы, нежилое помещение по адресу: город Москва, Соколово-Мещерская улица, дом 14, подвал № 0, м/мh 29, площадь 12,6 кв.м</p>
+														<p>
+															<b>Кадастровый номер:</b>
+															<a href="#" class="copy-link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-copy"></use>
+																</svg>
+																<span>534535345345354</span>
+															</a>
+															посредством публичного предложения
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="search-card__info search-card__info--tablet">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Город / регион</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-location"></use>
+														</svg>
+														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__bottom">
+											<div class="search-card__info">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Начальная цена</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-tranding-up-blue"></use>
+														</svg>
+														<span>2 710 400,00 ₽</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок с</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок до</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item search-card__info-item--tablet-none">
+													<span class="search-card__help">Город / регион</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-location"></use>
+														</svg>
+														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="search-card search__item">
+									<div class="search-card__wrap">
+										<div class="search-card__top">
+											<div class="search-card__inner">
+												<span class="search-card__lot">Лот №618715, торги №368836</span>
+												<div class="search-card__viewed">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-eye"></use>
+													</svg>
+													<span><span>5</span> просмотров</span>
+												</div>
+											</div>
+											<h3 class="search-card__heading">Квартира общей площадью 51,60 кв.м, кадастровый номер 03:23:010558:1352. </h3>
+											<div class="search-card__inner">
+												<ul class="search-card__tags">
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+												</ul>
+												<div class="search-card__controls">
+													<button class="search-card__control" aria-label="Избранное">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-star"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Включить уведомления">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-bell"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Поделиться">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-share"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__main">
+											<div class="search-card__inner search-card__inner--nowrap">
+												<span class="search-card__status">Объявлены</span>
+												<div class="c-tags search-card__tags">
+													<ul class="c-tags__list">
+														<li class="c-tags__item">
+															<span class="c-tags__value">АУКЦИОН</span>
+														</li>
+														<li class="c-tags__item">
+															<span class="c-tags__value">ФССП</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="search-card__wrapper">
+												<picture class="search-card__img">
+													<img src="img/search-card-04.jpg" alt="Image">
+												</picture>
+												<div class="search-card__body">
+													<div class="search-card__content content">
+														<p>Продажа имущества, находящегося в собственности города Москвы, нежилое помещение по адресу: город Москва, Соколово-Мещерская улица, дом 14, подвал № 0, м/мh 29, площадь 12,6 кв.м</p>
+														<p>
+															<b>Кадастровый номер:</b>
+															<a href="#" class="copy-link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-copy"></use>
+																</svg>
+																<span>534535345345354</span>
+															</a>
+															посредством публичного предложения
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="search-card__info search-card__info--tablet">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Город / регион</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-location"></use>
+														</svg>
+														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__bottom">
+											<div class="search-card__info">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Начальная цена</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-tranding-up-blue"></use>
+														</svg>
+														<span>2 710 400,00 ₽</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок с</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок до</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item search-card__info-item--tablet-none">
+													<span class="search-card__help">Город / регион</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-location"></use>
+														</svg>
+														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="c-load-more search__load-more">
+								<span>Загрузить еще</span>
+								<svg>
+									<use xlink:href="img/sprite.svg#icon-arrow-up-right"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of search -->
+		</div>
+		<!-- end of content -->
+		<!-- footer -->
+		<footer class="footer" id="footer">
+			<div class="footer__main">
+				<div class="container">
+					<div class="footer__wrapper">
+						<div class="footer__block">
+							<div class="footer__info">
+								<h3 class="footer__title">БанкротБаза.ру</h3>
+								<p class="footer__description">Агрегатор торгов по банкротству, торгов по приватизации государственного имущества, торгов арестованного имущества и конфиската, реализуемого судебными приставами, торгов коммерческих и залогового имущества банков</p>
+							</div>
+						</div>
+						<div class="footer__block">
+							<div class="footer__nav">
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="#" class="footer__link">Поддержка пользователей</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Рекламодателям</a>
+									</li>
+								</ul>
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="#" class="footer__link">Частые вопросы</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Правила оплаты и возврата</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__block">
+							<a href="#" class="footer__btn btn btn--orange">Выбрать лот</a>
+							<div class="c-socnav footer__socnav">
+								<ul class="c-socnav__list">
+									<li class="c-socnav__item">
+										<a href="#" class="c-socnav__link">
+											<svg class="c-socnav__icon">
+												<use xlink:href="img/sprite.svg#icon-ok"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="c-socnav__item">
+										<a href="#" class="c-socnav__link">
+											<svg class="c-socnav__icon">
+												<use xlink:href="img/sprite.svg#icon-vk"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="footer__wrapper footer__wrapper--center">
+						<div class="footer__bottom-block">
+							<span class="footer__text">2023</span>
+						</div>
+						<div class="footer__bottom-block">
+							<a href="#" class="footer__text">Политика обработки данных</a>
+						</div>
+						<div class="footer__bottom-block">
+							<span class="footer__text">Принимаем к оплате</span>
+						</div>
+						<div class="footer__bottom-block">
+							<div class="footer__payments">
+								<picture class="footer__payment">
+									<img src="img/visa.svg" width="83" height="27.5" alt="VISA">
+								</picture>
+								<picture class="footer__payment">
+									<img src="img/mastercard.svg" width="46" height="27.5" alt="Mastercard">
+								</picture>
+								<picture class="footer__payment">
+									<img src="img/mir.svg" width="97" height="27.5" alt="МИР">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end of footer -->
+	</div>
+	<!-- end of wrapper -->
+	<!-- scripts -->
+	<script src="js/vendor.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
