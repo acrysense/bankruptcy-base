@@ -294,34 +294,56 @@
 						<div class="search__right">
 							<div class="search-controls search__controls">
 								<form action="#" class="search-controls__form">
-									<div class="search-controls__group">
-										<svg class="search-controls__icon">
-											<use xlink:href="img/sprite.svg#icon-search"></use>
-										</svg>
-										<input type="text" class="search-controls__input" placeholder="Введите ключевое слово">
-										<div class="search-controls__filter" id="search-filter">
-											<button class="search-controls__trigger" id="search-filter-trigger">
-												<svg class="search-controls__trigger-icon">
-													<use xlink:href="img/sprite.svg#icon-filter-lines-center"></use>
-												</svg>
-											</button>
-											<div class="search-controls__dropdown">
-												<ul class="search-controls__list">
-													<li class="search-controls__item">
-														<button class="search-controls__option">Слова в любом порядке</button>
-													</li>
-													<li class="search-controls__item">
-														<button class="search-controls__option">Точное совпадение</button>
-													</li>
-													<li class="search-controls__item">
-														<button class="search-controls__option">Любое из слов</button>
-													</li>
-												</ul>
+									<div class="search-controls__wrapper">
+										<div class="search-controls__group">
+											<svg class="search-controls__icon">
+												<use xlink:href="img/sprite.svg#icon-search"></use>
+											</svg>
+											<input type="text" class="search-controls__input" placeholder="Введите ключевое слово">
+											<div class="search-controls__filter" id="search-controls-filter">
+												<div class="search-controls__selected search-controls__selected--desktop">
+													<div class="search-controls__selected-value">
+														<span></span>
+														<button class="search-controls__delete">
+															<svg class="search-controls__delete-icon">
+																<use xlink:href="img/sprite.svg#icon-close"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+												<button class="search-controls__trigger" id="search-controls-filter-trigger">
+													<svg class="search-controls__trigger-icon">
+														<use xlink:href="img/sprite.svg#icon-filter-lines-center"></use>
+													</svg>
+												</button>
+												<div class="search-controls__dropdown">
+													<ul class="search-controls__list">
+														<li class="search-controls__item">
+															<button class="search-controls__option">Слова в любом порядке</button>
+														</li>
+														<li class="search-controls__item">
+															<button class="search-controls__option">Точное совпадение</button>
+														</li>
+														<li class="search-controls__item">
+															<button class="search-controls__option">Любое из слов</button>
+														</li>
+													</ul>
+												</div>
 											</div>
 										</div>
+										<div class="search-controls__inner">
+											<button class="search-controls__btn btn btn--sm btn--orange">Поиск</button>
+										</div>
 									</div>
-									<div class="search-controls__inner">
-										<button class="search-controls__btn btn btn--sm btn--orange">Поиск</button>
+									<div class="search-controls__selected search-controls__selected--mobile">
+										<div class="search-controls__selected-value">
+											<span></span>
+											<button class="search-controls__delete">
+												<svg class="search-controls__delete-icon">
+													<use xlink:href="img/sprite.svg#icon-close"></use>
+												</svg>
+											</button>
+										</div>
 									</div>
 								</form>
 							</div>
@@ -417,7 +439,7 @@
 					</div>
 					<div class="search__wrap">
 						<div class="search__left">
-							<div class="search__filter search-filter">
+							<div class="search__filter search-filter" id="search-filter">
 								<button class="search-filter__trigger">
 									<span>Фильтр</span>
 									<svg>
@@ -535,7 +557,8 @@
 															</div>
 														</div>
 														<div class="select-box__selected">
-															<span class="select-box__placeholder">Любой</span>
+															<span class="select-box__placeholder select-box__placeholder--active">Любой</span>
+															<span class="select-box__value"></span>
 														</div>
 														<div class="select-box__values">
 															<div class="select-box__values-list"></div>
@@ -588,7 +611,8 @@
 															</div>
 														</div>
 														<div class="select-box__selected">
-															<span class="select-box__placeholder">Все</span>
+															<span class="select-box__placeholder select-box__placeholder--active">Все</span>
+															<span class="select-box__value"></span>
 														</div>
 														<div class="select-box__values">
 															<div class="select-box__values-list"></div>
@@ -607,7 +631,7 @@
 													</div>
 													<div class="control-group__checkboxes">
 														<label for="type-of-auction-01" class="square-checkbox control-group__checkbox">
-															<input type="checkbox" id="type-of-auction-01" class="square-checkbox__input">
+															<input type="checkbox" id="type-of-auction-01" class="square-checkbox__input" checked>
 															<div class="square-checkbox__group">
 																<div class="square-checkbox__icon"></div>
 																<div class="square-checkbox__label">
@@ -616,7 +640,7 @@
 															</div>
 														</label>
 														<label for="type-of-auction-02" class="square-checkbox control-group__checkbox">
-															<input type="checkbox" id="type-of-auction-02" class="square-checkbox__input">
+															<input type="checkbox" id="type-of-auction-02" class="square-checkbox__input" checked>
 															<div class="square-checkbox__group">
 																<div class="square-checkbox__icon"></div>
 																<div class="square-checkbox__label">
@@ -731,8 +755,13 @@
 																				<use xlink:href="img/sprite.svg#icon-search"></use>
 																			</svg>
 																		</button>
-																		<input type="text" class="input-group__input" placeholder="Введите ФИО или ИНН">
+																		<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Введите ФИО или ИНН">
 																		<span class="input-group__error">Сообщение об ошибке</span>
+																	</div>
+																	<div class="control-group__dropdown">
+																		<button class="control-group__option">Вариант 1</button>
+																		<button class="control-group__option">Вариант 2</button>
+																		<button class="control-group__option">Вариант 3</button>
 																	</div>
 																</div>
 															</div>
@@ -753,8 +782,13 @@
 																				<use xlink:href="img/sprite.svg#icon-search"></use>
 																			</svg>
 																		</button>
-																		<input type="text" class="input-group__input" placeholder="Введите ФИО или ИНН">
+																		<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Введите ФИО или ИНН">
 																		<span class="input-group__error">Сообщение об ошибке</span>
+																	</div>
+																	<div class="control-group__dropdown">
+																		<button class="control-group__option">Вариант 1</button>
+																		<button class="control-group__option">Вариант 2</button>
+																		<button class="control-group__option">Вариант 3</button>
 																	</div>
 																</div>
 															</div>
@@ -775,8 +809,13 @@
 																				<use xlink:href="img/sprite.svg#icon-search"></use>
 																			</svg>
 																		</button>
-																		<input type="text" class="input-group__input" placeholder="Введите ФИО или ИНН">
+																		<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Введите ФИО или ИНН">
 																		<span class="input-group__error">Сообщение об ошибке</span>
+																	</div>
+																	<div class="control-group__dropdown">
+																		<button class="control-group__option">Вариант 1</button>
+																		<button class="control-group__option">Вариант 2</button>
+																		<button class="control-group__option">Вариант 3</button>
 																	</div>
 																</div>
 															</div>
@@ -793,10 +832,22 @@
 											</svg>
 											<span>Cохранить и подписаться на поиск</span>
 										</button>
-										<button class="search-filter__btn btn btn--border">Cбросить все фильтры</button>
+										<button class="search-filter__btn btn btn--border" id="search-filter-all-clear">Cбросить все фильтры</button>
 										<button class="search-filter__btn search-filter__btn--mobile btn btn--orange">Применить фильтр</button>
 									</div>
 								</form>
+							</div>
+							<div class="banner-ds max-tablet-hidden">
+								<div class="banner-ds__wrapper">
+									<div class="banner-ds__body">
+										<h3 class="banner-ds__title">ЭЦП для участия в торгах от нашего партнёра</h3>
+										<p class="banner-ds__description">Здесь можно добавить какое-то пояснение? Бесплатно или со скидкой?</p>
+										<a href="#" class="banner-ds__btn btn">Оставить заявку</a>
+									</div>
+									<picture class="banner-ds__img">
+										<img src="img/banner-ds-01.jpg" alt="Image">
+									</picture>
+								</div>
 							</div>
 						</div>
 						<div class="search__right">
@@ -804,7 +855,17 @@
 								<div class="search-sort__wrapper">
 									<div class="search-sort__group">
 										<span class="search-sort__subtitle">Сортировать по:</span>
-										<select class="search-sort__select"></select>
+										<div class="default-select search-sort__select">
+											<select class="js-select">
+												<option value="0">Сначала новые</option>
+												<option value="1">Сначала старые</option>
+												<option value="2">Скоро начало</option>
+												<option value="3">Скоро завершение</option>
+												<option value="4">Сначала дешевые</option>
+												<option value="5">Сначала дорогие</option>
+												<option value="5">Сначала дорогие</option>
+											</select>
+										</div>
 									</div>
 									<div class="search-sort__group search-sort__group--mobile-none">
 										<label for="sort-with-photo-desktop" class="square-checkbox search-sort__checkbox">
@@ -940,17 +1001,6 @@
 													</div>
 												</div>
 											</div>
-											<div class="search-card__info search-card__info--tablet">
-												<div class="search-card__info-item">
-													<span class="search-card__help">Город / регион</span>
-													<div class="search-card__value">
-														<svg>
-															<use xlink:href="img/sprite.svg#icon-location"></use>
-														</svg>
-														<span>Республика Бурятия</span>
-													</div>
-												</div>
-											</div>
 										</div>
 										<div class="search-card__bottom">
 											<div class="search-card__info">
@@ -975,7 +1025,7 @@
 														<span>17.03.2023 с 09:00</span>
 													</div>
 												</div>
-												<div class="search-card__info-item search-card__info-item--tablet-none">
+												<div class="search-card__info-item">
 													<span class="search-card__help">Город / регион</span>
 													<div class="search-card__value">
 														<svg>
@@ -986,6 +1036,18 @@
 												</div>
 											</div>
 										</div>
+									</div>
+								</div>
+								<div class="banner-ds desktop-hidden">
+									<div class="banner-ds__wrapper">
+										<div class="banner-ds__body">
+											<h3 class="banner-ds__title">ЭЦП для участия в торгах от нашего партнёра</h3>
+											<p class="banner-ds__description">Здесь можно добавить какое-то пояснение? Бесплатно или со скидкой?</p>
+											<a href="#" class="banner-ds__btn btn">Оставить заявку</a>
+										</div>
+										<picture class="banner-ds__img">
+											<img src="img/banner-ds-01.jpg" alt="Image">
+										</picture>
 									</div>
 								</div>
 								<div class="search-card search-card--accent search__item">
@@ -1057,7 +1119,7 @@
 											</div>
 											<div class="search-card__wrapper">
 												<picture class="search-card__img">
-													<img src="img/search-card-02.jpg" alt="Image">
+													<img src="img/search-card-01.jpg" alt="Image">
 												</picture>
 												<div class="search-card__body">
 													<div class="search-card__content content">
@@ -1072,17 +1134,6 @@
 															</a>
 															посредством публичного предложения
 														</p>
-													</div>
-												</div>
-											</div>
-											<div class="search-card__info search-card__info--tablet">
-												<div class="search-card__info-item">
-													<span class="search-card__help">Город / регион</span>
-													<div class="search-card__value">
-														<svg>
-															<use xlink:href="img/sprite.svg#icon-location"></use>
-														</svg>
-														<span>Республика Бурятия</span>
 													</div>
 												</div>
 											</div>
@@ -1110,7 +1161,7 @@
 														<span>17.03.2023 с 09:00</span>
 													</div>
 												</div>
-												<div class="search-card__info-item search-card__info-item--tablet-none">
+												<div class="search-card__info-item">
 													<span class="search-card__help">Город / регион</span>
 													<div class="search-card__value">
 														<svg>
@@ -1210,7 +1261,30 @@
 													</div>
 												</div>
 											</div>
-											<div class="search-card__info search-card__info--tablet">
+										</div>
+										<div class="search-card__bottom">
+											<div class="search-card__info">
+												<div class="search-card__info-item">
+													<span class="search-card__help">Начальная цена</span>
+													<div class="search-card__value">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-tranding-up-blue"></use>
+														</svg>
+														<span>2 710 400,00 ₽</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок с</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
+												<div class="search-card__info-item">
+													<span class="search-card__help">Прием заявок до</span>
+													<div class="search-card__value">
+														<span>17.03.2023 с 09:00</span>
+													</div>
+												</div>
 												<div class="search-card__info-item">
 													<span class="search-card__help">Город / регион</span>
 													<div class="search-card__value">
@@ -1218,6 +1292,108 @@
 															<use xlink:href="img/sprite.svg#icon-location"></use>
 														</svg>
 														<span>Республика Бурятия</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="banner-consultation">
+									<div class="banner-consultation__wrapper">
+										<div class="banner-consultation__body">
+											<h3 class="banner-consultation__title">Полное ведения участия в торгах</h3>
+											<p class="banner-consultation__description">Поможем и проконсультируем по любым вопросам.</p>
+											<a href="#" class="banner-consultation__btn btn">Оставить заявку</a>
+										</div>
+										<picture class="banner-consultation__img">
+											<img src="img/banner-consultation-01.jpg" alt="Image">
+										</picture>
+									</div>
+								</div>
+								<div class="search-card search__item">
+									<div class="search-card__wrap">
+										<div class="search-card__top">
+											<div class="search-card__inner">
+												<span class="search-card__lot">Лот №618715, торги №368836</span>
+												<div class="search-card__viewed">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-eye"></use>
+													</svg>
+													<span><span>5</span> просмотров</span>
+												</div>
+											</div>
+											<h3 class="search-card__heading">Квартира общей площадью 51,60 кв.м, кадастровый номер 03:23:010558:1352. </h3>
+											<div class="search-card__inner">
+												<ul class="search-card__tags">
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+													<li class="search-card__tags-item">
+														<span class="search-card__tags-value">Недвижимость</span>
+													</li>
+												</ul>
+												<div class="search-card__controls">
+													<button class="search-card__control" aria-label="Избранное">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-star"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Включить уведомления">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-bell"></use>
+														</svg>
+													</button>
+													<button class="search-card__control" aria-label="Поделиться">
+														<svg class="search-card__control-icon">
+															<use xlink:href="img/sprite.svg#icon-share"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+										<div class="search-card__main">
+											<div class="search-card__inner search-card__inner--nowrap">
+												<span class="search-card__status">Объявлены</span>
+												<div class="c-tags search-card__tags">
+													<ul class="c-tags__list">
+														<li class="c-tags__item">
+															<span class="c-tags__value">АУКЦИОН</span>
+														</li>
+														<li class="c-tags__item">
+															<span class="c-tags__value">ФССП</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="search-card__wrapper">
+												<picture class="search-card__img">
+													<img src="img/search-card-01.jpg" alt="Image">
+												</picture>
+												<div class="search-card__body">
+													<div class="search-card__content content">
+														<p>Продажа имущества, находящегося в собственности города Москвы, нежилое помещение по адресу: город Москва, Соколово-Мещерская улица, дом 14, подвал № 0, м/мh 29, площадь 12,6 кв.м</p>
+														<p>
+															<b>Кадастровый номер:</b>
+															<a href="#" class="copy-link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-copy"></use>
+																</svg>
+																<span>534535345345354</span>
+															</a>
+															посредством публичного предложения
+														</p>
 													</div>
 												</div>
 											</div>
@@ -1245,7 +1421,7 @@
 														<span>17.03.2023 с 09:00</span>
 													</div>
 												</div>
-												<div class="search-card__info-item search-card__info-item--tablet-none">
+												<div class="search-card__info-item">
 													<span class="search-card__help">Город / регион</span>
 													<div class="search-card__value">
 														<svg>
@@ -1327,7 +1503,7 @@
 											</div>
 											<div class="search-card__wrapper">
 												<picture class="search-card__img">
-													<img src="img/search-card-03.jpg" alt="Image">
+													<img src="img/search-card-01.jpg" alt="Image">
 												</picture>
 												<div class="search-card__body">
 													<div class="search-card__content content">
@@ -1342,17 +1518,6 @@
 															</a>
 															посредством публичного предложения
 														</p>
-													</div>
-												</div>
-											</div>
-											<div class="search-card__info search-card__info--tablet">
-												<div class="search-card__info-item">
-													<span class="search-card__help">Город / регион</span>
-													<div class="search-card__value">
-														<svg>
-															<use xlink:href="img/sprite.svg#icon-location"></use>
-														</svg>
-														<span>Республика Бурятия</span>
 													</div>
 												</div>
 											</div>
@@ -1380,142 +1545,7 @@
 														<span>17.03.2023 с 09:00</span>
 													</div>
 												</div>
-												<div class="search-card__info-item search-card__info-item--tablet-none">
-													<span class="search-card__help">Город / регион</span>
-													<div class="search-card__value">
-														<svg>
-															<use xlink:href="img/sprite.svg#icon-location"></use>
-														</svg>
-														<span>Республика Бурятия</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="search-card search__item">
-									<div class="search-card__wrap">
-										<div class="search-card__top">
-											<div class="search-card__inner">
-												<span class="search-card__lot">Лот №618715, торги №368836</span>
-												<div class="search-card__viewed">
-													<svg>
-														<use xlink:href="img/sprite.svg#icon-eye"></use>
-													</svg>
-													<span><span>5</span> просмотров</span>
-												</div>
-											</div>
-											<h3 class="search-card__heading">Квартира общей площадью 51,60 кв.м, кадастровый номер 03:23:010558:1352. </h3>
-											<div class="search-card__inner">
-												<ul class="search-card__tags">
-													<li class="search-card__tags-item">
-														<span class="search-card__tags-value">Недвижимость</span>
-													</li>
-													<li class="search-card__tags-item">
-														<span class="search-card__tags-value">Недвижимость</span>
-													</li>
-													<li class="search-card__tags-item">
-														<span class="search-card__tags-value">Недвижимость</span>
-													</li>
-													<li class="search-card__tags-item">
-														<span class="search-card__tags-value">Недвижимость</span>
-													</li>
-													<li class="search-card__tags-item">
-														<span class="search-card__tags-value">Недвижимость</span>
-													</li>
-													<li class="search-card__tags-item">
-														<span class="search-card__tags-value">Недвижимость</span>
-													</li>
-												</ul>
-												<div class="search-card__controls">
-													<button class="search-card__control" aria-label="Избранное">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-star"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Включить уведомления">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-bell"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Поделиться">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-share"></use>
-														</svg>
-													</button>
-												</div>
-											</div>
-										</div>
-										<div class="search-card__main">
-											<div class="search-card__inner search-card__inner--nowrap">
-												<span class="search-card__status">Объявлены</span>
-												<div class="c-tags search-card__tags">
-													<ul class="c-tags__list">
-														<li class="c-tags__item">
-															<span class="c-tags__value">АУКЦИОН</span>
-														</li>
-														<li class="c-tags__item">
-															<span class="c-tags__value">ФССП</span>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="search-card__wrapper">
-												<picture class="search-card__img">
-													<img src="img/search-card-04.jpg" alt="Image">
-												</picture>
-												<div class="search-card__body">
-													<div class="search-card__content content">
-														<p>Продажа имущества, находящегося в собственности города Москвы, нежилое помещение по адресу: город Москва, Соколово-Мещерская улица, дом 14, подвал № 0, м/мh 29, площадь 12,6 кв.м</p>
-														<p>
-															<b>Кадастровый номер:</b>
-															<a href="#" class="copy-link">
-																<svg>
-																	<use xlink:href="img/sprite.svg#icon-copy"></use>
-																</svg>
-																<span>534535345345354</span>
-															</a>
-															посредством публичного предложения
-														</p>
-													</div>
-												</div>
-											</div>
-											<div class="search-card__info search-card__info--tablet">
 												<div class="search-card__info-item">
-													<span class="search-card__help">Город / регион</span>
-													<div class="search-card__value">
-														<svg>
-															<use xlink:href="img/sprite.svg#icon-location"></use>
-														</svg>
-														<span>Республика Бурятия</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="search-card__bottom">
-											<div class="search-card__info">
-												<div class="search-card__info-item">
-													<span class="search-card__help">Начальная цена</span>
-													<div class="search-card__value">
-														<svg>
-															<use xlink:href="img/sprite.svg#icon-tranding-up-blue"></use>
-														</svg>
-														<span>2 710 400,00 ₽</span>
-													</div>
-												</div>
-												<div class="search-card__info-item">
-													<span class="search-card__help">Прием заявок с</span>
-													<div class="search-card__value">
-														<span>17.03.2023 с 09:00</span>
-													</div>
-												</div>
-												<div class="search-card__info-item">
-													<span class="search-card__help">Прием заявок до</span>
-													<div class="search-card__value">
-														<span>17.03.2023 с 09:00</span>
-													</div>
-												</div>
-												<div class="search-card__info-item search-card__info-item--tablet-none">
 													<span class="search-card__help">Город / регион</span>
 													<div class="search-card__value">
 														<svg>
@@ -1529,12 +1559,39 @@
 									</div>
 								</div>
 							</div>
-							<a href="#" class="c-load-more search__load-more">
-								<span>Загрузить еще</span>
-								<svg>
-									<use xlink:href="img/sprite.svg#icon-arrow-up-right"></use>
-								</svg>
-							</a>
+							<div class="c-pagination search__pagination">
+								<ul class="c-pagination__list">
+									<li class="c-pagination__item">
+										<button class="c-pagination__btn" aria-label="Назад">
+											<svg class="c-pagination__btn-icon">
+												<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+											</svg>
+										</button>
+									</li>
+									<li class="c-pagination__item is--active">
+										<button class="c-pagination__btn">1</button>
+									</li>
+									<li class="c-pagination__item">
+										<button class="c-pagination__btn">2</button>
+									</li>
+									<li class="c-pagination__item">
+										<button class="c-pagination__btn">3</button>
+									</li>
+									<li class="c-pagination__item">
+										<button class="c-pagination__btn">4</button>
+									</li>
+									<li class="c-pagination__item">
+										<button class="c-pagination__btn" disabled>...</button>
+									</li>
+									<li class="c-pagination__item">
+										<button class="c-pagination__btn" aria-label="Далее">
+											<svg class="c-pagination__btn-icon">
+												<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+											</svg>
+										</button>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Банкрот База - Обучающие материалы</title>
+	<meta property="og:title" content="Банкрот База - Обучающие материалы">
+	<meta property="og:description" content="Описание">
+	<meta property="og:url" content="/">
+	<meta property="og:site_name" content="Банкрот База - Обучающие материалы">
+	<!-- styles -->
+	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!-- header -->
+		<header class="header" id="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<a href="index.html" class="header__logotype">
+						<picture>
+							<source srcset="img/logotype.svg" media="(min-width: 744px)">
+							<img src="img/logotype-mobile.svg" alt="Банкрот База">
+						</picture>
+					</a>
+					<div class="c-menu header__menu" id="c-menu">
+						<button class="c-menu__trigger" id="hamburger-toggle">
+							<div class="c-menu__trigger-icon">
+								<span class="c-menu__trigger-inner"></span>
+								<span class="c-menu__trigger-inner"></span>
+								<span class="c-menu__trigger-inner"></span>
+							</div>
+							<span class="c-menu__trigger-title">Меню</span>
+						</button>
+						<div class="c-menu__dropdown">
+							<div class="c-menu__container">
+								<div class="c-menu__block c-menu__block--tablet">
+									<ul class="c-menu__list">
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Расширенный поиск</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Категории</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Регионы</a>
+										</li>
+										<div class="c-menu__item">
+											<div class="c-menu__link-trigger">
+												<a href="#" class="c-menu__link">
+													<span>Реестры</span>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-caret"></use>
+													</svg>
+												</a>
+												<div class="c-menu__link-dropdown">
+													<ul class="c-menu__sublist">
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Должники</a>
+														</li>
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Арбитражные управляющие</a>
+														</li>
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Организаторы торгов</a>
+														</li>
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Торговые площадки</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Материалы</a>
+										</li>
+									</ul>
+								</div>
+								<div class="c-menu__block">
+									<ul class="c-menu__list">
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Поддержка пользователей</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Рекламодателям</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Частные вопросы</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Правила оплаты и возврата</a>
+										</li>
+									</ul>
+								</div>
+								<div class="c-menu__block c-menu__block--mobile c-menu__block--border">
+									<div class="c-menu__buttons">
+										<a href="#" class="c-menu__link">Войти</a>
+										<a href="#" class="c-menu__btn btn btn--border">Регистрация</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav class="nav header__nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">Расширенный поиск</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Категории</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Регионы</a>
+							</li>
+							<li class="nav__item">
+								<div class="nav__trigger">
+									<a href="#" class="nav__link">
+										<span>Реестры</span>
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-caret"></use>
+										</svg>
+									</a>
+									<div class="nav__dropdown">
+										<ul class="nav__sublist">
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Должники</a>
+											</li>
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Арбитражные управляющие</a>
+											</li>
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Организаторы торгов</a>
+											</li>
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Торговые площадки</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Материалы</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__controls">
+						<div class="c-notification header__notification" id="c-notification">
+							<a href="#" class="c-notification__trigger" id="c-notification-trigger">
+								<svg class="c-notification__trigger-icon">
+									<use xlink:href="img/sprite.svg#icon-notification"></use>
+								</svg>
+								<span class="c-notification__trigger-new"></span>
+							</a>
+							<div class="c-notification__dropdown">
+								<div class="c-notification__container">
+									<div class="c-notification__tabs">
+										<ul class="c-notification__tabs-list">
+											<li class="c-notification__tabs-item is--active">
+												<button class="c-notification__tabs-button">Лоты</button>
+											</li>
+											<li class="c-notification__tabs-item">
+												<button class="c-notification__tabs-button">Прочее</button>
+											</li>
+										</ul>
+										<div class="c-notification__tabs-wrapper is--active">
+											<div class="c-notification__info">
+												<a href="#" class="c-notification__more">Прочитать все</a>
+											</div>
+											<ul class="c-notification__list">
+												<li class="c-notification__item">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="c-notification__tabs-wrapper">
+											<div class="c-notification__info">
+												<a href="#" class="c-notification__more">Прочитать все</a>
+											</div>
+											<ul class="c-notification__list">
+												<li class="c-notification__item">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="header__buttons">
+							<a href="#" class="header__link">Войти</a>
+							<a href="#" class="header__btn btn btn--border">Регистрация</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- end of header -->
+		<!-- content -->
+		<div class="wrapper__content">
+			<!-- breadcrumb -->
+			<div class="breadcrumb" aria-label="Breadcrumb">
+				<div class="container">
+					<nav class="breadcrumb__nav">
+						<ol class="breadcrumb__list">
+							<li class="breadcrumb__item">
+								<a href="index.html" class="breadcrumb__link">Главная</a>
+							</li>
+							<li class="breadcrumb__item">
+								<a href="educational-materials.html" class="breadcrumb__link">Обучающие материалы</a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+			<!-- end of breadcrumb -->
+			<!-- education materials -->
+			<section class="materials" id="materials">
+				<div class="container">
+					<div class="section-info">
+						<div class="section-info__wrapper">
+							<div class="section-info__body">
+								<h1 class="section-info__heading">Обучающие материалы</h1>
+								<p class="section-info__description">Делимся полезными материалами по торгам и работе с площадкой</p>
+							</div>
+						</div>
+					</div>
+					<div class="materials__wrap">
+						<div class="materials__wrapper">
+							<div class="materials__left">
+								<h2 class="materials__heading">Особенности подбора лотов</h2>
+								<ol class="materials__list">
+									<li class="materials__item">
+										<div class="materials__elem">
+											<a href="#" class="materials__link is--active">Особенности подбора транспорта и спецтехники</a>
+											<ul class="materials__sublist">
+												<li class="materials__item">
+													<a href="#" class="materials__link">Заголовок пункта</a>
+												</li>
+												<li class="materials__item">
+													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пунктаЗаголовок пунктаЗаголовок пункта</a>
+												</li>
+												<li class="materials__item">
+													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пункта</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="materials__item">
+										<div class="materials__elem">
+											<a href="#" class="materials__link">Особенности подбора и анализа частного жилья и земельных участков (дома, дачи, земельные участки)</a>
+										</div>
+									</li>
+									<li class="materials__item">
+										<div class="materials__elem">
+											<a href="#" class="materials__link">Особенности подбора, осмотра и участия в торгах за квартиры</a>
+										</div>
+									</li>
+									<li class="materials__item">
+										<div class="materials__elem">
+											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
+										</div>
+									</li>
+									<li class="materials__item">
+										<div class="materials__elem">
+											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
+										</div>
+									</li>
+								</ol>
+							</div>
+							<div class="materials__right">
+								<div class="materials__content content">
+									<picture>
+										<img src="img/materials.jpg" alt="Image">
+									</picture>
+									<h3>Особенности подбора <br>транспорта и спецтехники</h3>
+									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
+									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
+									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
+								</div>
+							</div>
+						</div>
+						<div class="materials__wrapper">
+							<div class="materials__left">
+								<h2 class="materials__heading">Особенности подбора лотов</h2>
+								<ol class="materials__list">
+									<li class="materials__item">
+										<div class="materials__elem">
+											<a href="#" class="materials__link is--active">Особенности подбора транспорта и спецтехники</a>
+											<ul class="materials__sublist">
+												<li class="materials__item">
+													<a href="#" class="materials__link">Заголовок пункта</a>
+												</li>
+												<li class="materials__item">
+													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пунктаЗаголовок пунктаЗаголовок пункта</a>
+												</li>
+												<li class="materials__item">
+													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пункта</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="materials__item">
+										<div class="materials__elem">
+											<a href="#" class="materials__link">Особенности подбора и анализа частного жилья и земельных участков (дома, дачи, земельные участки)</a>
+										</div>
+									</li>
+									<li class="materials__item">
+										<div class="materials__elem">
+											<a href="#" class="materials__link">Особенности подбора, осмотра и участия в торгах за квартиры</a>
+										</div>
+									</li>
+									<li class="materials__item">
+										<div class="materials__elem">
+											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
+										</div>
+									</li>
+									<li class="materials__item">
+										<div class="materials__elem">
+											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
+										</div>
+									</li>
+								</ol>
+							</div>
+							<div class="materials__right">
+								<div class="materials__content content">
+									<picture>
+										<img src="img/materials.jpg" alt="Image">
+									</picture>
+									<h3>Особенности подбора <br>транспорта и спецтехники</h3>
+									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
+									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
+									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of education materials -->
+		</div>
+		<!-- end of content -->
+		<!-- footer -->
+		<footer class="footer" id="footer">
+			<div class="footer__main">
+				<div class="container">
+					<div class="footer__wrapper">
+						<div class="footer__block">
+							<div class="footer__info">
+								<h3 class="footer__title">БанкротБаза.ру</h3>
+								<p class="footer__description">Агрегатор торгов по банкротству, торгов по приватизации государственного имущества, торгов арестованного имущества и конфиската, реализуемого судебными приставами, торгов коммерческих и залогового имущества банков</p>
+							</div>
+						</div>
+						<div class="footer__block">
+							<div class="footer__nav">
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="#" class="footer__link">Поддержка пользователей</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Рекламодателям</a>
+									</li>
+								</ul>
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="#" class="footer__link">Частые вопросы</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Правила оплаты и возврата</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__block">
+							<a href="#" class="footer__btn btn btn--orange">Выбрать лот</a>
+							<div class="c-socnav footer__socnav">
+								<ul class="c-socnav__list">
+									<li class="c-socnav__item">
+										<a href="#" class="c-socnav__link">
+											<svg class="c-socnav__icon">
+												<use xlink:href="img/sprite.svg#icon-ok"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="c-socnav__item">
+										<a href="#" class="c-socnav__link">
+											<svg class="c-socnav__icon">
+												<use xlink:href="img/sprite.svg#icon-vk"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="footer__wrapper footer__wrapper--center">
+						<div class="footer__bottom-block">
+							<span class="footer__text">2023</span>
+						</div>
+						<div class="footer__bottom-block">
+							<a href="#" class="footer__text">Политика обработки данных</a>
+						</div>
+						<div class="footer__bottom-block">
+							<span class="footer__text">Принимаем к оплате</span>
+						</div>
+						<div class="footer__bottom-block">
+							<div class="footer__payments">
+								<picture class="footer__payment">
+									<img src="img/visa.svg" width="83" height="27.5" alt="VISA">
+								</picture>
+								<picture class="footer__payment">
+									<img src="img/mastercard.svg" width="46" height="27.5" alt="Mastercard">
+								</picture>
+								<picture class="footer__payment">
+									<img src="img/mir.svg" width="97" height="27.5" alt="МИР">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end of footer -->
+	</div>
+	<!-- end of wrapper -->
+	<!-- scripts -->
+	<script src="js/vendor.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
