@@ -347,7 +347,7 @@
 									</div>
 								</form>
 							</div>
-							<div class="search-tags search__tags">
+							<div class="search-tags search__tags search__tags--mobile">
 								<div class="search-tags__wrapper">
 									<div class="search-tags__checkboxes">
 										<label for="sort-with-photo-mobile" class="square-checkbox search-tags__checkbox">
@@ -440,12 +440,6 @@
 					<div class="search__wrap">
 						<div class="search__left">
 							<div class="search__filter search-filter" id="search-filter">
-								<button class="search-filter__trigger">
-									<span>Фильтр</span>
-									<svg>
-										<use xlink:href="img/sprite.svg#icon-caret-bold"></use>
-									</svg>
-								</button>
 								<button class="search-filter__save-filter btn">
 									<svg>
 										<use xlink:href="img/sprite.svg#icon-star"></use>
@@ -453,379 +447,392 @@
 									<span>Cохранить и подписаться на поиск</span>
 								</button>
 								<form action="#" class="search-filter__form">
-									<div class="search-filter__main">
-										<div class="search-filter__block">
-											<div class="search-filter__items">
-												<div class="control-group search-filter__item">
-													<div class="control-group__top">
-														<span class="control-group__heading">Категории</span>
-														<button class="control-group__clear is--hidden">
-															<span>Сбросить все</span>
-															<svg>
-																<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-															</svg>
-														</button>
-													</div>
-													<button class="popup-select control-group__popup-select">
-														<span>Все категории</span>
-														<svg>
-															<use xlink:href="img/sprite.svg#icon-arrow-up-right"></use>
-														</svg>
-													</button>
-												</div>
-												<div class="control-group search-filter__item">
-													<div class="control-group__top">
-														<span class="control-group__heading">Регион поиска</span>
-														<button class="control-group__clear is--hidden">
-															<span>Сбросить все</span>
-															<svg>
-																<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-															</svg>
-														</button>
-													</div>
-													<button class="popup-select control-group__popup-select">
-														<span>Вся Россия</span>
-														<svg>
-															<use xlink:href="img/sprite.svg#icon-arrow-up-right"></use>
-														</svg>
-													</button>
-												</div>
-												<div class="control-group search-filter__item">
-													<div class="control-group__top">
-														<span class="control-group__heading">Цена лота</span>
-														<button class="control-group__clear is--hidden">
-															<span>Сбросить все</span>
-															<svg>
-																<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-															</svg>
-														</button>
-													</div>
-													<div class="control-group__inputs">
-														<div class="input-group control-group__input">
-															<input type="number" class="input-group__input input-group__input--right" placeholder="От">
-															<span class="input-group__error">Сообщение об ошибке</span>
+									<div class="search-filter__filter-group">
+										<button class="search-filter__trigger">
+											<span>Фильтр</span>
+											<svg>
+												<use xlink:href="img/sprite.svg#icon-caret-bold"></use>
+											</svg>
+										</button>
+										<div class="search-filter__dropdown">
+											<div class="search-filter__main">
+												<div class="search-filter__block">
+													<div class="search-filter__items">
+														<div class="control-group search-filter__item">
+															<div class="control-group__top">
+																<span class="control-group__heading">Категории</span>
+																<button class="control-group__clear is--hidden">
+																	<span>Сбросить все</span>
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																	</svg>
+																</button>
+															</div>
+															<button class="popup-select control-group__popup-select">
+																<span>Все категории</span>
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-arrow-up-right"></use>
+																</svg>
+															</button>
 														</div>
-														<div class="input-group control-group__input">
-															<input type="number" class="input-group__input input-group__input--right" placeholder="До">
-															<span class="input-group__error">Сообщение об ошибке</span>
+														<div class="control-group search-filter__item">
+															<div class="control-group__top">
+																<span class="control-group__heading">Регион поиска</span>
+																<button class="control-group__clear is--hidden">
+																	<span>Сбросить все</span>
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																	</svg>
+																</button>
+															</div>
+															<button class="popup-select control-group__popup-select">
+																<span>Вся Россия</span>
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-arrow-up-right"></use>
+																</svg>
+															</button>
+														</div>
+														<div class="control-group search-filter__item">
+															<div class="control-group__top">
+																<span class="control-group__heading">Цена лота</span>
+																<button class="control-group__clear is--hidden">
+																	<span>Сбросить все</span>
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="control-group__inputs">
+																<div class="input-group control-group__input">
+																	<input type="number" class="input-group__input input-group__input--right" placeholder="От">
+																	<span class="input-group__error">Сообщение об ошибке</span>
+																</div>
+																<div class="input-group control-group__input">
+																	<input type="number" class="input-group__input input-group__input--right" placeholder="До">
+																	<span class="input-group__error">Сообщение об ошибке</span>
+																</div>
+															</div>
+														</div>
+														<div class="control-group search-filter__item">
+															<div class="control-group__top">
+																<span class="control-group__heading">Статус торгов</span>
+																<button class="control-group__clear is--hidden">
+																	<span>Сбросить все</span>
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="select-box control-group__select-box">
+																<div class="select-box__container">
+																	<div class="select-box__wrap">
+																		<div class="select-box__scroll">
+																			<div class="select-box__option">
+																				<input type="checkbox" class="select-box__radio" id="auction-status-01" name="auction-status">
+																				<label for="auction-status-01" class="select-box__label">
+																					<span class="select-box__icon"></span>
+																					<span class="select-box__title">Объявлены</span>
+																				</label>
+																			</div>
+																			<div class="select-box__option">
+																				<input type="checkbox" class="select-box__radio" id="auction-status-02" name="auction-status">
+																				<label for="auction-status-02" class="select-box__label">
+																					<span class="select-box__icon"></span>
+																					<span class="select-box__title">Прием заявок</span>
+																				</label>
+																			</div>
+																			<div class="select-box__option">
+																				<input type="checkbox" class="select-box__radio" id="auction-status-03" name="auction-status">
+																				<label for="auction-status-03" class="select-box__label">
+																					<span class="select-box__icon"></span>
+																					<span class="select-box__title">Прием заявок не активен</span>
+																				</label>
+																			</div>
+																			<div class="select-box__option">
+																				<input type="checkbox" class="select-box__radio" id="auction-status-04" name="auction-status">
+																				<label for="auction-status-04" class="select-box__label">
+																					<span class="select-box__icon"></span>
+																					<span class="select-box__title">Завершены</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="select-box__selected">
+																	<span class="select-box__placeholder select-box__placeholder--active">Любой</span>
+																	<span class="select-box__value"></span>
+																</div>
+																<div class="select-box__values">
+																	<div class="select-box__values-list"></div>
+																</div>
+															</div>
+														</div>
+														<div class="control-group search-filter__item">
+															<div class="control-group__top">
+																<span class="control-group__heading">Источник торгов</span>
+																<button class="control-group__clear is--hidden">
+																	<span>Сбросить все</span>
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="select-box control-group__select-box">
+																<div class="select-box__container">
+																	<div class="select-box__wrap">
+																		<div class="select-box__scroll">
+																			<div class="select-box__option">
+																				<input type="checkbox" class="select-box__radio" id="source-status-01" name="source-status">
+																				<label for="source-status-01" class="select-box__label">
+																					<span class="select-box__icon"></span>
+																					<span class="select-box__title">Объявлены</span>
+																				</label>
+																			</div>
+																			<div class="select-box__option">
+																				<input type="checkbox" class="select-box__radio" id="source-status-02" name="source-status">
+																				<label for="source-status-02" class="select-box__label">
+																					<span class="select-box__icon"></span>
+																					<span class="select-box__title">Прием заявок</span>
+																				</label>
+																			</div>
+																			<div class="select-box__option">
+																				<input type="checkbox" class="select-box__radio" id="source-status-03" name="source-status">
+																				<label for="source-status-03" class="select-box__label">
+																					<span class="select-box__icon"></span>
+																					<span class="select-box__title">Прием заявок не активен</span>
+																				</label>
+																			</div>
+																			<div class="select-box__option">
+																				<input type="checkbox" class="select-box__radio" id="source-status-04" name="source-status">
+																				<label for="source-status-04" class="select-box__label">
+																					<span class="select-box__icon"></span>
+																					<span class="select-box__title">Завершены</span>
+																				</label>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																<div class="select-box__selected">
+																	<span class="select-box__placeholder select-box__placeholder--active">Все</span>
+																	<span class="select-box__value"></span>
+																</div>
+																<div class="select-box__values">
+																	<div class="select-box__values-list"></div>
+																</div>
+															</div>
+														</div>
+														<div class="control-group search-filter__item">
+															<div class="control-group__top">
+																<span class="control-group__heading">Вид торгов</span>
+																<button class="control-group__clear is--hidden">
+																	<span>Сбросить все</span>
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="control-group__checkboxes">
+																<label for="type-of-auction-01" class="square-checkbox control-group__checkbox">
+																	<input type="checkbox" id="type-of-auction-01" class="square-checkbox__input" checked>
+																	<div class="square-checkbox__group">
+																		<div class="square-checkbox__icon"></div>
+																		<div class="square-checkbox__label">
+																			<span class="square-checkbox__title">Аукцион</span>
+																		</div>
+																	</div>
+																</label>
+																<label for="type-of-auction-02" class="square-checkbox control-group__checkbox">
+																	<input type="checkbox" id="type-of-auction-02" class="square-checkbox__input" checked>
+																	<div class="square-checkbox__group">
+																		<div class="square-checkbox__icon"></div>
+																		<div class="square-checkbox__label">
+																			<span class="square-checkbox__title">Публичное предложение</span>
+																		</div>
+																	</div>
+																</label>
+															</div>
 														</div>
 													</div>
 												</div>
-												<div class="control-group search-filter__item">
-													<div class="control-group__top">
-														<span class="control-group__heading">Статус торгов</span>
-														<button class="control-group__clear is--hidden">
-															<span>Сбросить все</span>
-															<svg>
-																<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-															</svg>
-														</button>
-													</div>
-													<div class="select-box control-group__select-box">
-														<div class="select-box__container">
-															<div class="select-box__wrap">
-																<div class="select-box__scroll">
-																	<div class="select-box__option">
-																		<input type="checkbox" class="select-box__radio" id="auction-status-01" name="auction-status">
-																		<label for="auction-status-01" class="select-box__label">
-																			<span class="select-box__icon"></span>
-																			<span class="select-box__title">Объявлены</span>
-																		</label>
+												<div class="search-filter__block">
+													<div class="c-accordeon c-accordeon--sm">
+														<div class="c-accordeon__item">
+															<button class="c-accordeon__trigger">
+																<span>Поиск по датам</span>
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-caret"></use>
+																</svg>
+															</button>
+															<div class="c-accordeon__wrapper">
+																<div class="search-filter__block">
+																	<div class="control-group search-filter__item">
+																		<div class="control-group__top">
+																			<span class="control-group__heading">Начало приема заявок</span>
+																			<button class="control-group__clear is--hidden">
+																				<span>Сбросить все</span>
+																				<svg>
+																					<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																				</svg>
+																			</button>
+																		</div>
+																		<div class="control-group__inputs">
+																			<div class="input-group control-group__input">
+																				<input type="number" class="input-group__input input-group__input--right calendar-dropdown-js" placeholder="От">
+																				<span class="input-group__error">Сообщение об ошибке</span>
+																			</div>
+																			<div class="input-group control-group__input">
+																				<input type="number" class="input-group__input input-group__input--right calendar-dropdown-js" placeholder="До">
+																				<span class="input-group__error">Сообщение об ошибке</span>
+																			</div>
+																		</div>
 																	</div>
-																	<div class="select-box__option">
-																		<input type="checkbox" class="select-box__radio" id="auction-status-02" name="auction-status">
-																		<label for="auction-status-02" class="select-box__label">
-																			<span class="select-box__icon"></span>
-																			<span class="select-box__title">Прием заявок</span>
-																		</label>
+																	<div class="control-group search-filter__item">
+																		<div class="control-group__top">
+																			<span class="control-group__heading">Окончание приема заявок</span>
+																			<button class="control-group__clear is--hidden">
+																				<span>Сбросить все</span>
+																				<svg>
+																					<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																				</svg>
+																			</button>
+																		</div>
+																		<div class="control-group__inputs">
+																			<div class="input-group control-group__input">
+																				<input type="number" class="input-group__input input-group__input--right" placeholder="От">
+																				<span class="input-group__error">Сообщение об ошибке</span>
+																			</div>
+																			<div class="input-group control-group__input">
+																				<input type="number" class="input-group__input input-group__input--right" placeholder="До">
+																				<span class="input-group__error">Сообщение об ошибке</span>
+																			</div>
+																		</div>
 																	</div>
-																	<div class="select-box__option">
-																		<input type="checkbox" class="select-box__radio" id="auction-status-03" name="auction-status">
-																		<label for="auction-status-03" class="select-box__label">
-																			<span class="select-box__icon"></span>
-																			<span class="select-box__title">Прием заявок не активен</span>
-																		</label>
-																	</div>
-																	<div class="select-box__option">
-																		<input type="checkbox" class="select-box__radio" id="auction-status-04" name="auction-status">
-																		<label for="auction-status-04" class="select-box__label">
-																			<span class="select-box__icon"></span>
-																			<span class="select-box__title">Завершены</span>
-																		</label>
+																	<div class="control-group search-filter__item">
+																		<div class="control-group__top">
+																			<span class="control-group__heading">Дата публикации</span>
+																			<button class="control-group__clear is--hidden">
+																				<span>Сбросить все</span>
+																				<svg>
+																					<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																				</svg>
+																			</button>
+																		</div>
+																		<div class="control-group__inputs">
+																			<div class="input-group control-group__input">
+																				<input type="number" class="input-group__input input-group__input--right" placeholder="От">
+																				<span class="input-group__error">Сообщение об ошибке</span>
+																			</div>
+																			<div class="input-group control-group__input">
+																				<input type="number" class="input-group__input input-group__input--right" placeholder="До">
+																				<span class="input-group__error">Сообщение об ошибке</span>
+																			</div>
+																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
-														<div class="select-box__selected">
-															<span class="select-box__placeholder select-box__placeholder--active">Любой</span>
-															<span class="select-box__value"></span>
-														</div>
-														<div class="select-box__values">
-															<div class="select-box__values-list"></div>
-														</div>
-													</div>
-												</div>
-												<div class="control-group search-filter__item">
-													<div class="control-group__top">
-														<span class="control-group__heading">Источник торгов</span>
-														<button class="control-group__clear is--hidden">
-															<span>Сбросить все</span>
-															<svg>
-																<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-															</svg>
-														</button>
-													</div>
-													<div class="select-box control-group__select-box">
-														<div class="select-box__container">
-															<div class="select-box__wrap">
-																<div class="select-box__scroll">
-																	<div class="select-box__option">
-																		<input type="checkbox" class="select-box__radio" id="source-status-01" name="source-status">
-																		<label for="source-status-01" class="select-box__label">
-																			<span class="select-box__icon"></span>
-																			<span class="select-box__title">Объявлены</span>
-																		</label>
+														<div class="c-accordeon__item">
+															<button class="c-accordeon__trigger">
+																<span>Поиск по участникам</span>
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-caret"></use>
+																</svg>
+															</button>
+															<div class="c-accordeon__wrapper">
+																<div class="search-filter__block">
+																	<div class="control-group search-filter__item">
+																		<div class="control-group__top">
+																			<span class="control-group__heading">Должник</span>
+																			<button class="control-group__clear is--hidden">
+																				<span>Сбросить все</span>
+																				<svg>
+																					<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																				</svg>
+																			</button>
+																		</div>
+																		<div class="control-group__inputs">
+																			<div class="input-group control-group__input">
+																				<button class="input-group__btn">
+																					<svg class="input-group__btn-icon">
+																						<use xlink:href="img/sprite.svg#icon-search"></use>
+																					</svg>
+																				</button>
+																				<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Введите ФИО или ИНН">
+																				<span class="input-group__error">Сообщение об ошибке</span>
+																			</div>
+																			<div class="control-group__dropdown">
+																				<button class="control-group__option">Вариант 1</button>
+																				<button class="control-group__option">Вариант 2</button>
+																				<button class="control-group__option">Вариант 3</button>
+																			</div>
+																		</div>
 																	</div>
-																	<div class="select-box__option">
-																		<input type="checkbox" class="select-box__radio" id="source-status-02" name="source-status">
-																		<label for="source-status-02" class="select-box__label">
-																			<span class="select-box__icon"></span>
-																			<span class="select-box__title">Прием заявок</span>
-																		</label>
+																	<div class="control-group search-filter__item">
+																		<div class="control-group__top">
+																			<span class="control-group__heading">Организатор</span>
+																			<button class="control-group__clear is--hidden">
+																				<span>Сбросить все</span>
+																				<svg>
+																					<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																				</svg>
+																			</button>
+																		</div>
+																		<div class="control-group__inputs">
+																			<div class="input-group control-group__input">
+																				<button class="input-group__btn">
+																					<svg class="input-group__btn-icon">
+																						<use xlink:href="img/sprite.svg#icon-search"></use>
+																					</svg>
+																				</button>
+																				<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Введите ФИО или ИНН">
+																				<span class="input-group__error">Сообщение об ошибке</span>
+																			</div>
+																			<div class="control-group__dropdown">
+																				<button class="control-group__option">Вариант 1</button>
+																				<button class="control-group__option">Вариант 2</button>
+																				<button class="control-group__option">Вариант 3</button>
+																			</div>
+																		</div>
 																	</div>
-																	<div class="select-box__option">
-																		<input type="checkbox" class="select-box__radio" id="source-status-03" name="source-status">
-																		<label for="source-status-03" class="select-box__label">
-																			<span class="select-box__icon"></span>
-																			<span class="select-box__title">Прием заявок не активен</span>
-																		</label>
-																	</div>
-																	<div class="select-box__option">
-																		<input type="checkbox" class="select-box__radio" id="source-status-04" name="source-status">
-																		<label for="source-status-04" class="select-box__label">
-																			<span class="select-box__icon"></span>
-																			<span class="select-box__title">Завершены</span>
-																		</label>
+																	<div class="control-group search-filter__item">
+																		<div class="control-group__top">
+																			<span class="control-group__heading">Арбитражный управляющий</span>
+																			<button class="control-group__clear is--hidden">
+																				<span>Сбросить все</span>
+																				<svg>
+																					<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+																				</svg>
+																			</button>
+																		</div>
+																		<div class="control-group__inputs">
+																			<div class="input-group control-group__input">
+																				<button class="input-group__btn">
+																					<svg class="input-group__btn-icon">
+																						<use xlink:href="img/sprite.svg#icon-search"></use>
+																					</svg>
+																				</button>
+																				<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Введите ФИО или ИНН">
+																				<span class="input-group__error">Сообщение об ошибке</span>
+																			</div>
+																			<div class="control-group__dropdown">
+																				<button class="control-group__option">Вариант 1</button>
+																				<button class="control-group__option">Вариант 2</button>
+																				<button class="control-group__option">Вариант 3</button>
+																			</div>
+																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
-														<div class="select-box__selected">
-															<span class="select-box__placeholder select-box__placeholder--active">Все</span>
-															<span class="select-box__value"></span>
-														</div>
-														<div class="select-box__values">
-															<div class="select-box__values-list"></div>
-														</div>
-													</div>
-												</div>
-												<div class="control-group search-filter__item">
-													<div class="control-group__top">
-														<span class="control-group__heading">Вид торгов</span>
-														<button class="control-group__clear is--hidden">
-															<span>Сбросить все</span>
-															<svg>
-																<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-															</svg>
-														</button>
-													</div>
-													<div class="control-group__checkboxes">
-														<label for="type-of-auction-01" class="square-checkbox control-group__checkbox">
-															<input type="checkbox" id="type-of-auction-01" class="square-checkbox__input" checked>
-															<div class="square-checkbox__group">
-																<div class="square-checkbox__icon"></div>
-																<div class="square-checkbox__label">
-																	<span class="square-checkbox__title">Аукцион</span>
-																</div>
-															</div>
-														</label>
-														<label for="type-of-auction-02" class="square-checkbox control-group__checkbox">
-															<input type="checkbox" id="type-of-auction-02" class="square-checkbox__input" checked>
-															<div class="square-checkbox__group">
-																<div class="square-checkbox__icon"></div>
-																<div class="square-checkbox__label">
-																	<span class="square-checkbox__title">Публичное предложение</span>
-																</div>
-															</div>
-														</label>
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="search-filter__block">
-											<div class="c-accordeon c-accordeon--sm">
-												<div class="c-accordeon__item">
-													<button class="c-accordeon__trigger">
-														<span>Поиск по датам</span>
-														<svg>
-															<use xlink:href="img/sprite.svg#icon-caret"></use>
-														</svg>
-													</button>
-													<div class="c-accordeon__wrapper">
-														<div class="search-filter__block">
-															<div class="control-group search-filter__item">
-																<div class="control-group__top">
-																	<span class="control-group__heading">Начало приема заявок</span>
-																	<button class="control-group__clear is--hidden">
-																		<span>Сбросить все</span>
-																		<svg>
-																			<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-																		</svg>
-																	</button>
-																</div>
-																<div class="control-group__inputs">
-																	<div class="input-group control-group__input">
-																		<input type="number" class="input-group__input input-group__input--right" placeholder="От">
-																		<span class="input-group__error">Сообщение об ошибке</span>
-																	</div>
-																	<div class="input-group control-group__input">
-																		<input type="number" class="input-group__input input-group__input--right" placeholder="До">
-																		<span class="input-group__error">Сообщение об ошибке</span>
-																	</div>
-																</div>
-															</div>
-															<div class="control-group search-filter__item">
-																<div class="control-group__top">
-																	<span class="control-group__heading">Окончание приема заявок</span>
-																	<button class="control-group__clear is--hidden">
-																		<span>Сбросить все</span>
-																		<svg>
-																			<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-																		</svg>
-																	</button>
-																</div>
-																<div class="control-group__inputs">
-																	<div class="input-group control-group__input">
-																		<input type="number" class="input-group__input input-group__input--right" placeholder="От">
-																		<span class="input-group__error">Сообщение об ошибке</span>
-																	</div>
-																	<div class="input-group control-group__input">
-																		<input type="number" class="input-group__input input-group__input--right" placeholder="До">
-																		<span class="input-group__error">Сообщение об ошибке</span>
-																	</div>
-																</div>
-															</div>
-															<div class="control-group search-filter__item">
-																<div class="control-group__top">
-																	<span class="control-group__heading">Дата публикации</span>
-																	<button class="control-group__clear is--hidden">
-																		<span>Сбросить все</span>
-																		<svg>
-																			<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-																		</svg>
-																	</button>
-																</div>
-																<div class="control-group__inputs">
-																	<div class="input-group control-group__input">
-																		<input type="number" class="input-group__input input-group__input--right" placeholder="От">
-																		<span class="input-group__error">Сообщение об ошибке</span>
-																	</div>
-																	<div class="input-group control-group__input">
-																		<input type="number" class="input-group__input input-group__input--right" placeholder="До">
-																		<span class="input-group__error">Сообщение об ошибке</span>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="c-accordeon__item">
-													<button class="c-accordeon__trigger">
-														<span>Поиск по участникам</span>
-														<svg>
-															<use xlink:href="img/sprite.svg#icon-caret"></use>
-														</svg>
-													</button>
-													<div class="c-accordeon__wrapper">
-														<div class="search-filter__block">
-															<div class="control-group search-filter__item">
-																<div class="control-group__top">
-																	<span class="control-group__heading">Должник</span>
-																	<button class="control-group__clear is--hidden">
-																		<span>Сбросить все</span>
-																		<svg>
-																			<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-																		</svg>
-																	</button>
-																</div>
-																<div class="control-group__inputs">
-																	<div class="input-group control-group__input">
-																		<button class="input-group__btn">
-																			<svg class="input-group__btn-icon">
-																				<use xlink:href="img/sprite.svg#icon-search"></use>
-																			</svg>
-																		</button>
-																		<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Введите ФИО или ИНН">
-																		<span class="input-group__error">Сообщение об ошибке</span>
-																	</div>
-																	<div class="control-group__dropdown">
-																		<button class="control-group__option">Вариант 1</button>
-																		<button class="control-group__option">Вариант 2</button>
-																		<button class="control-group__option">Вариант 3</button>
-																	</div>
-																</div>
-															</div>
-															<div class="control-group search-filter__item">
-																<div class="control-group__top">
-																	<span class="control-group__heading">Организатор</span>
-																	<button class="control-group__clear is--hidden">
-																		<span>Сбросить все</span>
-																		<svg>
-																			<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-																		</svg>
-																	</button>
-																</div>
-																<div class="control-group__inputs">
-																	<div class="input-group control-group__input">
-																		<button class="input-group__btn">
-																			<svg class="input-group__btn-icon">
-																				<use xlink:href="img/sprite.svg#icon-search"></use>
-																			</svg>
-																		</button>
-																		<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Введите ФИО или ИНН">
-																		<span class="input-group__error">Сообщение об ошибке</span>
-																	</div>
-																	<div class="control-group__dropdown">
-																		<button class="control-group__option">Вариант 1</button>
-																		<button class="control-group__option">Вариант 2</button>
-																		<button class="control-group__option">Вариант 3</button>
-																	</div>
-																</div>
-															</div>
-															<div class="control-group search-filter__item">
-																<div class="control-group__top">
-																	<span class="control-group__heading">Арбитражный управляющий</span>
-																	<button class="control-group__clear is--hidden">
-																		<span>Сбросить все</span>
-																		<svg>
-																			<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-																		</svg>
-																	</button>
-																</div>
-																<div class="control-group__inputs">
-																	<div class="input-group control-group__input">
-																		<button class="input-group__btn">
-																			<svg class="input-group__btn-icon">
-																				<use xlink:href="img/sprite.svg#icon-search"></use>
-																			</svg>
-																		</button>
-																		<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Введите ФИО или ИНН">
-																		<span class="input-group__error">Сообщение об ошибке</span>
-																	</div>
-																	<div class="control-group__dropdown">
-																		<button class="control-group__option">Вариант 1</button>
-																		<button class="control-group__option">Вариант 2</button>
-																		<button class="control-group__option">Вариант 3</button>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
+											<div class="search-filter__buttons">
+												<button class="search-filter__btn search-filter__btn--mobile btn btn--orange">Применить фильтр</button>
 											</div>
 										</div>
 									</div>
-									<div class="search-filter__buttons">
+									<div class="search-filter__bottom">
 										<button class="search-filter__btn search-filter__btn--desktop btn">
 											<svg>
 												<use xlink:href="img/sprite.svg#icon-star"></use>
@@ -833,7 +840,6 @@
 											<span>Cохранить и подписаться на поиск</span>
 										</button>
 										<button class="search-filter__btn btn btn--border" id="search-filter-all-clear">Cбросить все фильтры</button>
-										<button class="search-filter__btn search-filter__btn--mobile btn btn--orange">Применить фильтр</button>
 									</div>
 								</form>
 							</div>
@@ -851,6 +857,94 @@
 							</div>
 						</div>
 						<div class="search__right">
+							<div class="search-tags search__tags search__tags--desktop">
+								<div class="search-tags__wrapper">
+									<div class="search-tags__checkboxes">
+										<label for="sort-with-photo-mobile" class="square-checkbox search-tags__checkbox">
+											<input type="checkbox" id="sort-with-photo-mobile" class="square-checkbox__input">
+											<div class="square-checkbox__group">
+												<div class="square-checkbox__icon"></div>
+												<div class="square-checkbox__label">
+													<div class="square-checkbox__inner">
+														<span class="square-checkbox__title">C фото</span>
+														<div class="c-sm-info square-checkbox__info">
+															<button class="c-sm-info__trigger">
+																<svg class="c-sm-info__trigger-icon">
+																	<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
+																</svg>
+															</button>
+															<div class="c-sm-info__dropdown">
+																<p class="c-sm-info__text">Большинство лотов размещается без фото. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</label>
+										<label for="sort-with-report-mobile" class="square-checkbox search-tags__checkbox">
+											<input type="checkbox" id="sort-with-report-mobile" class="square-checkbox__input">
+											<div class="square-checkbox__group">
+												<div class="square-checkbox__icon"></div>
+												<div class="square-checkbox__label">
+													<div class="square-checkbox__inner">
+														<span class="square-checkbox__title">C отчетом</span>
+														<div class="c-sm-info square-checkbox__info">
+															<button class="c-sm-info__trigger">
+																<svg class="c-sm-info__trigger-icon">
+																	<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
+																</svg>
+															</button>
+															<div class="c-sm-info__dropdown">
+																<p class="c-sm-info__text">Большинство лотов размещаются без отчетов. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</label>
+									</div>
+									<ul class="search-tags__list">
+										<li class="search-tags__item is--active">
+											<button class="search-tags__option">
+												<span>Все</span>
+												<svg>
+													<use xlink:href="img/sprite.svg#icon-close"></use>
+												</svg>
+											</button>
+										</li>
+										<li class="search-tags__item">
+											<button class="search-tags__option">
+												<span> Торги по банкротству</span>
+											</button>
+										</li>
+										<li class="search-tags__item">
+											<button class="search-tags__option">
+												<span>Арестованное имущество</span>
+											</button>
+										</li>
+										<li class="search-tags__item">
+											<button class="search-tags__option">
+												<span>Приватизация</span>
+											</button>
+										</li>
+										<li class="search-tags__item">
+											<button class="search-tags__option">
+												<span>Коммерческие торги</span>
+											</button>
+										</li>
+									</ul>
+									<div class="search-save search-tags__save">
+										<button class="search-save__trigger">
+											<svg class="search-save__trigger-icon">
+												<use xlink:href="img/sprite.svg#icon-star-bold"></use>
+											</svg>
+										</button>
+										<div class="search-save__dropdown">
+											<p class="search-save__text">Сохранить и подписаться на поиск</p>
+										</div>
+									</div>
+								</div>
+							</div>
 							<div class="search-sort search__sort">
 								<div class="search-sort__wrapper">
 									<div class="search-sort__group">
@@ -862,7 +956,6 @@
 												<option value="2">Скоро начало</option>
 												<option value="3">Скоро завершение</option>
 												<option value="4">Сначала дешевые</option>
-												<option value="5">Сначала дорогие</option>
 												<option value="5">Сначала дорогие</option>
 											</select>
 										</div>
@@ -949,21 +1042,36 @@
 													</li>
 												</ul>
 												<div class="search-card__controls">
-													<button class="search-card__control" aria-label="Избранное">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-star"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Включить уведомления">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-bell"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Поделиться">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-share"></use>
-														</svg>
-													</button>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Избранное">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-star"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Понравился лот? Сохраните его в личном кабинете</p>
+                                                        </div> -->
+													</div>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Включить уведомления">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-bell"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Подписаться на изменения лота</p>
+                                                        </div> -->
+													</div>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Поделиться">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-share"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Поделиться лотом</p>
+                                                        </div> -->
+													</div>
 												</div>
 											</div>
 										</div>
