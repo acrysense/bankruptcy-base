@@ -349,49 +349,61 @@
 							</div>
 							<div class="search-tags search__tags search__tags--mobile">
 								<div class="search-tags__wrapper">
-									<div class="search-tags__checkboxes">
-										<label for="sort-with-photo-mobile" class="square-checkbox search-tags__checkbox">
-											<input type="checkbox" id="sort-with-photo-mobile" class="square-checkbox__input">
-											<div class="square-checkbox__group">
-												<div class="square-checkbox__icon"></div>
-												<div class="square-checkbox__label">
-													<div class="square-checkbox__inner">
-														<span class="square-checkbox__title">C фото</span>
-														<div class="c-sm-info square-checkbox__info">
-															<button class="c-sm-info__trigger">
-																<svg class="c-sm-info__trigger-icon">
-																	<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
-																</svg>
-															</button>
-															<div class="c-sm-info__dropdown">
-																<p class="c-sm-info__text">Большинство лотов размещается без фото. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
+									<div class="search-tags__controls">
+										<div class="search-tags__checkboxes">
+											<label for="checkbox-with-photo-mobile" class="square-checkbox search-tags__checkbox">
+												<input type="checkbox" id="checkbox-with-photo-mobile" class="square-checkbox__input">
+												<div class="square-checkbox__group">
+													<div class="square-checkbox__icon"></div>
+													<div class="square-checkbox__label">
+														<div class="square-checkbox__inner">
+															<span class="square-checkbox__title">C фото</span>
+															<div class="c-sm-info square-checkbox__info">
+																<button class="c-sm-info__trigger">
+																	<svg class="c-sm-info__trigger-icon">
+																		<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
+																	</svg>
+																</button>
+																<div class="c-sm-info__dropdown">
+																	<p class="c-sm-info__text">Большинство лотов размещается без фото. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-										</label>
-										<label for="sort-with-report-mobile" class="square-checkbox search-tags__checkbox">
-											<input type="checkbox" id="sort-with-report-mobile" class="square-checkbox__input">
-											<div class="square-checkbox__group">
-												<div class="square-checkbox__icon"></div>
-												<div class="square-checkbox__label">
-													<div class="square-checkbox__inner">
-														<span class="square-checkbox__title">C отчетом</span>
-														<div class="c-sm-info square-checkbox__info">
-															<button class="c-sm-info__trigger">
-																<svg class="c-sm-info__trigger-icon">
-																	<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
-																</svg>
-															</button>
-															<div class="c-sm-info__dropdown">
-																<p class="c-sm-info__text">Большинство лотов размещаются без отчетов. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
+											</label>
+											<label for="checkbox-with-report-mobile" class="square-checkbox search-tags__checkbox">
+												<input type="checkbox" id="checkbox-with-report-mobile" class="square-checkbox__input">
+												<div class="square-checkbox__group">
+													<div class="square-checkbox__icon"></div>
+													<div class="square-checkbox__label">
+														<div class="square-checkbox__inner">
+															<span class="square-checkbox__title">C отчетом</span>
+															<div class="c-sm-info square-checkbox__info">
+																<button class="c-sm-info__trigger">
+																	<svg class="c-sm-info__trigger-icon">
+																		<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
+																	</svg>
+																</button>
+																<div class="c-sm-info__dropdown">
+																	<p class="c-sm-info__text">Большинство лотов размещаются без отчетов. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
+																</div>
 															</div>
 														</div>
 													</div>
 												</div>
+											</label>
+										</div>
+										<div class="search-save search-tags__save search-tags__save--mobile">
+											<button class="search-save__trigger">
+												<svg class="search-save__trigger-icon">
+													<use xlink:href="img/sprite.svg#icon-star-bold"></use>
+												</svg>
+											</button>
+											<div class="search-save__dropdown">
+												<p class="search-save__text">Сохранить и подписаться на поиск</p>
 											</div>
-										</label>
+										</div>
 									</div>
 									<ul class="search-tags__list">
 										<li class="search-tags__item is--active">
@@ -423,7 +435,7 @@
 											</button>
 										</li>
 									</ul>
-									<div class="search-save search-tags__save">
+									<div class="search-save search-tags__save search-tags__save--desktop">
 										<button class="search-save__trigger">
 											<svg class="search-save__trigger-icon">
 												<use xlink:href="img/sprite.svg#icon-star-bold"></use>
@@ -440,12 +452,6 @@
 					<div class="search__wrap">
 						<div class="search__left">
 							<div class="search__filter search-filter" id="search-filter">
-								<button class="search-filter__save-filter btn">
-									<svg>
-										<use xlink:href="img/sprite.svg#icon-star"></use>
-									</svg>
-									<span>Cохранить и подписаться на поиск</span>
-								</button>
 								<form action="#" class="search-filter__form">
 									<div class="search-filter__filter-group">
 										<button class="search-filter__trigger">
@@ -677,11 +683,11 @@
 																		</div>
 																		<div class="control-group__inputs">
 																			<div class="input-group control-group__input">
-																				<input type="number" class="input-group__input input-group__input--right calendar-dropdown-js" placeholder="От">
+																				<input type="text" id="date-filter-01" class="input-group__input input-group__input--right calendar-dropdown-js" placeholder="От">
 																				<span class="input-group__error">Сообщение об ошибке</span>
 																			</div>
 																			<div class="input-group control-group__input">
-																				<input type="number" class="input-group__input input-group__input--right calendar-dropdown-js" placeholder="До">
+																				<input type="text" id="date-filter-02" class="input-group__input input-group__input--right calendar-dropdown-js" placeholder="До">
 																				<span class="input-group__error">Сообщение об ошибке</span>
 																			</div>
 																		</div>
@@ -698,11 +704,11 @@
 																		</div>
 																		<div class="control-group__inputs">
 																			<div class="input-group control-group__input">
-																				<input type="number" class="input-group__input input-group__input--right" placeholder="От">
+																				<input type="text" id="date-filter-03" class="input-group__input input-group__input--right calendar-dropdown-js" placeholder="От">
 																				<span class="input-group__error">Сообщение об ошибке</span>
 																			</div>
 																			<div class="input-group control-group__input">
-																				<input type="number" class="input-group__input input-group__input--right" placeholder="До">
+																				<input type="text" id="date-filter-04" class="input-group__input input-group__input--right calendar-dropdown-js" placeholder="До">
 																				<span class="input-group__error">Сообщение об ошибке</span>
 																			</div>
 																		</div>
@@ -719,11 +725,11 @@
 																		</div>
 																		<div class="control-group__inputs">
 																			<div class="input-group control-group__input">
-																				<input type="number" class="input-group__input input-group__input--right" placeholder="От">
+																				<input type="text" id="date-filter-05" class="input-group__input input-group__input--right calendar-dropdown-js" placeholder="От">
 																				<span class="input-group__error">Сообщение об ошибке</span>
 																			</div>
 																			<div class="input-group control-group__input">
-																				<input type="number" class="input-group__input input-group__input--right" placeholder="До">
+																				<input type="text" id="date-filter-06" class="input-group__input input-group__input--right calendar-dropdown-js" placeholder="До">
 																				<span class="input-group__error">Сообщение об ошибке</span>
 																			</div>
 																		</div>
@@ -828,7 +834,8 @@
 												</div>
 											</div>
 											<div class="search-filter__buttons">
-												<button class="search-filter__btn search-filter__btn--mobile btn btn--orange">Применить фильтр</button>
+												<button class="search-filter__btn btn btn--orange">Применить фильтр</button>
+												<button class="search-filter__btn btn btn--border" id="search-filter-all-clear">Cбросить все фильтры</button>
 											</div>
 										</div>
 									</div>
@@ -839,7 +846,6 @@
 											</svg>
 											<span>Cохранить и подписаться на поиск</span>
 										</button>
-										<button class="search-filter__btn btn btn--border" id="search-filter-all-clear">Cбросить все фильтры</button>
 									</div>
 								</form>
 							</div>
@@ -859,50 +865,6 @@
 						<div class="search__right">
 							<div class="search-tags search__tags search__tags--desktop">
 								<div class="search-tags__wrapper">
-									<div class="search-tags__checkboxes">
-										<label for="sort-with-photo-mobile" class="square-checkbox search-tags__checkbox">
-											<input type="checkbox" id="sort-with-photo-mobile" class="square-checkbox__input">
-											<div class="square-checkbox__group">
-												<div class="square-checkbox__icon"></div>
-												<div class="square-checkbox__label">
-													<div class="square-checkbox__inner">
-														<span class="square-checkbox__title">C фото</span>
-														<div class="c-sm-info square-checkbox__info">
-															<button class="c-sm-info__trigger">
-																<svg class="c-sm-info__trigger-icon">
-																	<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
-																</svg>
-															</button>
-															<div class="c-sm-info__dropdown">
-																<p class="c-sm-info__text">Большинство лотов размещается без фото. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</label>
-										<label for="sort-with-report-mobile" class="square-checkbox search-tags__checkbox">
-											<input type="checkbox" id="sort-with-report-mobile" class="square-checkbox__input">
-											<div class="square-checkbox__group">
-												<div class="square-checkbox__icon"></div>
-												<div class="square-checkbox__label">
-													<div class="square-checkbox__inner">
-														<span class="square-checkbox__title">C отчетом</span>
-														<div class="c-sm-info square-checkbox__info">
-															<button class="c-sm-info__trigger">
-																<svg class="c-sm-info__trigger-icon">
-																	<use xlink:href="img/sprite.svg#icon-info-circle-bold"></use>
-																</svg>
-															</button>
-															<div class="c-sm-info__dropdown">
-																<p class="c-sm-info__text">Большинство лотов размещаются без отчетов. Выбирая эту опцию, вы можете пропустить интересный лот.</p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</label>
-									</div>
 									<ul class="search-tags__list">
 										<li class="search-tags__item is--active">
 											<button class="search-tags__option">
@@ -1193,21 +1155,36 @@
 													</li>
 												</ul>
 												<div class="search-card__controls">
-													<button class="search-card__control" aria-label="Избранное">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-star"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Включить уведомления">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-bell"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Поделиться">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-share"></use>
-														</svg>
-													</button>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Избранное">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-star"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Понравился лот? Сохраните его в личном кабинете</p>
+                                                        </div> -->
+													</div>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Включить уведомления">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-bell"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Подписаться на изменения лота</p>
+                                                        </div> -->
+													</div>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Поделиться">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-share"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Поделиться лотом</p>
+                                                        </div> -->
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1317,21 +1294,36 @@
 													</li>
 												</ul>
 												<div class="search-card__controls">
-													<button class="search-card__control" aria-label="Избранное">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-star"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Включить уведомления">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-bell"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Поделиться">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-share"></use>
-														</svg>
-													</button>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Избранное">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-star"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Понравился лот? Сохраните его в личном кабинете</p>
+                                                        </div> -->
+													</div>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Включить уведомления">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-bell"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Подписаться на изменения лота</p>
+                                                        </div> -->
+													</div>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Поделиться">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-share"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Поделиться лотом</p>
+                                                        </div> -->
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1453,21 +1445,36 @@
 													</li>
 												</ul>
 												<div class="search-card__controls">
-													<button class="search-card__control" aria-label="Избранное">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-star"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Включить уведомления">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-bell"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Поделиться">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-share"></use>
-														</svg>
-													</button>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Избранное">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-star"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Понравился лот? Сохраните его в личном кабинете</p>
+                                                        </div> -->
+													</div>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Включить уведомления">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-bell"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Подписаться на изменения лота</p>
+                                                        </div> -->
+													</div>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Поделиться">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-share"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Поделиться лотом</p>
+                                                        </div> -->
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1577,21 +1584,36 @@
 													</li>
 												</ul>
 												<div class="search-card__controls">
-													<button class="search-card__control" aria-label="Избранное">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-star"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Включить уведомления">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-bell"></use>
-														</svg>
-													</button>
-													<button class="search-card__control" aria-label="Поделиться">
-														<svg class="search-card__control-icon">
-															<use xlink:href="img/sprite.svg#icon-share"></use>
-														</svg>
-													</button>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Избранное">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-star"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Понравился лот? Сохраните его в личном кабинете</p>
+                                                        </div> -->
+													</div>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Включить уведомления">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-bell"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Подписаться на изменения лота</p>
+                                                        </div> -->
+													</div>
+													<div class="search-card__control-item">
+														<button class="search-card__control" aria-label="Поделиться">
+															<svg class="search-card__control-icon">
+																<use xlink:href="img/sprite.svg#icon-share"></use>
+															</svg>
+														</button>
+														<!-- <div class="search-card__control-dropdown">
+                                                            <p class="search-card__control-text">Поделиться лотом</p>
+                                                        </div> -->
+													</div>
 												</div>
 											</div>
 										</div>
