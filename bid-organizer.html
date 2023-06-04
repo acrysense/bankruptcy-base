@@ -537,12 +537,24 @@
 					<div class="lots-debtors marketplace__wrapper">
 						<div class="lots-debtors__wrap">
 							<div class="lots-debtors__wrapper is--open">
-								<button class="lots-debtors__trigger">
-									<span>Лоты должника</span>
-									<svg>
-										<use xlink:href="img/sprite.svg#icon-caret-bold"></use>
-									</svg>
-								</button>
+								<div class="lots-debtors__trigger-wrap">
+									<button class="lots-debtors__trigger">
+										<span>Портфель лотов <small>4 лота</small></span>
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-caret-bold"></use>
+										</svg>
+									</button>
+									<div class="c-trigger-dropdown lots-debtors__trigger-notification">
+										<button class="c-trigger-dropdown__control" aria-label="Включить уведомления">
+											<svg class="c-trigger-dropdown__control-icon">
+												<use xlink:href="img/sprite.svg#icon-bell"></use>
+											</svg>
+										</button>
+										<div class="c-trigger-dropdown__control-dropdown">
+											<p class="c-trigger-dropdown__control-text">Подписаться на новые лоты организатора торгов</p>
+										</div>
+									</div>
+								</div>
 								<div class="lots-debtors__dropdown" style="display: block;">
 									<div class="lots-debtors__main">
 										<div class="search-card lots-debtors__item">
