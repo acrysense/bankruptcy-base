@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Банкрот База - Страница навигации по сайту</title>
-	<meta property="og:title" content="Банкрот База - Страница навигации по сайту">
+	<title>Банкрот База - Страница лота</title>
+	<meta property="og:title" content="Банкрот База - Страница лота">
 	<meta property="og:description" content="Описание">
 	<meta property="og:url" content="/">
-	<meta property="og:site_name" content="Банкрот База - Страница навигации по сайту">
+	<meta property="og:site_name" content="Банкрот База - Страница лота">
 	<!-- styles -->
 	<link rel="stylesheet" href="css/vendor.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
@@ -284,89 +284,171 @@
 		<!-- end of header -->
 		<!-- content -->
 		<div class="wrapper__content">
-			<!-- page top -->
-			<div class="page-top">
+			<!-- breadcrumb -->
+			<div class="breadcrumb" aria-label="Breadcrumb">
 				<div class="container">
-					<div class="breadcrumb page-top__breadcrumb" aria-label="Breadcrumb">
-						<nav class="breadcrumb__nav">
-							<ol class="breadcrumb__list">
-								<li class="breadcrumb__item">
-									<a href="index.html" class="breadcrumb__link">Главная</a>
-								</li>
-								<li class="breadcrumb__item">
-									<a href="nav.html" class="breadcrumb__link">Страница навигации по сайту</a>
-								</li>
-							</ol>
-						</nav>
-					</div>
-					<h1 class="page-top__heading">Страница навигации по сайту</h1>
-				</div>
-			</div>
-			<!-- end of page top -->
-			<!-- site nav -->
-			<section class="site-nav" id="site-nav">
-				<div class="container">
-					<nav class="site-nav__nav">
-						<ul class="site-nav__list">
-							<li class="site-nav__item">
-								<a href="index.html" class="site-nav__link">Главная</a>
+					<nav class="breadcrumb__nav">
+						<ol class="breadcrumb__list">
+							<li class="breadcrumb__item">
+								<a href="index.html" class="breadcrumb__link">Главная</a>
 							</li>
-							<li class="site-nav__item">
-								<a href="index-user.html" class="site-nav__link">Главная (авторизованный пользователь)</a>
+							<li class="breadcrumb__item">
+								<a href="#" class="breadcrumb__link">Конфискат</a>
 							</li>
-							<li class="site-nav__item">
-								<a href="search.html" class="site-nav__link">Поиск</a>
+							<li class="breadcrumb__item">
+								<a href="#" class="breadcrumb__link">Алтайский край</a>
 							</li>
-							<!-- <li class="site-nav__item">
-                                <a href="lot-page.html" class="site-nav__link">Страница лота</a>
-                            </li> -->
-							<li class="site-nav__item">
-								<a href="faq.html" class="site-nav__link">FAQ</a>
+							<li class="breadcrumb__item">
+								<a href="#" class="breadcrumb__link">Автомобили</a>
 							</li>
-							<li class="site-nav__item">
-								<a href="educational-materials.html" class="site-nav__link">Обучающие материалы</a>
+							<li class="breadcrumb__item">
+								<a href="lot-page.html" class="breadcrumb__link">Лот№14 Транспортное средство Тойота Приус, г/в 2004, г/н А298РА122, цвет...</a>
 							</li>
-							<li class="site-nav__item">
-								<a href="privacy-policy.html" class="site-nav__link">Политика конфиденциальности</a>
-							</li>
-							<li class="site-nav__item">
-								<a href="payment.html" class="site-nav__link">Правила оплаты и возвратов</a>
-							</li>
-							<li class="site-nav__item">
-								<a href="all-categories.html" class="site-nav__link">Все категории лотов</a>
-							</li>
-							<li class="site-nav__item">
-								<a href="regions.html" class="site-nav__link">Торги в регионах России</a>
-							</li>
-							<li class="site-nav__item">
-								<a href="register-am.html" class="site-nav__link">Реестр арбитражных управляющих </a>
-							</li>
-							<li class="site-nav__item">
-								<a href="auction-organizers.html" class="site-nav__link">Организаторы торгов</a>
-							</li>
-							<li class="site-nav__item">
-								<a href="marketplace-bankruptcy.html" class="site-nav__link">Торги по банкротству площадки</a>
-							</li>
-							<li class="site-nav__item">
-								<a href="bankruptcy-register.html" class="site-nav__link">Реестр банкротов (должников) </a>
-							</li>
-							<li class="site-nav__item">
-								<a href="debtor-page.html" class="site-nav__link">Страница должника</a>
-							</li>
-							<li class="site-nav__item">
-								<a href="arbitrator.html" class="site-nav__link">Арбитражный управляющий</a>
-							</li>
-							<li class="site-nav__item">
-								<a href="bid-organizer.html" class="site-nav__link">Организатор торгов</a>
-							</li>
-							<li class="site-nav__item">
-								<a href="marketplace-page.html" class="site-nav__link">Страница торговой площадки</a>
-							</li>
-						</ul>
+						</ol>
 					</nav>
 				</div>
+			</div>
+			<!-- end of breadcrumb -->
+			<!-- lot -->
+			<section class="lot" id="lot">
+				<div class="container">
+					<div class="lot__wrap">
+						<div class="lot__left">
+							<div class="reviews lot__reviews" id="reviews">
+								<div class="section-top">
+									<div class="section-top__group">
+										<h3 class="section-top__title">Отзывы пользователей о других торгах</h3>
+									</div>
+									<div class="section-top__group">
+										<a href="#" class="section-top__btn btn">
+											<span>Добавить отзыв</span>
+											<svg>
+												<use xlink:href="img/sprite.svg#icon-plus"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+								<div class="reviews__scroll custom-scroll" data-simplebar>
+									<div class="reviews__wrapper">
+										<div class="reviews__slide">
+											<div class="reviews__inner">
+												<h3 class="reviews__name">Анна К.</h3>
+												<div class="c-rating reviews__rating" style="--rating: 5;" aria-label="Rating of this product is 5 out of 5."></div>
+											</div>
+											<p class="reviews__description">Спасибо АУ Ковалевой М.А., за полную информацию и ответы на все вопросы. Приобрела отличный лот и с отличной выгодой!!!</p>
+											<span class="reviews__date">30.05.2021 10:05</span>
+											<div class="reviews__likes">
+												<button class="c-btn-liked c-btn-liked--like reviews__thumbs">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-thumbs-up"></use>
+													</svg>
+													<span>369</span>
+												</button>
+												<button class="c-btn-liked c-btn-liked--dislike reviews__thumbs">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-thumbs-down"></use>
+													</svg>
+													<span>23</span>
+												</button>
+											</div>
+										</div>
+										<div class="reviews__slide">
+											<div class="reviews__inner">
+												<h3 class="reviews__name">Анна К.</h3>
+												<div class="c-rating reviews__rating" style="--rating: 5;" aria-label="Rating of this product is 5 out of 5."></div>
+											</div>
+											<p class="reviews__description">Спасибо АУ Ковалевой М.А., за полную информацию и ответы на все вопросы. Приобрела отличный лот и с отличной выгодой!!!</p>
+											<span class="reviews__date">30.05.2021 10:05</span>
+											<div class="reviews__likes">
+												<button class="c-btn-liked c-btn-liked--like reviews__thumbs">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-thumbs-up"></use>
+													</svg>
+													<span>369</span>
+												</button>
+												<button class="c-btn-liked c-btn-liked--dislike reviews__thumbs">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-thumbs-down"></use>
+													</svg>
+													<span>23</span>
+												</button>
+											</div>
+										</div>
+										<div class="reviews__slide">
+											<div class="reviews__inner">
+												<h3 class="reviews__name">Анна К.</h3>
+												<div class="c-rating reviews__rating" style="--rating: 5;" aria-label="Rating of this product is 5 out of 5."></div>
+											</div>
+											<p class="reviews__description">Спасибо АУ Ковалевой М.А., за полную информацию и ответы на все вопросы. Приобрела отличный лот и с отличной выгодой!!!</p>
+											<span class="reviews__date">30.05.2021 10:05</span>
+											<div class="reviews__likes">
+												<button class="c-btn-liked c-btn-liked--like reviews__thumbs">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-thumbs-up"></use>
+													</svg>
+													<span>369</span>
+												</button>
+												<button class="c-btn-liked c-btn-liked--dislike reviews__thumbs">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-thumbs-down"></use>
+													</svg>
+													<span>23</span>
+												</button>
+											</div>
+										</div>
+										<div class="reviews__slide">
+											<div class="reviews__inner">
+												<h3 class="reviews__name">Анна К.</h3>
+												<div class="c-rating reviews__rating" style="--rating: 5;" aria-label="Rating of this product is 5 out of 5."></div>
+											</div>
+											<p class="reviews__description">Спасибо АУ Ковалевой М.А., за полную информацию и ответы на все вопросы. Приобрела отличный лот и с отличной выгодой!!!</p>
+											<span class="reviews__date">30.05.2021 10:05</span>
+											<div class="reviews__likes">
+												<button class="c-btn-liked c-btn-liked--like reviews__thumbs">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-thumbs-up"></use>
+													</svg>
+													<span>369</span>
+												</button>
+												<button class="c-btn-liked c-btn-liked--dislike reviews__thumbs">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-thumbs-down"></use>
+													</svg>
+													<span>23</span>
+												</button>
+											</div>
+										</div>
+										<div class="reviews__slide">
+											<div class="reviews__inner">
+												<h3 class="reviews__name">Анна К.</h3>
+												<div class="c-rating reviews__rating" style="--rating: 5;" aria-label="Rating of this product is 5 out of 5."></div>
+											</div>
+											<p class="reviews__description">Спасибо АУ Ковалевой М.А., за полную информацию и ответы на все вопросы. Приобрела отличный лот и с отличной выгодой!!!</p>
+											<span class="reviews__date">30.05.2021 10:05</span>
+											<div class="reviews__likes">
+												<button class="c-btn-liked c-btn-liked--like reviews__thumbs">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-thumbs-up"></use>
+													</svg>
+													<span>369</span>
+												</button>
+												<button class="c-btn-liked c-btn-liked--dislike reviews__thumbs">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-thumbs-down"></use>
+													</svg>
+													<span>23</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="lot__right"></div>
+					</div>
+				</div>
 			</section>
-			<!-- end of site nav -->
+			<!-- end of lot -->
 		</div>
 		<!-- end of content -->
 		<!-- footer -->
