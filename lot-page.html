@@ -316,24 +316,24 @@
 						<div class="lot__left">
 							<div class="lot__block">
 								<div class="lot__top">
-									<div class="lot__helps">
-										<span class="lot__help">Лот №618715, торги №368836</span>
+									<span class="lot__help">Лот №618715, торги №368836</span>
+									<div class="lot__top-inner">
 										<span class="lot__help">
 											<svg>
 												<use xlink:href="img/sprite.svg#icon-eye"></use>
 											</svg>
 											<span>5 просмотров</span>
 										</span>
-									</div>
-									<div class="c-tags lot__tags">
-										<ul class="c-tags__list">
-											<li class="c-tags__item">
-												<span class="c-tags__value">АУКЦИОН</span>
-											</li>
-											<li class="c-tags__item">
-												<span class="c-tags__value">ФССП</span>
-											</li>
-										</ul>
+										<div class="c-tags lot__tags">
+											<ul class="c-tags__list">
+												<li class="c-tags__item">
+													<span class="c-tags__value">АУКЦИОН</span>
+												</li>
+												<li class="c-tags__item">
+													<span class="c-tags__value">ФССП</span>
+												</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 								<div class="lot__wrapper">
@@ -353,6 +353,16 @@
 												</button>
 												<div class="lot__control-dropdown">
 													<p class="lot__control-text">Понравился лот? Сохраните его в личном кабинете</p>
+												</div>
+											</div>
+											<div class="lot__control-item">
+												<button class="lot__control" aria-label="Заметка к лоту">
+													<svg class="lot__control-icon">
+														<use xlink:href="img/sprite.svg#icon-edit"></use>
+													</svg>
+												</button>
+												<div class="lot__control-dropdown">
+													<p class="lot__control-text">Заметка к лоту</p>
 												</div>
 											</div>
 											<div class="lot__control-item">
@@ -544,12 +554,53 @@
 								<div class="lot-banner lot__banner">
 									<article class="lot-banner__wrapper">
 										<div class="lot-banner__main">
-											<div class="lot-banner__body">
+											<div class="lot-banner__left">
 												<h3 class="lot-banner__title">Вы можете заказать отчёт по объекту недвижимости</h3>
 												<p class="lot-banner__description">Узнайте всю историю объекта в 2 клика. Рекомендуется перед участием в торгах.</p>
+											</div>
+											<div class="lot-banner__right">
+												<a href="#" class="lot-banner__btn btn btn--orange">Заказать отчет за 464 руб.</a>
 												<a href="#" class="lot-banner__link">Подробнее об услуге</a>
 											</div>
-											<a href="#" class="lot-banner__btn btn btn--orange">Заказать отчет за 464 руб.</a>
+										</div>
+										<picture class="lot-banner__img">
+											<img src="img/lot-banner.png" alt="Image">
+										</picture>
+									</article>
+								</div>
+							</div>
+							<div class="lot__block">
+								<div class="lot-banner lot__banner">
+									<article class="lot-banner__wrapper">
+										<div class="lot-banner__main">
+											<div class="lot-banner__left">
+												<h3 class="lot-banner__title">Вы можете заказ отчёт по истории автомобиля из этого лота</h3>
+												<p class="lot-banner__description">Узнайте всю историю авто в 2 клика. Рекомендуется перед участием в торгах.</p>
+												<ul class="lot-banner__list">
+													<li class="lot-banner__list-item">
+														<span class="lot-banner__list-elem">угон, арест, залог</span>
+													</li>
+													<li class="lot-banner__list-item">
+														<span class="lot-banner__list-elem">скрученный пробег</span>
+													</li>
+													<li class="lot-banner__list-item">
+														<span class="lot-banner__list-elem">участие в ДТП</span>
+													</li>
+													<li class="lot-banner__list-item">
+														<span class="lot-banner__list-elem">история владения</span>
+													</li>
+													<li class="lot-banner__list-item">
+														<span class="lot-banner__list-elem">история ТО у дилера</span>
+													</li>
+													<li class="lot-banner__list-item">
+														<span class="lot-banner__list-elem">работа в такси и каршеринге</span>
+													</li>
+												</ul>
+											</div>
+											<div class="lot-banner__right">
+												<a href="#" class="lot-banner__btn btn btn--orange">Заказать отчет за 464 руб.</a>
+												<a href="#" class="lot-banner__link">Подробнее об услуге</a>
+											</div>
 										</div>
 										<picture class="lot-banner__img">
 											<img src="img/lot-banner.png" alt="Image">
@@ -1331,7 +1382,7 @@
 							<div class="lot__block lot__block--lg">
 								<div class="lot-categories lot__categories">
 									<div class="lot-categories__wrap">
-										<h3 class="lot-categories__title">Возможно, вас заинтересуют другие похожие категории</h3>
+										<h3 class="lot-categories__heading">Возможно, вас заинтересуют другие похожие категории</h3>
 										<ul class="lot-categories__list">
 											<li class="lot-categories__item">
 												<a href="#" class="lot-categories__link">Недвижимость</a>
@@ -1372,7 +1423,7 @@
 							</div>
 							<div class="lot__block lot__block--lg">
 								<div class="reviews lot__reviews">
-									<div class="section-top">
+									<div class="section-top section-top--column">
 										<div class="section-top__group">
 											<h3 class="section-top__title">Отзывы пользователей о других торгах</h3>
 										</div>
