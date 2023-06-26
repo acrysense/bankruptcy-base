@@ -482,7 +482,7 @@
 												<span class="lot-info__value">35 200 ₽</span>
 											</div>
 										</div>
-										<a href="#" class="lot-info__btn btn btn--grey">
+										<a href="#" class="lot-info__btn btn btn--grey modal-btn" data-id="modal-buy-lot">
 											<svg>
 												<use xlink:href="img/sprite.svg#icon-info-circle"></use>
 											</svg>
@@ -513,14 +513,14 @@
 									<div class="lot-details__wrapper">
 										<div class="lot-details__fixed">
 											<span class="lot-details__subtitle">Понравился лот?</span>
-											<a href="#" class="lot-details__btn btn btn--orange">
+											<a href="#" class="lot-details__btn btn btn--orange modal-btn" data-id="modal-buy-lot">
 												<svg>
 													<use xlink:href="img/sprite.svg#icon-coins"></use>
 												</svg>
 												<span>Купить с торгов</span>
 											</a>
 										</div>
-										<p class="lot-details__description">Оформите заявку на участие в торгах арестованного имущества за 3 клика. <a href="#">Ознакомиться с условиями</a>.</p>
+										<p class="lot-details__description">Оформите заявку на участие в торгах арестованного имущества за 3 клика. <a href="#" class="modal-btn" data-id="modal-buy-lot">Ознакомиться с условиями</a>.</p>
 									</div>
 								</div>
 							</div>
@@ -662,7 +662,7 @@
 											</ul>
 											<div class="lot-documents__report">
 												<h3 class="lot-documents__description">В лоте найден отчёт, для доступа необходимо <a href="#">зарегистрироваться</a>.</h3>
-												<span class="lot-documents__help">Это полностью бесплатно и открывает <a href="#">много других возможностей</a>.</span>
+												<span class="lot-documents__help">Это полностью бесплатно и открывает <a href="#" class="modal-btn" data-id="modal-registration-benefits">много других возможностей</a>.</span>
 												<ul class="lot-documents__list">
 													<li class="lot-documents__item">
 														<a href="#" class="lot-documents__link disabled">
@@ -1570,7 +1570,7 @@
 										</div>
 										<div class="lot-details__block">
 											<span class="lot-details__subtitle">Понравился лот?</span>
-											<a href="#" class="lot-details__btn btn btn--orange">
+											<a href="#" class="lot-details__btn btn btn--orange modal-btn" data-id="modal-buy-lot">
 												<svg>
 													<use xlink:href="img/sprite.svg#icon-coins"></use>
 												</svg>
@@ -1578,7 +1578,7 @@
 											</a>
 										</div>
 									</div>
-									<p class="lot-details__description">Оформите заявку на участие в торгах арестованного имущества за 3 клика. <a href="#">Ознакомиться с условиями</a>.</p>
+									<p class="lot-details__description">Оформите заявку на участие в торгах арестованного имущества за 3 клика. <a href="#" class="modal-btn" data-id="modal-buy-lot">Ознакомиться с условиями</a>.</p>
 								</div>
 							</div>
 						</div>
@@ -1675,6 +1675,392 @@
 		<!-- end of footer -->
 	</div>
 	<!-- end of wrapper -->
+	<!-- modals -->
+	<div class="modal" id="modal-not-found">
+		<div class="modal__scroll">
+			<div class="modal__wrap">
+				<div class="modal__top modal__top--center">
+					<h3 class="modal__heading">Информация по ИНН / ОГРН</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__main modal__main--left">
+					<h4 class="modal__subtitle modal__subtitle--grey">По такому ИНН / ОГРН информации не найдено</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-only-premium">
+		<div class="modal__scroll">
+			<div class="modal__wrap modal__wrap--sm">
+				<div class="modal__top modal__top--center">
+					<h3 class="modal__heading">Только для Премиума</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__main">
+					<picture class="modal__img">
+						<img src="img/img-notification.svg" alt="Image">
+					</picture>
+					<div class="modal__body">
+						<p class="modal__description">Подписка на изменение статуса лота, как и множество <a href="#">других функций</a>, доступны только в пакете Премиум</p>
+					</div>
+					<div class="modal-notification modal__notification">
+						<h3 class="modal-notification__title">Зачем Вам эта функция?</h3>
+						<p class="modal-notification__description">После подписки на лот система будет уведомлять Вас о каждом изменении статуса лота. Подписка помогает отслеживать десятки лотов без необходимости составлять календари событий и обновлений вручную.</p>
+						<p class="modal-notification__description">Управлять сохранёнными лотами можно в личном кабинете в разделе "Подписки на обновления" → "Лоты".</p>
+					</div>
+					<div class="modal__body">
+						<a href="#" class="modal__btn btn btn--orange">Попробовать за 90 руб.</a>
+						<a href="#" class="modal__btn btn btn--grey modal__close">Позже</a>
+					</div>
+					<div class="modal__bottom">
+						<a href="#" class="modal__more">Что еще даст мне регистрация?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-registration-benefits">
+		<div class="modal__scroll">
+			<div class="modal__wrap">
+				<div class="modal__top modal__top--center">
+					<h3 class="modal__heading">Преимущества регистрации</h3>
+					<h4 class="modal__subtitle">Все эти функции будут доступны совершенно бесплатно</h4>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__wrapper">
+					<div class="registration-benefits">
+						<div class="registration-benefits__wrapper">
+							<article class="registration-benefits__item">
+								<picture class="registration-benefits__img">
+									<img src="img/registration-benefits-01.svg" alt="Image">
+								</picture>
+								<div class="registration-benefits__body">
+									<h3 class="registration-benefits__title">Избранные лоты</h3>
+									<p class="registration-benefits__description">Сохраняйте лоты в Избранное, чтобы не потерять в будущем</p>
+								</div>
+							</article>
+							<article class="registration-benefits__item">
+								<picture class="registration-benefits__img">
+									<img src="img/registration-benefits-02.svg" alt="Image">
+								</picture>
+								<div class="registration-benefits__body">
+									<h3 class="registration-benefits__title">Уведомления</h3>
+									<p class="registration-benefits__description">Получайте уведомления о лотах <br>в Избранном и о других событиях</p>
+								</div>
+							</article>
+							<article class="registration-benefits__item">
+								<picture class="registration-benefits__img">
+									<img src="img/registration-benefits-03.svg" alt="Image">
+								</picture>
+								<div class="registration-benefits__body">
+									<h3 class="registration-benefits__title">Отчет по оценке</h3>
+									<p class="registration-benefits__description">Отчёты по оценке имущества в лоте доступны после регистрации</p>
+								</div>
+							</article>
+							<article class="registration-benefits__item">
+								<picture class="registration-benefits__img">
+									<img src="img/registration-benefits-04.svg" alt="Image">
+								</picture>
+								<div class="registration-benefits__body">
+									<h3 class="registration-benefits__title">Кадастровая информация</h3>
+									<p class="registration-benefits__description">Для недвижимости будут предоставлены данные, включая стоимость и площадь</p>
+								</div>
+							</article>
+						</div>
+						<div class="registration-benefits__controls">
+							<a href="#" class="registration-benefits__btn btn btn--border modal__close">Позже</a>
+							<a href="#" class="registration-benefits__btn btn btn--orange modal__close">Зарегистрироваться</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-registration-required">
+		<div class="modal__scroll">
+			<div class="modal__wrap">
+				<div class="modal__top modal__top--center">
+					<h3 class="modal__heading">Нужна регистрация</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__main">
+					<picture class="modal__img">
+						<img src="img/img-notification.svg" alt="Image">
+					</picture>
+					<div class="modal__body">
+						<p class="modal__description">Мы бы с радостью сохранили этот лот для Вас, но лот должен быть привязан к аккаунту, для этого необходимо <a href="#">войти</a> или <a href="#">зарегистрироваться</a></p>
+						<a href="#" class="modal__btn btn btn--orange">Регистрация</a>
+						<a href="#" class="modal__btn btn btn--grey">Войти</a>
+					</div>
+					<div class="modal__bottom">
+						<a href="#" class="modal__more">Что еще даст мне регистрация?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-buy-lot">
+		<div class="modal__scroll">
+			<div class="modal__wrap">
+				<div class="modal__top modal__top--center">
+					<h3 class="modal__heading">Понравился лот? Поможем выиграть!</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__wrapper">
+					<div class="buy-lot">
+						<h4 class="buy-lot__title">Мы оказываем услуги по полной организации участия <br>в торгах: от сбора документов и подачи заявки до оформления имущества после победы в торгах.</h4>
+						<div class="buy-lot__wrapper">
+							<article class="buy-lot__item">
+								<picture class="buy-lot__img">
+									<img src="img/buy-lot-01.svg" alt="Image">
+								</picture>
+								<div class="buy-lot__body">
+									<h3 class="buy-lot__subtitle">Ваш личный менеджер</h3>
+									<ul class="buy-lot__list">
+										<li class="buy-lot__list-item">
+											<span class="buy-lot__list-elem">Опыт работы более 10 лет</span>
+										</li>
+										<li class="buy-lot__list-item">
+											<span class="buy-lot__list-elem">Консультации по любым вопросам</span>
+										</li>
+										<li class="buy-lot__list-item">
+											<span class="buy-lot__list-elem">Полное ведение участия в торгах</span>
+										</li>
+									</ul>
+								</div>
+							</article>
+							<article class="buy-lot__item">
+								<picture class="buy-lot__img">
+									<img src="img/buy-lot-02.svg" alt="Image">
+								</picture>
+								<div class="buy-lot__body">
+									<h3 class="buy-lot__subtitle">Экономия денег и&nbsp;времени</h3>
+									<ul class="buy-lot__list">
+										<li class="buy-lot__list-item">
+											<span class="buy-lot__list-elem">Не требуется ЭЦП (экономите до 10.000 рублей)</span>
+										</li>
+										<li class="buy-lot__list-item">
+											<span class="buy-lot__list-elem">Не требуется регистрация на ЭТП (занимает до 72 часов)</span>
+										</li>
+									</ul>
+								</div>
+							</article>
+							<article class="buy-lot__item">
+								<picture class="buy-lot__img">
+									<img src="img/buy-lot-03.svg" alt="Image">
+								</picture>
+								<div class="buy-lot__body">
+									<h3 class="buy-lot__subtitle">Ваш личный менеджер</h3>
+									<ul class="buy-lot__list">
+										<li class="buy-lot__list-item">
+											<span class="buy-lot__list-elem">Сбор полного пакета необходимых документов</span>
+										</li>
+										<li class="buy-lot__list-item">
+											<span class="buy-lot__list-elem">Корректно оформленная заявка</span>
+										</li>
+									</ul>
+								</div>
+							</article>
+						</div>
+						<div class="buy-lot__controls">
+							<a href="#" class="buy-lot__btn btn btn--orange">Узнать стоимость</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-how-to-bid">
+		<div class="modal__scroll">
+			<div class="modal__wrap">
+				<div class="modal__top modal__top--center">
+					<h3 class="modal__heading">Как принять участие в торгах?</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__wrapper">
+					<div class="how-to-bid">
+						<h4 class="how-to-bid__title">Мы оказываем услуги по полной организации участия <br>в торгах: от сбора документов и подачи заявки до оформления имущества после победы в торгах.</h4>
+						<div class="how-to-bid__wrapper">
+							<article class="how-to-bid__item">
+								<picture class="how-to-bid__img">
+									<img src="img/how-to-bid-01.svg" alt="Image">
+								</picture>
+								<h3 class="how-to-bid__subtitle">Выберите лот в <br>каталоге</h3>
+							</article>
+							<article class="how-to-bid__item">
+								<picture class="how-to-bid__img">
+									<img src="img/how-to-bid-02.svg" alt="Image">
+								</picture>
+								<h3 class="how-to-bid__subtitle">Оформите заявку <br>на сайте</h3>
+							</article>
+							<article class="how-to-bid__item">
+								<picture class="how-to-bid__img">
+									<img src="img/how-to-bid-03.svg" alt="Image">
+								</picture>
+								<h3 class="how-to-bid__subtitle">Получите личного менеджера для <br>участия в торгах</h3>
+							</article>
+						</div>
+						<div class="how-to-bid__controls">
+							<a href="#" class="how-to-bid__btn btn btn--orange">Выбрать лот</a>
+							<a href="#" class="how-to-bid__btn btn btn--border">Узнать подробнее об услугах</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-emails-send">
+		<div class="modal__scroll">
+			<div class="modal__wrap">
+				<div class="modal__main">
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+					<div class="modal__body">
+						<h3 class="modal__title">Оставьте вашу почту</h3>
+						<p class="modal__description">Созданный заказ будет прикреплен к указанной почте</p>
+						<form action="#" class="modal-form modal__form">
+							<div class="input-group modal-form__input">
+								<input type="email" class="input-group__input" placeholder="Введите Email">
+								<span class="input-group__error">Сообщение об ошибке</span>
+							</div>
+							<div class="modal-form__controls">
+								<a href="#" class="modal-form__btn btn btn--border modal__close">Отмена</a>
+								<a href="#" class="modal-form__btn btn btn--orange">Продолжить</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-emails-offers">
+		<div class="modal__scroll">
+			<div class="modal__wrap">
+				<div class="modal__top modal__top--center">
+					<h3 class="modal__heading">Почта для предложений</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__main">
+					<picture class="modal__img modal__img--sm">
+						<img src="img/img-emails-offers.svg" alt="Image">
+					</picture>
+					<div class="modal__body">
+						<p class="modal__description">По любым формам сотрудничества <br>и рекламным предложениям пишите, пожалуйста, на почту</p>
+						<a href="mailto:info@bankrotbaza.ru" class="modal__link">info@bankrotbaza.ru</a>
+						<a href="#" class="modal__btn btn btn--grey modal__close">Ок, спасибо</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-request-ok">
+		<div class="modal__scroll">
+			<div class="modal__wrap">
+				<div class="modal__main">
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+					<picture class="modal__img">
+						<img src="img/img-app.svg" alt="Image">
+					</picture>
+					<div class="modal__body">
+						<h3 class="modal__title">Спасибо за заявку!</h3>
+						<p class="modal__description">Наш менеджер свяжется с вами в ближайшее время для уточнения деталей.</p>
+						<a href="#" class="modal__btn btn btn--orange modal__close">Отлично, спасибо!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-request-send">
+		<div class="modal__scroll">
+			<div class="modal__wrap">
+				<div class="modal__top modal__top--center">
+					<h3 class="modal__heading">Ваш запрос отправлен</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__main">
+					<picture class="modal__img modal__img--sm">
+						<img src="img/img-emails-send.svg" alt="Image">
+					</picture>
+					<div class="modal__body">
+						<p class="modal__description">Как только свежая информация потсупит от гос.органов, мы сразу уведомим вас на указанный email</p>
+						<a href="#" class="modal__btn btn btn--grey modal__close">Ок, спасибо</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-save-feedback">
+		<div class="modal__scroll">
+			<div class="modal__wrap">
+				<div class="modal__main">
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+					<picture class="modal__img">
+						<img src="img/img-save.svg" alt="Image">
+					</picture>
+					<div class="modal__body">
+						<h3 class="modal__title">Сохранено</h3>
+						<p class="modal__description">Ваш отзыв будет опубликован после модерации</p>
+						<a href="#" class="modal__btn btn btn--orange modal__close">Отлично, спасибо!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal-overlay" id="modal-overlay"></div>
+	<!-- end of modals -->
 	<!-- scripts -->
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
