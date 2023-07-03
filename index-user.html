@@ -357,13 +357,13 @@
 							</div>
 							<div class="main-search-form__right">
 								<div class="main-search__links main-search__links--desktop main-search-form__links">
-									<a href="#" class="main-search__link">
+									<a href="#" class="main-search__link modal-btn" data-id="modal-region-selection">
 										<span>По всей России</span>
 										<svg>
 											<use xlink:href="img/sprite.svg#icon-view-all-up"></use>
 										</svg>
 									</a>
-									<a href="#" class="main-search__link">
+									<a href="#" class="main-search__link modal-btn" data-id="modal-category-selection">
 										<span>Все категории</span>
 										<svg>
 											<use xlink:href="img/sprite.svg#icon-view-all-up"></use>
@@ -5419,7 +5419,7 @@
 							<h3 class="section-top__title">Отзывы пользователей о других торгах</h3>
 						</div>
 						<div class="section-top__group">
-							<a href="#" class="section-top__btn btn">
+							<a href="#" class="section-top__btn btn modal-btn" data-id="modal-reviews-add">
 								<span>Добавить отзыв</span>
 								<svg>
 									<use xlink:href="img/sprite.svg#icon-plus"></use>
@@ -5561,7 +5561,7 @@
 							<div class="footer__nav">
 								<ul class="footer__list">
 									<li class="footer__item">
-										<a href="#" class="footer__link">Поддержка пользователей</a>
+										<a href="#" class="footer__link modal-btn" data-id="modal-help-request">Поддержка пользователей</a>
 									</li>
 									<li class="footer__item">
 										<a href="#" class="footer__link">Рекламодателям</a>
@@ -5634,151 +5634,586 @@
 	</div>
 	<!-- end of wrapper -->
 	<!-- modals -->
-	<div class="modal" id="modal-not-found">
-		<div class="modal__scroll">
-			<div class="modal__wrap">
-				<div class="modal__top modal__top--center">
-					<h3 class="modal__heading">Информация по ИНН / ОГРН</h3>
+	<div class="modal" id="modal-cadastral-info">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__top">
+					<h3 class="modal__heading">Кадастровая информация</h3>
 					<button class="modal__close-btn modal__close" aria-label="Закрыть">
 						<svg class="modal__close-icon">
 							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
 						</svg>
 					</button>
 				</div>
-				<div class="modal__main modal__main--left">
-					<h4 class="modal__subtitle modal__subtitle--grey">По такому ИНН / ОГРН информации не найдено</h4>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="modal" id="modal-only-premium">
-		<div class="modal__scroll">
-			<div class="modal__wrap modal__wrap--sm">
-				<div class="modal__top modal__top--center">
-					<h3 class="modal__heading">Только для Премиума</h3>
-					<button class="modal__close-btn modal__close" aria-label="Закрыть">
-						<svg class="modal__close-icon">
-							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-						</svg>
-					</button>
-				</div>
-				<div class="modal__main">
-					<picture class="modal__img">
-						<img src="img/img-notification.svg" alt="Image">
-					</picture>
-					<div class="modal__body">
-						<p class="modal__description">Подписка на изменение статуса лота, как и множество <a href="#">других функций</a>, доступны только в пакете Премиум</p>
-					</div>
-					<div class="modal-notification modal__notification">
-						<h3 class="modal-notification__title">Зачем Вам эта функция?</h3>
-						<p class="modal-notification__description">После подписки на лот система будет уведомлять Вас о каждом изменении статуса лота. Подписка помогает отслеживать десятки лотов без необходимости составлять календари событий и обновлений вручную.</p>
-						<p class="modal-notification__description">Управлять сохранёнными лотами можно в личном кабинете в разделе "Подписки на обновления" → "Лоты".</p>
-					</div>
-					<div class="modal__body">
-						<a href="#" class="modal__btn btn btn--orange">Попробовать за 90 руб.</a>
-						<a href="#" class="modal__btn btn btn--grey modal__close">Позже</a>
-					</div>
-					<div class="modal__bottom">
-						<a href="#" class="modal__more">Что еще даст мне регистрация?</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="modal__overlay"></div>
-	</div>
-	<div class="modal" id="modal-registration-benefits">
-		<div class="modal__scroll">
-			<div class="modal__wrap">
-				<div class="modal__top modal__top--center">
-					<h3 class="modal__heading">Преимущества регистрации</h3>
-					<h4 class="modal__subtitle">Все эти функции будут доступны совершенно бесплатно</h4>
-					<button class="modal__close-btn modal__close" aria-label="Закрыть">
-						<svg class="modal__close-icon">
-							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-						</svg>
-					</button>
-				</div>
-				<div class="modal__wrapper">
-					<div class="registration-benefits">
-						<div class="registration-benefits__wrapper">
-							<article class="registration-benefits__item">
-								<picture class="registration-benefits__img">
-									<img src="img/registration-benefits-01.svg" alt="Image">
-								</picture>
-								<div class="registration-benefits__body">
-									<h3 class="registration-benefits__title">Избранные лоты</h3>
-									<p class="registration-benefits__description">Сохраняйте лоты в Избранное, чтобы не потерять в будущем</p>
-								</div>
-							</article>
-							<article class="registration-benefits__item">
-								<picture class="registration-benefits__img">
-									<img src="img/registration-benefits-02.svg" alt="Image">
-								</picture>
-								<div class="registration-benefits__body">
-									<h3 class="registration-benefits__title">Уведомления</h3>
-									<p class="registration-benefits__description">Получайте уведомления о лотах <br>в Избранном и о других событиях</p>
-								</div>
-							</article>
-							<article class="registration-benefits__item">
-								<picture class="registration-benefits__img">
-									<img src="img/registration-benefits-03.svg" alt="Image">
-								</picture>
-								<div class="registration-benefits__body">
-									<h3 class="registration-benefits__title">Отчет по оценке</h3>
-									<p class="registration-benefits__description">Отчёты по оценке имущества в лоте доступны после регистрации</p>
-								</div>
-							</article>
-							<article class="registration-benefits__item">
-								<picture class="registration-benefits__img">
-									<img src="img/registration-benefits-04.svg" alt="Image">
-								</picture>
-								<div class="registration-benefits__body">
-									<h3 class="registration-benefits__title">Кадастровая информация</h3>
-									<p class="registration-benefits__description">Для недвижимости будут предоставлены данные, включая стоимость и площадь</p>
-								</div>
-							</article>
+				<div class="modal__content">
+					<div class="cadastral-info">
+						<div class="cadastral-info__scroll custom-scroll" data-simplebar>
+							<ul class="cadastral-info__tabs">
+								<li class="cadastral-info__item is--active">
+									<button class="cadastral-info__tab">3454354353453454353</button>
+								</li>
+								<li class="cadastral-info__item">
+									<button class="cadastral-info__tab">3454354353453454353</button>
+								</li>
+								<li class="cadastral-info__item">
+									<button class="cadastral-info__tab">3454354353453454353</button>
+								</li>
+							</ul>
 						</div>
-						<div class="registration-benefits__controls">
-							<a href="#" class="registration-benefits__btn btn btn--border modal__close">Позже</a>
-							<a href="#" class="registration-benefits__btn btn btn--orange modal__close">Зарегистрироваться</a>
+						<div class="cadastral-info__wrapper is--active">
+							<div class="cadastral-info__block">
+								<h3 class="cadastral-info__title">Общая информация</h3>
+								<div class="cadastral-info__details">
+									<div class="cadastral-info__inner">
+										<span class="cadastral-info__subtitle">Адрес</span>
+										<div class="cadastral-info__group">
+											<span class="cadastral-info__value">Красноярский край, Саянский р-н, д. Орловка, ул. Новая, д. 5, кв. 1</span>
+										</div>
+									</div>
+									<div class="cadastral-info__inner">
+										<span class="cadastral-info__subtitle">Кадастровый номер</span>
+										<div class="cadastral-info__group">
+											<span class="cadastral-info__value">3454354353453454353</span>
+										</div>
+									</div>
+									<div class="cadastral-info__inner">
+										<span class="cadastral-info__subtitle">Наименование</span>
+										<div class="cadastral-info__group">
+											<span class="cadastral-info__value">Квартира</span>
+										</div>
+									</div>
+									<div class="cadastral-info__inner">
+										<span class="cadastral-info__subtitle">Кадастровая стоимость</span>
+										<div class="cadastral-info__group">
+											<span class="cadastral-info__value">847 742 руб. на 03.02.2012 на 03.02.2012</span>
+										</div>
+									</div>
+									<div class="cadastral-info__inner">
+										<span class="cadastral-info__subtitle">Площадь</span>
+										<div class="cadastral-info__group">
+											<span class="cadastral-info__value">78 кв. м</span>
+										</div>
+									</div>
+									<div class="cadastral-info__inner">
+										<span class="cadastral-info__subtitle">Исполнитель</span>
+										<div class="cadastral-info__group">
+											<span class="cadastral-info__value">Саянское отделение филиала ФГУП "Ростехинвентаризация - Федеральное БТИ" по Красноярскому краю</span>
+										</div>
+									</div>
+									<div class="cadastral-info__inner">
+										<span class="cadastral-info__subtitle">Дата постановки на учет</span>
+										<div class="cadastral-info__group">
+											<span class="cadastral-info__value">11.03.2010</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cadastral-info__block">
+								<h3 class="cadastral-info__title">Права</h3>
+								<div class="c-prompt c-prompt--sm c-prompt--dark cadastral-info__notification">
+									<svg class="c-prompt__icon">
+										<use xlink:href="img/sprite.svg#icon-info-circle"></use>
+									</svg>
+									<p class="c-prompt__text">Некоторые документы доступны только для <a href="#" class="modal-btn" data-id="modal-tariff-selection">Премиум</a> тарифа</p>
+								</div>
+								<div class="cadastral-info__details">
+									<div class="cadastral-info__inner">
+										<span class="cadastral-info__subtitle">Права на объект</span>
+										<div class="cadastral-info__group">
+											<div class="c-hidden-value cadastral-info__hidden-value">
+												<div class="c-hidden-value__wrapper">
+													<span class="c-hidden-value__title">Вид права:</span>
+													<a href="#" class="c-hidden-value__inner modal-btn" data-id="modal-tariff-selection">
+														<svg class="c-hidden-value__icon">
+															<use xlink:href="img/sprite.svg#icon-lock"></use>
+														</svg>
+														<span class="c-hidden-value__elem">********* **** ****</span>
+													</a>
+												</div>
+											</div>
+											<div class="c-hidden-value cadastral-info__hidden-value">
+												<div class="c-hidden-value__wrapper">
+													<span class="c-hidden-value__title">Регистрационный номер:</span>
+													<a href="#" class="c-hidden-value__inner modal-btn" data-id="modal-tariff-selection">
+														<svg class="c-hidden-value__icon">
+															<use xlink:href="img/sprite.svg#icon-lock"></use>
+														</svg>
+														<span class="c-hidden-value__elem">********* **** ****</span>
+													</a>
+												</div>
+											</div>
+											<div class="c-hidden-value cadastral-info__hidden-value">
+												<div class="c-hidden-value__wrapper">
+													<span class="c-hidden-value__title">Дата появления права:</span>
+													<a href="#" class="c-hidden-value__inner modal-btn" data-id="modal-tariff-selection">
+														<svg class="c-hidden-value__icon">
+															<use xlink:href="img/sprite.svg#icon-lock"></use>
+														</svg>
+														<span class="c-hidden-value__elem">********* **** ****</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cadastral-info__inner">
+										<span class="cadastral-info__subtitle">Актуально на</span>
+										<div class="cadastral-info__group">
+											<span class="cadastral-info__value">17.03.23</span>
+											<a href="#" class="cadastral-info__btn btn btn--border modal-btn" data-id="modal-emails-need">Запросить актуальную информацию</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="cadastral-info__help">*Таблица выше носит справочный характер, гарантированно актуальные данные отображаются только в <a href="#">отчётах по объекту недвижимости</a></p>
 						</div>
+						<div class="cadastral-info__wrapper"></div>
+						<div class="cadastral-info__wrapper"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="modal__overlay"></div>
 	</div>
-	<div class="modal" id="modal-registration-required">
-		<div class="modal__scroll">
-			<div class="modal__wrap">
-				<div class="modal__top modal__top--center">
-					<h3 class="modal__heading">Нужна регистрация</h3>
+	<div class="modal" id="modal-report-order">
+		<div class="modal__wrap modal__wrap--md">
+			<div class="modal__wrapper">
+				<div class="modal__top">
+					<h3 class="modal__heading">Документы по к/н 24:50:0000000:32442</h3>
 					<button class="modal__close-btn modal__close" aria-label="Закрыть">
 						<svg class="modal__close-icon">
 							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
 						</svg>
 					</button>
 				</div>
-				<div class="modal__main">
-					<picture class="modal__img">
-						<img src="img/img-notification.svg" alt="Image">
-					</picture>
-					<div class="modal__body">
-						<p class="modal__description">Мы бы с радостью сохранили этот лот для Вас, но лот должен быть привязан к аккаунту, для этого необходимо <a href="#">войти</a> или <a href="#">зарегистрироваться</a></p>
-						<a href="#" class="modal__btn btn btn--orange">Регистрация</a>
-						<a href="#" class="modal__btn btn btn--grey">Войти</a>
-					</div>
-					<div class="modal__bottom">
-						<a href="#" class="modal__more">Что еще даст мне регистрация?</a>
+				<div class="modal__content">
+					<div class="report-order">
+						<div class="report-order__wrapper">
+							<label for="report-order-01" class="report-order__item">
+								<div class="report-order__item-top">На 20% выгоднее</div>
+								<div class="report-order__item-inner">
+									<div class="report-order__left">
+										<div class="report-order__controls">
+											<input type="radio" id="report-order-01" class="report-order__input" name="report-order" checked>
+											<span class="report-order__checked"></span>
+										</div>
+										<div class="report-order__body">
+											<span class="report-order__title">Отчёт об изменении прав</span>
+											<div class="report-order__list">
+												<div class="report-order__list-item">
+													<span class="report-order__list-elem">гарантируется полный возврат денежных средств в случае тех. сбоев</span>
+												</div>
+												<div class="report-order__list-item">
+													<span class="report-order__list-elem">в заказе будет PDF файл</span>
+												</div>
+												<div class="report-order__list-item">
+													<span class="report-order__list-elem">изготовление от 10 мин.</span>
+												</div>
+											</div>
+											<div class="report-order__links">
+												<a href="#" class="report-order__link">Пример</a>
+												<a href="#" class="report-order__link">Подробнее об услуге</a>
+											</div>
+										</div>
+									</div>
+									<div class="report-order__right">
+										<span class="report-order__price">464 руб.</span>
+										<span class="report-order__discount">вместо 590 руб.</span>
+									</div>
+								</div>
+							</label>
+							<label for="report-order-02" class="report-order__item">
+								<div class="report-order__item-inner">
+									<div class="report-order__left">
+										<div class="report-order__controls">
+											<input type="radio" id="report-order-02" class="report-order__input" name="report-order">
+											<span class="report-order__checked"></span>
+										</div>
+										<div class="report-order__body">
+											<span class="report-order__title">Отчёт об основных характеристиках</span>
+											<div class="report-order__list">
+												<div class="report-order__list-item">
+													<span class="report-order__list-elem">гарантируется полный возврат денежных средств в случае тех. сбоев</span>
+												</div>
+												<div class="report-order__list-item">
+													<span class="report-order__list-elem">в заказе будет PDF файл</span>
+												</div>
+												<div class="report-order__list-item">
+													<span class="report-order__list-elem">изготовление от 10 мин.</span>
+												</div>
+											</div>
+											<div class="report-order__links">
+												<a href="#" class="report-order__link">Пример</a>
+												<a href="#" class="report-order__link">Подробнее об услуге</a>
+											</div>
+										</div>
+									</div>
+									<div class="report-order__right">
+										<span class="report-order__price">290 руб.</span>
+									</div>
+								</div>
+							</label>
+							<label for="report-order-03" class="report-order__item">
+								<div class="report-order__item-inner">
+									<div class="report-order__left">
+										<div class="report-order__controls">
+											<input type="radio" id="report-order-03" class="report-order__input" name="report-order">
+											<span class="report-order__checked"></span>
+										</div>
+										<div class="report-order__body">
+											<span class="report-order__title">Отчёт об основных характеристиках</span>
+											<div class="report-order__list">
+												<div class="report-order__list-item">
+													<span class="report-order__list-elem">гарантируется полный возврат денежных средств в случае тех. сбоев</span>
+												</div>
+												<div class="report-order__list-item">
+													<span class="report-order__list-elem">в заказе будет PDF файл</span>
+												</div>
+												<div class="report-order__list-item">
+													<span class="report-order__list-elem">изготовление от 10 мин.</span>
+												</div>
+											</div>
+											<div class="report-order__links">
+												<a href="#" class="report-order__link">Пример</a>
+												<a href="#" class="report-order__link">Подробнее об услуге</a>
+											</div>
+										</div>
+									</div>
+									<div class="report-order__right">
+										<span class="report-order__price">290 руб.</span>
+									</div>
+								</div>
+							</label>
+						</div>
+						<div class="report-order__inner">
+							<a href="#" class="report-order__link">Какая информация будет в отчётах?</a>
+							<a href="#" class="report-order__link">Зачем заказывать отчет?</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-tariff-selection">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__top">
+					<h3 class="modal__heading">Выбор тарифа</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__content">
+					<div class="tariff-selection">
+						<div class="tariff-selection__wrapper">
+							<label for="tariff-selection-01" class="tariff-selection__item">
+								<div class="tariff-selection__left">
+									<div class="tariff-selection__controls">
+										<input type="radio" id="tariff-selection-01" class="tariff-selection__input" name="tariff-selection" checked>
+										<span class="tariff-selection__checked"></span>
+									</div>
+									<div class="tariff-selection__body">
+										<span class="tariff-selection__title">Премиум доступ на год</span>
+										<div class="tariff-selection__list">
+											<div class="tariff-selection__list-item">
+												<span class="tariff-selection__list-elem">30 отчётов по кад.номеру включено</span>
+											</div>
+											<div class="tariff-selection__list-item">
+												<span class="tariff-selection__list-elem">5 отчётов по VIN авто включено</span>
+											</div>
+											<div class="tariff-selection__list-item">
+												<span class="tariff-selection__list-elem">Бесплатные выписки из ЕГРЮЛ</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tariff-selection__right">
+									<span class="tariff-selection__price">3 590 руб.</span>
+									<span class="tariff-selection__help">9,8 руб. / день</span>
+								</div>
+							</label>
+							<label for="tariff-selection-02" class="tariff-selection__item">
+								<div class="tariff-selection__left">
+									<div class="tariff-selection__controls">
+										<input type="radio" id="tariff-selection-02" class="tariff-selection__input" name="tariff-selection">
+										<span class="tariff-selection__checked"></span>
+									</div>
+									<div class="tariff-selection__body">
+										<span class="tariff-selection__title">Премиум доступ на 30 дней</span>
+										<div class="tariff-selection__list">
+											<div class="tariff-selection__list-item">
+												<span class="tariff-selection__list-elem">3 отчёта по кад.номеру включено</span>
+											</div>
+											<div class="tariff-selection__list-item">
+												<span class="tariff-selection__list-elem"> 1 отчёт по VIN авто включен</span>
+											</div>
+											<div class="tariff-selection__list-item">
+												<span class="tariff-selection__list-elem">Бесплатные выписки из ЕГРЮЛ</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tariff-selection__right">
+									<span class="tariff-selection__price">490 руб.</span>
+									<span class="tariff-selection__help">16,3 руб. / день</span>
+								</div>
+							</label>
+							<label for="tariff-selection-03" class="tariff-selection__item">
+								<div class="tariff-selection__left">
+									<div class="tariff-selection__controls">
+										<input type="radio" id="tariff-selection-03" class="tariff-selection__input" name="tariff-selection">
+										<span class="tariff-selection__checked"></span>
+									</div>
+									<div class="tariff-selection__body">
+										<span class="tariff-selection__title">Премиум доступ на 24 часа</span>
+									</div>
+								</div>
+								<div class="tariff-selection__right">
+									<span class="tariff-selection__price">90 руб.</span>
+								</div>
+							</label>
+						</div>
+						<a href="#" class="tariff-selection__link modal-btn" data-id="modal-premium-features">Возможности на Премиуме</a>
+						<a href="#" class="tariff-selection__btn btn modal-btn" data-id="modal-emails-send">Оформить</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-premium-features">
+		<div class="modal__wrap modal__wrap--sm">
+			<div class="modal__wrapper">
+				<div class="modal__top modal__top--desktop-center">
+					<h3 class="modal__heading">Возможности на премиуме</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__content">
+					<div class="premium-features">
+						<div class="premium-features__main">
+							<table class="premium-features__table">
+								<thead class="premium-features__thead">
+									<tr class="premium-features__tr">
+										<th class="premium-features__th">Функционал</th>
+										<th class="premium-features__th">Базовый</th>
+										<th class="premium-features__th">Премиум</th>
+									</tr>
+								</thead>
+								<tbody class="premium-features__tbody">
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Поиск лотов по 50 ЭТП</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Фото и документы лотао</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Отчеты по лоту</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Лот на карте</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Поиск по 10 параметрам</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">
+											<a href="#" class="premium-features__link">Кадастр. инфо в лоте</a>
+										</td>
+										<td class="premium-features__td">Частично</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Реестры должников, АУ, организаторов</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Открытые контакты всех участников</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Открытые ссылки на ЭТП</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">
+											<a href="#" class="premium-features__link">Кадастр. инфо в лоте</a>
+										</td>
+										<td class="premium-features__td">До 10 лотов</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">
+											<a href="#" class="premium-features__link">Заметки к лотам</a>
+										</td>
+										<td class="premium-features__td">До 10 лотов</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">
+											<a href="#" class="premium-features__link">Подписка на события лота</a>
+										</td>
+										<td class="premium-features__td">До 10 лотов</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Подписка на поиск</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Подписка на должника</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Подписка на поиск</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Подписка на АУ</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Подписка на организатора</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Отчёты по кад.номеру</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Отчёты по кад.номеру</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status"></span>
+										</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">
+											<a href="#" class="premium-features__link">Подписка на события лота</a>
+										</td>
+										<td class="premium-features__td">До 10 лотов</td>
+										<td class="premium-features__td">
+											<span class="premium-features__status is--done"></span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Отчёты по VIN авто</td>
+										<td class="premium-features__td">290 руб.</td>
+										<td class="premium-features__td">
+											<span class="premium-features__prompt">1-5 включено</span>
+										</td>
+									</tr>
+									<tr class="premium-features__tr">
+										<td class="premium-features__td">Выписки из ЕГРЮЛ/ЕГРИП</td>
+										<td class="premium-features__td">290 руб.</td>
+										<td class="premium-features__td">
+											<span class="premium-features__prompt">1-5 включено</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="premium-features__bottom">
+							<a href="#" class="premium-features__btn btn btn--orange modal-btn" data-id="modal-tariff-selection">К выбору тарифов</a>
+							<div class="premium-features__block">
+								<a href="#" class="premium-features__more">Что еще даст мне регистрация?</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="modal" id="modal-buy-lot">
-		<div class="modal__scroll">
-			<div class="modal__wrap">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
 				<div class="modal__top modal__top--center">
 					<h3 class="modal__heading">Понравился лот? Поможем выиграть!</h3>
 					<button class="modal__close-btn modal__close" aria-label="Закрыть">
@@ -5787,9 +6222,9 @@
 						</svg>
 					</button>
 				</div>
-				<div class="modal__wrapper">
+				<div class="modal__content">
 					<div class="buy-lot">
-						<h4 class="buy-lot__title">Мы оказываем услуги по полной организации участия <br>в торгах: от сбора документов и подачи заявки до оформления имущества после победы в торгах.</h4>
+						<h4 class="buy-lot__title">Мы оказываем услуги по полной организации участия в торгах: от сбора документов и подачи заявки до оформления имущества после победы в торгах.</h4>
 						<div class="buy-lot__wrapper">
 							<article class="buy-lot__item">
 								<picture class="buy-lot__img">
@@ -5843,18 +6278,109 @@
 								</div>
 							</article>
 						</div>
+						<div class="plan-edge buy-lot__plan">
+							<button class="plan-edge__trigger">
+								<span>Поэтапный план работ</span>
+								<svg>
+									<use xlink:href="img/sprite.svg#icon-caret"></use>
+								</svg>
+							</button>
+							<div class="plan-edge__dropdown">
+								<div class="plan-edge__wrapper">
+									<article class="plan-edge__item">
+										<p class="plan-edge__description">После заявки вам выделяется личный менеджер</p>
+									</article>
+									<article class="plan-edge__item">
+										<p class="plan-edge__description">Менеджер изучает документацию торгов, рассказывает вам о нюансах</p>
+									</article>
+									<article class="plan-edge__item">
+										<p class="plan-edge__description">Заключаем с вами агентский договор на комплекс работ</p>
+									</article>
+									<article class="plan-edge__item">
+										<p class="plan-edge__description">Собираем пакет документов, оформляем и подаем заявку</p>
+									</article>
+									<article class="plan-edge__item">
+										<p class="plan-edge__description">Следим за изменениями, участвуем непосредственно в торгах</p>
+									</article>
+									<article class="plan-edge__item">
+										<p class="plan-edge__description">Оформляем документы по результатам торгов</p>
+									</article>
+								</div>
+								<p class="plan-edge__help">Менеджер будет держать вас в курсе дела, при необходимости объясняя все рабочие моменты</p>
+							</div>
+						</div>
 						<div class="buy-lot__controls">
-							<a href="#" class="buy-lot__btn btn btn--orange">Узнать стоимость</a>
+							<a href="#" class="buy-lot__btn btn btn--orange modal-btn" data-id="modal-make-request">Узнать стоимость</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-registration-benefits">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__top modal__top--desktop-center">
+					<h3 class="modal__heading">Преимущества регистрации</h3>
+					<h4 class="modal__subtitle">Все эти функции будут доступны совершенно бесплатно</h4>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__content">
+					<div class="registration-benefits">
+						<div class="registration-benefits__wrapper">
+							<article class="registration-benefits__item">
+								<picture class="registration-benefits__img">
+									<img src="img/registration-benefits-01.svg" alt="Image">
+								</picture>
+								<div class="registration-benefits__body">
+									<h3 class="registration-benefits__title">Избранные лоты</h3>
+									<p class="registration-benefits__description">Сохраняйте лоты в Избранное, чтобы не потерять в будущем</p>
+								</div>
+							</article>
+							<article class="registration-benefits__item">
+								<picture class="registration-benefits__img">
+									<img src="img/registration-benefits-02.svg" alt="Image">
+								</picture>
+								<div class="registration-benefits__body">
+									<h3 class="registration-benefits__title">Уведомления</h3>
+									<p class="registration-benefits__description">Получайте уведомления о лотах <br>в Избранном и о других событиях</p>
+								</div>
+							</article>
+							<article class="registration-benefits__item">
+								<picture class="registration-benefits__img">
+									<img src="img/registration-benefits-03.svg" alt="Image">
+								</picture>
+								<div class="registration-benefits__body">
+									<h3 class="registration-benefits__title">Отчет по оценке</h3>
+									<p class="registration-benefits__description">Отчёты по оценке имущества в лоте доступны после регистрации</p>
+								</div>
+							</article>
+							<article class="registration-benefits__item">
+								<picture class="registration-benefits__img">
+									<img src="img/registration-benefits-04.svg" alt="Image">
+								</picture>
+								<div class="registration-benefits__body">
+									<h3 class="registration-benefits__title">Кадастровая информация</h3>
+									<p class="registration-benefits__description">Для недвижимости будут предоставлены данные, включая стоимость и площадь</p>
+								</div>
+							</article>
+						</div>
+						<div class="registration-benefits__controls">
+							<a href="#" class="registration-benefits__btn btn btn--orange">Зарегистрироваться</a>
+							<a href="#" class="registration-benefits__btn btn btn--border modal__close">Позже</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="modal" id="modal-how-to-bid">
-		<div class="modal__scroll">
-			<div class="modal__wrap">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
 				<div class="modal__top modal__top--center">
 					<h3 class="modal__heading">Как принять участие в торгах?</h3>
 					<button class="modal__close-btn modal__close" aria-label="Закрыть">
@@ -5863,7 +6389,7 @@
 						</svg>
 					</button>
 				</div>
-				<div class="modal__wrapper">
+				<div class="modal__content">
 					<div class="how-to-bid">
 						<h4 class="how-to-bid__title">Мы оказываем услуги по полной организации участия <br>в торгах: от сбора документов и подачи заявки до оформления имущества после победы в торгах.</h4>
 						<div class="how-to-bid__wrapper">
@@ -5894,65 +6420,221 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal__overlay"></div>
 	</div>
-	<div class="modal" id="modal-emails-send">
-		<div class="modal__scroll">
-			<div class="modal__wrap">
-				<div class="modal__main">
-					<button class="modal__close-btn modal__close" aria-label="Закрыть">
-						<svg class="modal__close-icon">
-							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
-						</svg>
-					</button>
-					<div class="modal__body">
-						<h3 class="modal__title">Оставьте вашу почту</h3>
-						<p class="modal__description">Созданный заказ будет прикреплен к указанной почте</p>
-						<form action="#" class="modal-form modal__form">
-							<div class="input-group modal-form__input">
-								<input type="email" class="input-group__input" placeholder="Введите Email">
-								<span class="input-group__error">Сообщение об ошибке</span>
-							</div>
-							<div class="modal-form__controls">
-								<a href="#" class="modal-form__btn btn btn--border modal__close">Отмена</a>
-								<a href="#" class="modal-form__btn btn btn--orange">Продолжить</a>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="modal__overlay"></div>
-	</div>
-	<div class="modal" id="modal-emails-offers">
-		<div class="modal__scroll">
-			<div class="modal__wrap">
-				<div class="modal__top modal__top--center">
-					<h3 class="modal__heading">Почта для предложений</h3>
+	<div class="modal" id="modal-help-request">
+		<div class="modal__wrap modal__wrap--xs">
+			<div class="modal__wrapper">
+				<div class="modal__top">
+					<h3 class="modal__heading">С чем мы можем вам помочь?</h3>
 					<button class="modal__close-btn modal__close" aria-label="Закрыть">
 						<svg class="modal__close-icon">
 							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
 						</svg>
 					</button>
 				</div>
-				<div class="modal__main">
-					<picture class="modal__img modal__img--sm">
-						<img src="img/img-emails-offers.svg" alt="Image">
-					</picture>
-					<div class="modal__body">
-						<p class="modal__description">По любым формам сотрудничества <br>и рекламным предложениям пишите, пожалуйста, на почту</p>
-						<a href="mailto:info@bankrotbaza.ru" class="modal__link">info@bankrotbaza.ru</a>
-						<a href="#" class="modal__btn btn btn--grey modal__close">Ок, спасибо</a>
-					</div>
+				<div class="modal__content modal__content--pd">
+					<form action="#" class="modal-form modal__form">
+						<div class="control-group modal-form__input">
+							<div class="control-group__top">
+								<h3 class="control-group__heading">Тип обращения</h3>
+							</div>
+							<div class="select-box select-box--single control-group__select-box">
+								<div class="select-box__container">
+									<div class="select-box__wrap">
+										<div class="select-box__scroll">
+											<div class="select-box__option">
+												<input type="radio" class="select-box__radio" id="help-request-status-01" name="help-request-status">
+												<label for="help-request-status-01" class="select-box__label">
+													<span class="select-box__icon"></span>
+													<span class="select-box__title">Платежи</span>
+												</label>
+											</div>
+											<div class="select-box__option">
+												<input type="radio" class="select-box__radio" id="help-request-status-02" name="help-request-status">
+												<label for="help-request-status-02" class="select-box__label">
+													<span class="select-box__icon"></span>
+													<span class="select-box__title">Премиум тариф</span>
+												</label>
+											</div>
+											<div class="select-box__option">
+												<input type="radio" class="select-box__radio" id="help-request-status-03" name="help-request-status">
+												<label for="help-request-status-03" class="select-box__label">
+													<span class="select-box__icon"></span>
+													<span class="select-box__title">Отчёты по кад.номеру / отчёты по VIN</span>
+												</label>
+											</div>
+											<div class="select-box__option">
+												<input type="radio" class="select-box__radio" id="help-request-status-04" name="help-request-status">
+												<label for="help-request-status-04" class="select-box__label">
+													<span class="select-box__icon"></span>
+													<span class="select-box__title">Прочее</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="select-box__selected">
+									<span class="select-box__placeholder select-box__placeholder--active">Выберите тип</span>
+									<span class="select-box__value"></span>
+								</div>
+								<div class="select-box__values">
+									<div class="select-box__values-list"></div>
+								</div>
+							</div>
+						</div>
+						<div class="control-group modal-form__input">
+							<div class="control-group__top">
+								<label for="help-request-email" class="control-group__heading">На какой email прислать ответ?</label>
+							</div>
+							<div class="control-group__inputs">
+								<div class="input-group control-group__input">
+									<input type="email" id="help-request-email" class="input-group__input" placeholder="">
+									<span class="input-group__error">Сообщение об ошибке</span>
+								</div>
+							</div>
+						</div>
+						<div class="control-group modal-form__input">
+							<div class="control-group__top">
+								<label for="help-request-text" class="control-group__heading">Опишите ситуацию</label>
+							</div>
+							<div class="control-group__inputs">
+								<div class="input-group control-group__input">
+									<textarea id="help-request-text" class="input-group__textarea"></textarea>
+									<span class="input-group__symbol">60</span>
+									<span class="input-group__error">Сообщение об ошибке</span>
+								</div>
+							</div>
+						</div>
+						<div class="modal-form__controls modal-form__controls--column">
+							<a href="#" class="modal-form__btn btn btn--orange">Отправить</a>
+							<a href="#" class="modal-form__btn btn btn--border">Закрыть</a>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
-		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-make-request">
+		<div class="modal__wrap modal__wrap--xs">
+			<div class="modal__wrapper">
+				<div class="modal__top">
+					<h3 class="modal__heading">Оформить заявку</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__content modal__content--pd">
+					<p class="modal__description">После оформления заявки на участие с вами свяжется личный менеджер, расскажет о всех нюансах торгов и стоимости участия</p>
+					<form action="#" class="modal-form modal__form">
+						<div class="control-group modal-form__input">
+							<div class="control-group__top">
+								<label for="make-request-name" class="control-group__heading">Ваше имя *</label>
+							</div>
+							<div class="control-group__inputs">
+								<div class="input-group control-group__input">
+									<input type="text" id="make-request-name" class="input-group__input" placeholder="" required>
+									<span class="input-group__error">Сообщение об ошибке</span>
+								</div>
+							</div>
+						</div>
+						<div class="control-group modal-form__input">
+							<div class="control-group__top">
+								<label for="make-request-tel" class="control-group__heading">Телефон для связи *</label>
+							</div>
+							<div class="control-group__inputs">
+								<div class="input-group control-group__input">
+									<input type="tel" id="make-request-tel" class="input-group__input" placeholder="" required>
+									<span class="input-group__error">Сообщение об ошибке</span>
+								</div>
+							</div>
+						</div>
+						<div class="control-group modal-form__input">
+							<div class="control-group__top">
+								<label for="make-request-email" class="control-group__heading">Ваш Email</label>
+							</div>
+							<div class="control-group__inputs">
+								<div class="input-group control-group__input">
+									<input type="email" id="make-request-email" class="input-group__input" placeholder="">
+									<span class="input-group__error">Сообщение об ошибке</span>
+								</div>
+							</div>
+						</div>
+						<div class="control-group modal-form__input">
+							<div class="control-group__top">
+								<h3 class="control-group__heading">Удобный способ связи</h3>
+							</div>
+							<div class="control-group__checkboxes">
+								<label for="make-request-checkbox-01" class="circle-checkbox control-group__checkbox">
+									<input type="radio" id="make-request-checkbox-01" class="circle-checkbox__input" name="make-request-checkbox">
+									<div class="circle-checkbox__group">
+										<div class="circle-checkbox__icon"></div>
+										<div class="circle-checkbox__label">
+											<div class="circle-checkbox__inner">
+												<span class="circle-checkbox__title">Звонок</span>
+											</div>
+										</div>
+									</div>
+								</label>
+								<label for="make-request-checkbox-02" class="circle-checkbox control-group__checkbox">
+									<input type="radio" id="make-request-checkbox-02" class="circle-checkbox__input" name="make-request-checkbox">
+									<div class="circle-checkbox__group">
+										<div class="circle-checkbox__icon"></div>
+										<div class="circle-checkbox__label">
+											<div class="circle-checkbox__inner">
+												<span class="circle-checkbox__title">WhatsApp</span>
+											</div>
+										</div>
+									</div>
+								</label>
+								<label for="make-request-checkbox-03" class="circle-checkbox control-group__checkbox">
+									<input type="radio" id="make-request-checkbox-03" class="circle-checkbox__input" name="make-request-checkbox">
+									<div class="circle-checkbox__group">
+										<div class="circle-checkbox__icon"></div>
+										<div class="circle-checkbox__label">
+											<div class="circle-checkbox__inner">
+												<span class="circle-checkbox__title">Telegram</span>
+											</div>
+										</div>
+									</div>
+								</label>
+								<label for="make-request-checkbox-04" class="circle-checkbox control-group__checkbox">
+									<input type="radio" id="make-request-checkbox-04" class="circle-checkbox__input" name="make-request-checkbox">
+									<div class="circle-checkbox__group">
+										<div class="circle-checkbox__icon"></div>
+										<div class="circle-checkbox__label">
+											<div class="circle-checkbox__inner">
+												<span class="circle-checkbox__title">Viber</span>
+											</div>
+										</div>
+									</div>
+								</label>
+								<label for="make-request-checkbox-05" class="circle-checkbox control-group__checkbox">
+									<input type="radio" id="make-request-checkbox-05" class="circle-checkbox__input" name="make-request-checkbox">
+									<div class="circle-checkbox__group">
+										<div class="circle-checkbox__icon"></div>
+										<div class="circle-checkbox__label">
+											<div class="circle-checkbox__inner">
+												<span class="circle-checkbox__title">Почта</span>
+											</div>
+										</div>
+									</div>
+								</label>
+							</div>
+						</div>
+						<div class="modal-form__controls">
+							<a href="#" class="modal-form__btn modal-form__btn--wide btn btn--orange modal-btn" data-id="modal-request-ok">Оформить заявку</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="modal" id="modal-request-ok">
-		<div class="modal__scroll">
-			<div class="modal__wrap">
-				<div class="modal__main">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__success">
 					<button class="modal__close-btn modal__close" aria-label="Закрыть">
 						<svg class="modal__close-icon">
 							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
@@ -5969,12 +6651,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal__overlay"></div>
 	</div>
 	<div class="modal" id="modal-request-send">
-		<div class="modal__scroll">
-			<div class="modal__wrap">
-				<div class="modal__top modal__top--center">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__top modal__top--desktop-center">
 					<h3 class="modal__heading">Ваш запрос отправлен</h3>
 					<button class="modal__close-btn modal__close" aria-label="Закрыть">
 						<svg class="modal__close-icon">
@@ -5982,7 +6663,7 @@
 						</svg>
 					</button>
 				</div>
-				<div class="modal__main">
+				<div class="modal__success">
 					<picture class="modal__img modal__img--sm">
 						<img src="img/img-emails-send.svg" alt="Image">
 					</picture>
@@ -5993,12 +6674,108 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal__overlay"></div>
+	</div>
+	<div class="modal" id="modal-reviews-add">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__top">
+					<h3 class="modal__heading">Отзыв о компании</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__content modal__content--pd">
+					<form action="#" class="modal-form modal__form">
+						<div class="modal-form__inner">
+							<div class="control-group modal-form__input">
+								<div class="control-group__top">
+									<label for="reviews-add-name" class="control-group__heading">Ваше имя</label>
+								</div>
+								<div class="control-group__inputs">
+									<div class="input-group control-group__input">
+										<input type="text" id="reviews-add-name" class="input-group__input" placeholder="Введите имя" required>
+										<span class="input-group__error">Сообщение об ошибке</span>
+									</div>
+								</div>
+							</div>
+							<div class="control-group modal-form__input">
+								<div class="control-group__top">
+									<label for="reviews-add-email" class="control-group__heading">Ваш Email</label>
+								</div>
+								<div class="control-group__inputs">
+									<div class="input-group control-group__input">
+										<input type="email" id="reviews-add-email" class="input-group__input" placeholder="Введите Email">
+										<span class="input-group__error">Сообщение об ошибке</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="control-group modal-form__input">
+							<div class="control-group__top">
+								<h3 class="control-group__heading">Ваша оценка</h3>
+							</div>
+							<div class="control-group__rating">
+								<div class="rating-select add-reviews-form__rating">
+									<input class="rating-select__input" type="radio" id="star5" name="rating" value="5">
+									<label class="rating-select__label" for="star5" title="5 star">
+										<svg class="rating-select__icon">
+											<use xlink:href="img/sprite.svg#icon-star-orange"></use>
+										</svg>
+									</label>
+									<input class="rating-select__input" type="radio" id="star4" name="rating" value="4">
+									<label class="rating-select__label" for="star4" title="4 star">
+										<svg class="rating-select__icon">
+											<use xlink:href="img/sprite.svg#icon-star-orange"></use>
+										</svg>
+									</label>
+									<input class="rating-select__input" type="radio" id="star3" name="rating" value="3">
+									<label class="rating-select__label" for="star3" title="3 star">
+										<svg class="rating-select__icon">
+											<use xlink:href="img/sprite.svg#icon-star-orange"></use>
+										</svg>
+									</label>
+									<input class="rating-select__input" type="radio" id="star2" name="rating" value="2">
+									<label class="rating-select__label" for="star2" title="2 star">
+										<svg class="rating-select__icon">
+											<use xlink:href="img/sprite.svg#icon-star-orange"></use>
+										</svg>
+									</label>
+									<input class="rating-select__input" type="radio" id="star1" name="rating" value="1">
+									<label class="rating-select__label" for="star1" title="1 star">
+										<svg class="rating-select__icon">
+											<use xlink:href="img/sprite.svg#icon-star-orange"></use>
+										</svg>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="control-group modal-form__input">
+							<div class="control-group__top">
+								<label for="reviews-add-text" class="control-group__heading">Текст отзыва</label>
+							</div>
+							<div class="control-group__inputs">
+								<div class="input-group control-group__input">
+									<textarea id="reviews-add-text" class="input-group__textarea"></textarea>
+									<span class="input-group__symbol">300</span>
+									<span class="input-group__error">Сообщение об ошибке</span>
+								</div>
+							</div>
+						</div>
+						<div class="modal-form__controls modal-form__controls--space-between">
+							<a href="#" class="modal-form__btn btn btn--border">Отмена</a>
+							<a href="#" class="modal-form__btn btn btn--orange modal-btn" data-id="modal-save-feedback">Отправить</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="modal" id="modal-save-feedback">
-		<div class="modal__scroll">
-			<div class="modal__wrap">
-				<div class="modal__main">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__success">
 					<button class="modal__close-btn modal__close" aria-label="Закрыть">
 						<svg class="modal__close-icon">
 							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
@@ -6015,9 +6792,594 @@
 				</div>
 			</div>
 		</div>
-		<div class="modal__overlay"></div>
 	</div>
-	<div class="modal-overlay" id="modal-overlay"></div>
+	<div class="modal" id="modal-category-selection">
+		<div class="modal__wrap modal__wrap--sm">
+			<div class="modal__wrapper">
+				<div class="modal__top">
+					<h3 class="modal__heading">Выберите категорию</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__content modal__content--pd">
+					<div class="category-selection">
+						<form action="#" class="category-selection__form">
+							<div class="category-selection__top">
+								<button class="category-selection__search-btn" aria-label="Поиск">
+									<svg>
+										<use xlink:href="img/sprite.svg#icon-search"></use>
+									</svg>
+								</button>
+								<input type="text" class="category-selection__search-input" placeholder="Введите название категории">
+							</div>
+							<div class="category-selection__wrapper">
+								<div class="category-selection__item">
+									<label for="category-selection-all" class="square-checkbox square-checkbox--bold category-selection__checkbox">
+										<input type="checkbox" id="category-selection-all" data-checkbox="all" class="square-checkbox__input" checked>
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Любая категория</span>
+												</div>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-01" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-01" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Автомобили</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-02" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-02" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Грузовой транспорт</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-03" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-03" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Жилая недвижимость</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-04" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-04" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Драгоценности</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-05" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-05" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Сельхоз оборудование</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-06" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-06" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Автомобили</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-07" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-07" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Грузовой транспорт</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-08" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-08" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Жилая недвижимость</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-09" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-09" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Драгоценности</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-10" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-10" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Сельхоз оборудование</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="category-selection-11" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="category-selection-11" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Сельхоз оборудование</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="category-selection__bottom">
+								<button class="category-selection__btn btn">Выбрать</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-region-selection">
+		<div class="modal__wrap modal__wrap--sm">
+			<div class="modal__wrapper">
+				<div class="modal__top">
+					<h3 class="modal__heading">Выберите регион</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__content modal__content--pd">
+					<div class="category-selection">
+						<form action="#" class="category-selection__form">
+							<div class="category-selection__top">
+								<button class="category-selection__search-btn" aria-label="Поиск">
+									<svg>
+										<use xlink:href="img/sprite.svg#icon-search"></use>
+									</svg>
+								</button>
+								<input type="text" class="category-selection__search-input" placeholder="Введите название региона">
+							</div>
+							<div class="category-selection__wrapper">
+								<div class="category-selection__item">
+									<label for="region-selection-all" class="square-checkbox square-checkbox--bold category-selection__checkbox">
+										<input type="checkbox" id="region-selection-all" data-checkbox="all" class="square-checkbox__input" checked>
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">Любой регион</span>
+												</div>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="region-selection-01" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="region-selection-01" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">77. Москва</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="region-selection-02" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="region-selection-02" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">50. Московская обл.</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="region-selection-03" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="region-selection-03" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">52. Нижегородская обл.</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="region-selection-04" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="region-selection-04" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">54. Новосибирская обл.</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="region-selection-05" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="region-selection-05" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">92. Севастополь</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="region-selection-06" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="region-selection-06" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">35. Вологодская обл.</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="region-selection-07" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="region-selection-07" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">54. Новосибирская обл.</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="region-selection-08" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="region-selection-08" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">35. Вологодская обл.</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+								<div class="category-selection__item">
+									<label for="region-selection-09" class="square-checkbox category-selection__checkbox">
+										<input type="checkbox" id="region-selection-09" class="square-checkbox__input">
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<div class="square-checkbox__inner">
+													<span class="square-checkbox__title">50. Московская обл.</span>
+												</div>
+												<span class="square-checkbox__help">4564 лота</span>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="category-selection__bottom">
+								<button class="category-selection__btn btn">Выбрать</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-periods-price-decline">
+		<div class="modal__wrap modal__wrap--md">
+			<div class="modal__wrapper">
+				<div class="modal__top">
+					<h3 class="modal__heading">Периоды снижения цены</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__content">
+					<div class="periods-pd">
+						<div class="periods-pd__table-wrap">
+							<table class="periods-pd__table">
+								<thead class="periods-pd__thead">
+									<tr class="periods-pd__trow">
+										<th class="periods-pd__th">№</th>
+										<th class="periods-pd__th">Стоимость</th>
+										<th class="periods-pd__th">Период</th>
+									</tr>
+								</thead>
+								<tbody class="periods-pd__tbody">
+									<tr class="periods-pd__trow">
+										<td class="periods-pd__td">1</td>
+										<td class="periods-pd__td">
+											<span class="periods-pd__value">2 700 000,00 руб. <span class="periods-pd__value--green">-10%</span></span>
+										</td>
+										<td class="periods-pd__td">С 04.04.2023 11:07 по 14.07.2023 10:00</td>
+									</tr>
+									<tr class="periods-pd__trow">
+										<td class="periods-pd__td">2</td>
+										<td class="periods-pd__td">
+											<span class="periods-pd__value">2 700 000,00 руб. <span class="periods-pd__value--green">-10%</span></span>
+										</td>
+										<td class="periods-pd__td">С 04.04.2023 11:07 по 14.07.2023 10:00</td>
+									</tr>
+									<tr class="periods-pd__trow">
+										<td class="periods-pd__td">3</td>
+										<td class="periods-pd__td">
+											<span class="periods-pd__value">2 700 000,00 руб. <span class="periods-pd__value--green">-10%</span></span>
+										</td>
+										<td class="periods-pd__td">С 04.04.2023 11:07 по 14.07.2023 10:00</td>
+									</tr>
+									<tr class="periods-pd__trow">
+										<td class="periods-pd__td">4</td>
+										<td class="periods-pd__td">
+											<span class="periods-pd__value">2 700 000,00 руб. <span class="periods-pd__value--green">-10%</span></span>
+										</td>
+										<td class="periods-pd__td">С 04.04.2023 11:07 по 14.07.2023 10:00</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-not-found">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__top modal__top--desktop-center">
+					<h3 class="modal__heading">Информация по ИНН / ОГРН</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__success modal__success--left">
+					<h4 class="modal__subtitle modal__subtitle--grey">По такому ИНН / ОГРН информации не найдено</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-only-premium">
+		<div class="modal__wrap modal__wrap--sm">
+			<div class="modal__wrapper">
+				<div class="modal__top modal__top--desktop-center">
+					<h3 class="modal__heading">Только для Премиума</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__success">
+					<picture class="modal__img">
+						<img src="img/img-notification.svg" alt="Image">
+					</picture>
+					<div class="modal__body">
+						<p class="modal__description">Подписка на изменение статуса лота, как и множество <a href="#">других функций</a>, доступны только в пакете Премиум</p>
+					</div>
+					<div class="modal-notification modal__notification">
+						<h3 class="modal-notification__title">Зачем Вам эта функция?</h3>
+						<p class="modal-notification__description">После подписки на лот система будет уведомлять Вас о каждом изменении статуса лота. Подписка помогает отслеживать десятки лотов без необходимости составлять календари событий и обновлений вручную.</p>
+						<p class="modal-notification__description">Управлять сохранёнными лотами можно в личном кабинете в разделе "Подписки на обновления" → "Лоты".</p>
+					</div>
+					<div class="modal__body">
+						<a href="#" class="modal__btn btn btn--orange">Попробовать за 90 руб.</a>
+						<a href="#" class="modal__btn btn btn--grey modal__close">Позже</a>
+					</div>
+					<div class="modal__bottom">
+						<a href="#" class="modal__more">Что еще даст мне регистрация?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-registration-required">
+		<div class="modal__wrap modal__wrap--sm">
+			<div class="modal__wrapper">
+				<div class="modal__top modal__top--center">
+					<h3 class="modal__heading">Нужна регистрация</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__success">
+					<picture class="modal__img">
+						<img src="img/img-notification.svg" alt="Image">
+					</picture>
+					<div class="modal__body">
+						<p class="modal__description">Мы бы с радостью сохранили этот лот для Вас, но лот должен быть привязан к аккаунту, для этого необходимо <a href="#">войти</a> или <a href="#">зарегистрироваться</a></p>
+						<a href="#" class="modal__btn btn btn--orange">Регистрация</a>
+						<a href="#" class="modal__btn btn btn--grey">Войти</a>
+					</div>
+					<div class="modal__bottom">
+						<a href="#" class="modal__more">Что еще даст мне регистрация?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-emails-send">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__success">
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+					<div class="modal__body">
+						<h3 class="modal__title">Оставьте вашу почту</h3>
+						<p class="modal__description">Созданный заказ будет прикреплен <br>к указанной почте</p>
+						<form action="#" class="modal-form modal__form">
+							<div class="input-group modal-form__input">
+								<input type="email" class="input-group__input" placeholder="Введите Email">
+								<span class="input-group__error">Сообщение об ошибке</span>
+							</div>
+							<div class="modal-form__controls">
+								<a href="#" class="modal-form__btn btn btn--border modal__close">Отмена</a>
+								<a href="#" class="modal-form__btn btn btn--orange">Продолжить</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-emails-need">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__success">
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+					<div class="modal__body">
+						<h3 class="modal__title">Нужна ваша почта</h3>
+						<p class="modal__description">На неё мы пришлем уведомление, как только свежие данные придут от гос. органов</p>
+						<form action="#" class="modal-form modal__form">
+							<div class="input-group modal-form__input">
+								<input type="email" class="input-group__input" placeholder="Введите Email">
+								<span class="input-group__error">Сообщение об ошибке</span>
+							</div>
+							<div class="modal-form__controls">
+								<a href="#" class="modal-form__btn btn btn--border modal__close">Отмена</a>
+								<a href="#" class="modal-form__btn btn btn--orange">Продолжить</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal-emails-offers">
+		<div class="modal__wrap">
+			<div class="modal__wrapper">
+				<div class="modal__top modal__top--center">
+					<h3 class="modal__heading">Почта для предложений</h3>
+					<button class="modal__close-btn modal__close" aria-label="Закрыть">
+						<svg class="modal__close-icon">
+							<use xlink:href="img/sprite.svg#icon-close-thin"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="modal__success">
+					<picture class="modal__img modal__img--sm">
+						<img src="img/img-emails-offers.svg" alt="Image">
+					</picture>
+					<div class="modal__body">
+						<p class="modal__description">По любым формам сотрудничества <br>и рекламным предложениям пишите, пожалуйста, на почту</p>
+						<a href="mailto:info@bankrotbaza.ru" class="modal__link">info@bankrotbaza.ru</a>
+						<a href="#" class="modal__btn btn btn--grey modal__close">Ок, спасибо</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- end of modals -->
 	<!-- scripts -->
 	<script src="js/vendor.min.js"></script>
