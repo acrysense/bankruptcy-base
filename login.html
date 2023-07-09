@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Банкрот База - Обучающие материалы</title>
-	<meta property="og:title" content="Банкрот База - Обучающие материалы">
+	<title>Банкрот База - Вход</title>
+	<meta property="og:title" content="Банкрот База - Вход">
 	<meta property="og:description" content="Описание">
 	<meta property="og:url" content="/">
-	<meta property="og:site_name" content="Банкрот База - Обучающие материалы">
+	<meta property="og:site_name" content="Банкрот База - Вход">
 	<!-- styles -->
 	<link rel="stylesheet" href="css/vendor.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
@@ -284,186 +284,43 @@
 		<!-- end of header -->
 		<!-- content -->
 		<div class="wrapper__content">
-			<!-- breadcrumb -->
-			<div class="breadcrumb" aria-label="Breadcrumb">
+			<!-- auth -->
+			<div class="auth" id="auth">
 				<div class="container">
-					<nav class="breadcrumb__nav">
-						<ol class="breadcrumb__list">
-							<li class="breadcrumb__item">
-								<a href="index.html" class="breadcrumb__link">Главная</a>
-							</li>
-							<li class="breadcrumb__item">
-								<a href="educational-materials.html" class="breadcrumb__link">Обучающие материалы</a>
-							</li>
-						</ol>
-					</nav>
+					<div class="auth__wrap">
+						<div class="auth__wrapper">
+							<div class="auth__top">
+								<h1 class="auth__heading">Вход</h1>
+							</div>
+							<form action="#" class="auth-form auth__form">
+								<div class="input-group input-group--lg auth-form__input">
+									<input type="email" class="input-group__input" placeholder="E-mail" required>
+									<span class="input-group__error">Сообщение об ошибке</span>
+								</div>
+								<div class="input-group input-group--lg auth-form__input">
+									<input type="text" class="input-group__input" placeholder="Пароль" required>
+									<span class="input-group__error">Сообщение об ошибке</span>
+								</div>
+								<div class="auth-form__inner">
+									<label for="auth-register-checkbox" class="square-checkbox auth-form__checkbox">
+										<input type="checkbox" id="auth-register-checkbox" class="square-checkbox__input" required>
+										<div class="square-checkbox__group">
+											<div class="square-checkbox__icon"></div>
+											<div class="square-checkbox__label">
+												<span class="square-checkbox__subtitle">Запомнить меня</span>
+											</div>
+										</div>
+									</label>
+									<a href="#" class="auth__link">Забыли пароль?</a>
+								</div>
+								<button class="auth-form__btn btn btn--orange">Зарегистрироваться</button>
+							</form>
+						</div>
+						<span class="auth__help">Еще нет аккаунта? <a href="register.html">Зарегистрироваться</a></span>
+					</div>
 				</div>
 			</div>
-			<!-- end of breadcrumb -->
-			<!-- education materials -->
-			<section class="materials" id="materials">
-				<div class="container">
-					<div class="section-info">
-						<div class="section-info__wrapper">
-							<div class="section-info__body">
-								<h1 class="section-info__heading">Обучающие материалы</h1>
-								<p class="section-info__description">Делимся полезными материалами по торгам и работе с площадкой</p>
-							</div>
-							<picture class="section-info__img section-info__img--second">
-								<img src="img/section-info-education.jpg" alt="Image">
-							</picture>
-						</div>
-					</div>
-					<div class="section-tags">
-						<ul class="section-tags__list">
-							<li class="section-tags__item is--active">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-									<svg>
-										<use xlink:href="img/sprite.svg#icon-close"></use>
-									</svg>
-								</button>
-							</li>
-							<li class="section-tags__item">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-								</button>
-							</li>
-							<li class="section-tags__item">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-								</button>
-							</li>
-							<li class="section-tags__item">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-								</button>
-							</li>
-							<li class="section-tags__item">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-								</button>
-							</li>
-							<li class="section-tags__item">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-								</button>
-							</li>
-						</ul>
-					</div>
-					<div class="materials__wrap">
-						<div class="materials__wrapper">
-							<div class="materials__left">
-								<h2 class="materials__heading">Особенности подбора лотов</h2>
-								<ol class="materials__list">
-									<li class="materials__item">
-										<div class="materials__elem is--open">
-											<a href="#" class="materials__link materials__link--dropdown">Особенности подбора транспорта и спецтехники</a>
-											<ul class="materials__sublist">
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта</a>
-												</li>
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пунктаЗаголовок пунктаЗаголовок пункта</a>
-												</li>
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пункта</a>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Особенности подбора и анализа частного жилья и земельных участков (дома, дачи, земельные участки)</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Особенности подбора, осмотра и участия в торгах за квартиры</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
-										</div>
-									</li>
-								</ol>
-							</div>
-							<div class="materials__right">
-								<div class="materials__content content">
-									<picture>
-										<img src="img/materials.jpg" alt="Image">
-									</picture>
-									<h3>Особенности подбора <br>транспорта и спецтехники</h3>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-								</div>
-							</div>
-						</div>
-						<div class="materials__wrapper">
-							<div class="materials__left">
-								<h2 class="materials__heading">Особенности подбора лотов</h2>
-								<ol class="materials__list">
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link is--active">Особенности подбора транспорта и спецтехники</a>
-											<ul class="materials__sublist">
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта</a>
-												</li>
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пунктаЗаголовок пунктаЗаголовок пункта</a>
-												</li>
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пункта</a>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Особенности подбора и анализа частного жилья и земельных участков (дома, дачи, земельные участки)</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Особенности подбора, осмотра и участия в торгах за квартиры</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
-										</div>
-									</li>
-								</ol>
-							</div>
-							<div class="materials__right">
-								<div class="materials__content content">
-									<picture>
-										<img src="img/materials.jpg" alt="Image">
-									</picture>
-									<h3>Особенности подбора <br>транспорта и спецтехники</h3>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end of education materials -->
+			<!-- end of auth -->
 		</div>
 		<!-- end of content -->
 		<!-- footer -->

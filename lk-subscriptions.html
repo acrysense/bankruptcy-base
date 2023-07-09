@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Банкрот База - Подписки</title>
+	<meta property="og:title" content="Банкрот База - Подписки">
+	<meta property="og:description" content="Описание">
+	<meta property="og:url" content="/">
+	<meta property="og:site_name" content="Банкрот База - Подписки">
+	<!-- styles -->
+	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!-- header -->
+		<header class="header" id="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<a href="index.html" class="header__logotype">
+						<picture>
+							<source srcset="img/logotype.svg" media="(min-width: 744px)">
+							<img src="img/logotype-mobile.svg" alt="Банкрот База">
+						</picture>
+					</a>
+					<div class="c-menu header__menu" id="c-menu">
+						<button class="c-menu__trigger" id="hamburger-toggle">
+							<div class="c-menu__trigger-icon">
+								<span class="c-menu__trigger-inner"></span>
+								<span class="c-menu__trigger-inner"></span>
+								<span class="c-menu__trigger-inner"></span>
+							</div>
+							<span class="c-menu__trigger-title">Меню</span>
+						</button>
+						<div class="c-menu__dropdown">
+							<div class="c-menu__container">
+								<div class="c-menu__block c-menu__block--tablet">
+									<ul class="c-menu__list">
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Расширенный поиск</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Категории</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Регионы</a>
+										</li>
+										<div class="c-menu__item">
+											<div class="c-menu__link-trigger">
+												<a href="#" class="c-menu__link">
+													<span>Реестры</span>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-caret"></use>
+													</svg>
+												</a>
+												<div class="c-menu__link-dropdown">
+													<ul class="c-menu__sublist">
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Должники</a>
+														</li>
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Арбитражные управляющие</a>
+														</li>
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Организаторы торгов</a>
+														</li>
+														<li class="c-menu__subitem">
+															<a href="#" class="c-menu__sublink">Торговые площадки</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Материалы</a>
+										</li>
+									</ul>
+								</div>
+								<div class="c-menu__block">
+									<ul class="c-menu__list">
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Поддержка пользователей</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Рекламодателям</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Частные вопросы</a>
+										</li>
+										<li class="c-menu__item">
+											<a href="#" class="c-menu__link">Правила оплаты и возврата</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav class="nav header__nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link">Расширенный поиск</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Категории</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Регионы</a>
+							</li>
+							<li class="nav__item">
+								<div class="nav__trigger">
+									<a href="#" class="nav__link">
+										<span>Реестры</span>
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-caret"></use>
+										</svg>
+									</a>
+									<div class="nav__dropdown">
+										<ul class="nav__sublist">
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Должники</a>
+											</li>
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Арбитражные управляющие</a>
+											</li>
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Организаторы торгов</a>
+											</li>
+											<li class="nav__subitem">
+												<a href="#" class="nav__sublink">Торговые площадки</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">Материалы</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header__controls">
+						<div class="c-notification header__notification" id="c-notification">
+							<a href="#" class="c-notification__trigger" id="c-notification-trigger">
+								<svg class="c-notification__trigger-icon">
+									<use xlink:href="img/sprite.svg#icon-notification"></use>
+								</svg>
+								<span class="c-notification__trigger-new"></span>
+							</a>
+							<div class="c-notification__dropdown">
+								<div class="c-notification__container">
+									<div class="c-notification__tabs">
+										<ul class="c-notification__tabs-list">
+											<li class="c-notification__tabs-item is--active">
+												<button class="c-notification__tabs-button">Лоты</button>
+											</li>
+											<li class="c-notification__tabs-item">
+												<button class="c-notification__tabs-button">Прочее</button>
+											</li>
+										</ul>
+										<div class="c-notification__tabs-wrapper is--active">
+											<div class="c-notification__info">
+												<a href="#" class="c-notification__more">Прочитать все</a>
+											</div>
+											<ul class="c-notification__list">
+												<li class="c-notification__item">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="c-notification__tabs-wrapper">
+											<div class="c-notification__info">
+												<a href="#" class="c-notification__more">Прочитать все</a>
+											</div>
+											<ul class="c-notification__list">
+												<li class="c-notification__item">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+												<li class="c-notification__item is--viewed">
+													<a href="#" class="c-notification__link">
+														<svg class="c-notification__link-icon">
+															<use xlink:href="img/sprite.svg#icon-email-opened"></use>
+														</svg>
+														<div class="c-notification__link-group">
+															<span class="c-notification__link-title">Окончание приёма документов завтра</span>
+															<span class="c-notification__link-help">03.03.23</span>
+														</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c-user header__user" id="c-user">
+							<a href="#" class="c-user__trigger" id="c-user-trigger">
+								<span class="c-user__title">petrov4565@gmail.com</span>
+								<picture class="c-user__img">
+									<img src="img/c-user.svg" alt="АП">
+								</picture>
+							</a>
+							<div class="c-user__dropdown">
+								<div class="c-user__container">
+									<div class="c-user__top">
+										<picture class="c-user__img">
+											<img src="img/c-user.svg" alt="АП">
+										</picture>
+										<div class="c-user__group">
+											<span class="c-user__title">petrov4565@gmail.com</span>
+											<span class="c-user__status">Базовый тариф</span>
+										</div>
+									</div>
+									<div class="c-user__main">
+										<ul class="c-user__list">
+											<li class="c-user__item">
+												<a href="#" class="c-user__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-favorites"></use>
+													</svg>
+													<span>Избранные лоты</span>
+												</a>
+											</li>
+											<li class="c-user__item">
+												<a href="#" class="c-user__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-email-bold"></use>
+													</svg>
+													<span>Мои уведомления</span>
+												</a>
+											</li>
+											<li class="c-user__item">
+												<a href="#" class="c-user__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-time"></use>
+													</svg>
+													<span>Недавно просмотренные лоты</span>
+												</a>
+											</li>
+											<li class="c-user__item">
+												<a href="#" class="c-user__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-card"></use>
+													</svg>
+													<span>Банк панель</span>
+												</a>
+											</li>
+											<li class="c-user__item">
+												<a href="#" class="c-user__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-settings"></use>
+													</svg>
+													<span>Настройки аккаунта</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="c-user__bottom">
+										<a href="#" class="c-user__btn btn btn--grey">Выйти</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- end of header -->
+		<!-- content -->
+		<div class="wrapper__content">
+			<!-- lk -->
+			<div class="lk" id="lk">
+				<div class="container">
+					<div class="lk__wrap">
+						<div class="lk__left">
+							<div class="lk-profile lk__profile">
+								<div class="lk-profile__wrapper">
+									<picture class="lk-profile__img">
+										<img src="img/c-user.svg" alt="АП">
+									</picture>
+									<div class="lk-profile__body">
+										<a href="#" class="lk-profile__name is--verified">
+											<span>info@bankrotbaza.ru1</span>
+										</a>
+										<span class="lk-profile__help">Пользователь</span>
+									</div>
+								</div>
+								<div class="lk-profile__info">
+									<div class="lk-profile__inner">
+										<span class="lk-profile__value lk-profile__value--grey">Email</span>
+										<span class="lk-profile__value">dfgfgsdcs@mail.ru</span>
+									</div>
+									<div class="lk-profile__inner">
+										<span class="lk-profile__value lk-profile__value--grey">Тариф</span>
+										<span class="lk-profile__value">Базовый тариф</span>
+									</div>
+								</div>
+							</div>
+							<div class="lk-nav lk__nav">
+								<button class="lk-nav__trigger">
+									<span>Меню профиля</span>
+									<svg>
+										<use xlink:href="img/sprite.svg#icon-caret"></use>
+									</svg>
+								</button>
+								<nav class="lk-nav__nav">
+									<ul class="lk-nav__list">
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-favorites.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-favorites"></use>
+													</svg>
+													<span>Избранное</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<button class="lk-nav__link lk-nav__link--trigger">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-basket"></use>
+													</svg>
+													<span>Мои заказы</span>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-caret"></use>
+													</svg>
+												</button>
+												<ul class="lk-nav__sublist">
+													<li class="lk-nav__item">
+														<div class="lk-nav__elem">
+															<a href="lk-cadastral-report.html" class="lk-nav__link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-compass"></use>
+																</svg>
+																<span>Отчеты по кад. номеру</span>
+															</a>
+														</div>
+													</li>
+													<li class="lk-nav__item">
+														<div class="lk-nav__elem">
+															<a href="lk-auto-report.html" class="lk-nav__link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-list"></use>
+																</svg>
+																<span>Отчеты по авто</span>
+															</a>
+														</div>
+													</li>
+													<li class="lk-nav__item">
+														<div class="lk-nav__elem">
+															<a href="lk-extracts.html" class="lk-nav__link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-document"></use>
+																</svg>
+																<span>Выписки из ЕГРЮЛ/ЕГРИП</span>
+															</a>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-tariff.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-flash"></use>
+													</svg>
+													<span>Тариф</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-notes.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-notes"></use>
+													</svg>
+													<span>Заметки</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem is--active">
+												<a href="lk-subscriptions.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-bell-ringing"></use>
+													</svg>
+													<span>Подписки на обновления</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-notification.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-email-bold"></use>
+													</svg>
+													<span>Уведомления</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-recently-viewed.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-clock"></use>
+													</svg>
+													<span>Недавно просмотренные</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-settings.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-settings"></use>
+													</svg>
+													<span>Настройки аккаунта</span>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="lk__right">
+							<div class="lk-notification lk__notification">
+								<div class="lk-notification__wrapper">
+									<div class="lk-notification__icon-wrap">
+										<svg class="lk-notification__icon">
+											<use xlink:href="img/sprite.svg#icon-bell-ringing-thin"></use>
+										</svg>
+									</div>
+									<div class="lk-notification__body">
+										<h3 class="lk-notification__title">Обращаем внимание</h3>
+										<p class="lk-notification__description lk-notification__description--limit">Уведомления по Вашим подпискам приходят только при наличии активного <a href="#">Премиум</a> тарифа.</p>
+									</div>
+								</div>
+							</div>
+							<div class="lk__main">
+								<div class="lk__top">
+									<div class="lk__group">
+										<h1 class="lk__heading">Подписки</h1>
+									</div>
+								</div>
+								<div class="lk-tabs lk__tabs">
+									<div class="lk-tabs__scroll custom-scroll" data-simplebar>
+										<ul class="lk-tabs__list">
+											<li class="lk-tabs__item is--active">
+												<button class="lk-tabs__tab">Лоты</button>
+											</li>
+											<li class="lk-tabs__item">
+												<button class="lk-tabs__tab">Должники</button>
+											</li>
+											<li class="lk-tabs__item">
+												<button class="lk-tabs__tab">АУ</button>
+											</li>
+											<li class="lk-tabs__item">
+												<button class="lk-tabs__tab">Организаторы</button>
+											</li>
+											<li class="lk-tabs__item">
+												<button class="lk-tabs__tab">Фильтры поиска</button>
+											</li>
+										</ul>
+									</div>
+									<div class="lk-tabs__wrapper is--active">
+										<div class="lk__sort">
+											<div class="lk__sort-group">
+												<span class="lk-sort__text">Показать на странице:</span>
+												<div class="default-select lk__sort-select">
+													<select class="js-select">
+														<option value="0">10</option>
+														<option value="1">15</option>
+														<option value="2">20</option>
+														<option value="3">25</option>
+													</select>
+												</div>
+											</div>
+											<div class="control-group lk__sort-search">
+												<div class="control-group__inputs">
+													<div class="input-group control-group__input">
+														<button class="input-group__btn">
+															<svg class="input-group__btn-icon">
+																<use xlink:href="img/sprite.svg#icon-search"></use>
+															</svg>
+														</button>
+														<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Быстрый поиск ">
+														<span class="input-group__error">Сообщение об ошибке</span>
+													</div>
+													<div class="control-group__dropdown">
+														<button class="control-group__option">Вариант 1</button>
+														<button class="control-group__option">Вариант 2</button>
+														<button class="control-group__option">Вариант 3</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="lk-table lk__table">
+											<div class="lk-table__scroll custom-scroll" data-simplebar>
+												<table class="lk-table__table">
+													<thead class="lk-table__thead">
+														<tr class="lk-table__trow">
+															<th class="lk-table__th">Название</th>
+															<th class="lk-table__th">Дата подписки</th>
+															<th class="lk-table__th">Действия</th>
+														</tr>
+													</thead>
+													<tbody class="lk-table__tbody">
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="lk-tabs__wrapper">
+										<div class="lk__sort">
+											<div class="lk__sort-group">
+												<span class="lk-sort__text">Показать на странице:</span>
+												<div class="default-select lk__sort-select">
+													<select class="js-select">
+														<option value="0">10</option>
+														<option value="1">15</option>
+														<option value="2">20</option>
+														<option value="3">25</option>
+													</select>
+												</div>
+											</div>
+											<div class="control-group lk__sort-search">
+												<div class="control-group__inputs">
+													<div class="input-group control-group__input">
+														<button class="input-group__btn">
+															<svg class="input-group__btn-icon">
+																<use xlink:href="img/sprite.svg#icon-search"></use>
+															</svg>
+														</button>
+														<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Быстрый поиск ">
+														<span class="input-group__error">Сообщение об ошибке</span>
+													</div>
+													<div class="control-group__dropdown">
+														<button class="control-group__option">Вариант 1</button>
+														<button class="control-group__option">Вариант 2</button>
+														<button class="control-group__option">Вариант 3</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="lk-table lk__table">
+											<div class="lk-table__scroll custom-scroll" data-simplebar>
+												<table class="lk-table__table">
+													<thead class="lk-table__thead">
+														<tr class="lk-table__trow">
+															<th class="lk-table__th">Название</th>
+															<th class="lk-table__th">Дата подписки</th>
+															<th class="lk-table__th">Действия</th>
+														</tr>
+													</thead>
+													<tbody class="lk-table__tbody">
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="lk-tabs__wrapper">
+										<div class="lk__sort">
+											<div class="lk__sort-group">
+												<span class="lk-sort__text">Показать на странице:</span>
+												<div class="default-select lk__sort-select">
+													<select class="js-select">
+														<option value="0">10</option>
+														<option value="1">15</option>
+														<option value="2">20</option>
+														<option value="3">25</option>
+													</select>
+												</div>
+											</div>
+											<div class="control-group lk__sort-search">
+												<div class="control-group__inputs">
+													<div class="input-group control-group__input">
+														<button class="input-group__btn">
+															<svg class="input-group__btn-icon">
+																<use xlink:href="img/sprite.svg#icon-search"></use>
+															</svg>
+														</button>
+														<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Быстрый поиск ">
+														<span class="input-group__error">Сообщение об ошибке</span>
+													</div>
+													<div class="control-group__dropdown">
+														<button class="control-group__option">Вариант 1</button>
+														<button class="control-group__option">Вариант 2</button>
+														<button class="control-group__option">Вариант 3</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="lk-table lk__table">
+											<div class="lk-table__scroll custom-scroll" data-simplebar>
+												<table class="lk-table__table">
+													<thead class="lk-table__thead">
+														<tr class="lk-table__trow">
+															<th class="lk-table__th">Название</th>
+															<th class="lk-table__th">Дата подписки</th>
+															<th class="lk-table__th">Действия</th>
+														</tr>
+													</thead>
+													<tbody class="lk-table__tbody">
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="lk-tabs__wrapper">
+										<div class="lk__sort">
+											<div class="lk__sort-group">
+												<span class="lk-sort__text">Показать на странице:</span>
+												<div class="default-select lk__sort-select">
+													<select class="js-select">
+														<option value="0">10</option>
+														<option value="1">15</option>
+														<option value="2">20</option>
+														<option value="3">25</option>
+													</select>
+												</div>
+											</div>
+											<div class="control-group lk__sort-search">
+												<div class="control-group__inputs">
+													<div class="input-group control-group__input">
+														<button class="input-group__btn">
+															<svg class="input-group__btn-icon">
+																<use xlink:href="img/sprite.svg#icon-search"></use>
+															</svg>
+														</button>
+														<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Быстрый поиск ">
+														<span class="input-group__error">Сообщение об ошибке</span>
+													</div>
+													<div class="control-group__dropdown">
+														<button class="control-group__option">Вариант 1</button>
+														<button class="control-group__option">Вариант 2</button>
+														<button class="control-group__option">Вариант 3</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="lk-table lk__table">
+											<div class="lk-table__scroll custom-scroll" data-simplebar>
+												<table class="lk-table__table">
+													<thead class="lk-table__thead">
+														<tr class="lk-table__trow">
+															<th class="lk-table__th">Название</th>
+															<th class="lk-table__th">Дата подписки</th>
+															<th class="lk-table__th">Действия</th>
+														</tr>
+													</thead>
+													<tbody class="lk-table__tbody">
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="lk-tabs__wrapper">
+										<div class="lk__sort">
+											<div class="lk__sort-group">
+												<span class="lk-sort__text">Показать на странице:</span>
+												<div class="default-select lk__sort-select">
+													<select class="js-select">
+														<option value="0">10</option>
+														<option value="1">15</option>
+														<option value="2">20</option>
+														<option value="3">25</option>
+													</select>
+												</div>
+											</div>
+											<div class="control-group lk__sort-search">
+												<div class="control-group__inputs">
+													<div class="input-group control-group__input">
+														<button class="input-group__btn">
+															<svg class="input-group__btn-icon">
+																<use xlink:href="img/sprite.svg#icon-search"></use>
+															</svg>
+														</button>
+														<input type="text" class="input-group__input input-group__input--dropdown" placeholder="Быстрый поиск ">
+														<span class="input-group__error">Сообщение об ошибке</span>
+													</div>
+													<div class="control-group__dropdown">
+														<button class="control-group__option">Вариант 1</button>
+														<button class="control-group__option">Вариант 2</button>
+														<button class="control-group__option">Вариант 3</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="lk-table lk__table">
+											<div class="lk-table__scroll custom-scroll" data-simplebar>
+												<table class="lk-table__table">
+													<thead class="lk-table__thead">
+														<tr class="lk-table__trow">
+															<th class="lk-table__th">Название</th>
+															<th class="lk-table__th">Дата подписки</th>
+															<th class="lk-table__th">Действия</th>
+														</tr>
+													</thead>
+													<tbody class="lk-table__tbody">
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+														<tr class="lk-table__trow">
+															<td class="lk-table__td">Mercedes-Benz VITO tourer 119 bluetec 44, синий, 2018, 27 375 км, 2.1 АТ (190 л. с.)</td>
+															<td class="lk-table__td">12.12.2023, 17:12</td>
+															<td class="lk-table__td">
+																<a href="#" class="lk-table__btn btn btn--sm btn--border">Посмотреть</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end of lk -->
+		</div>
+		<!-- end of content -->
+		<!-- footer -->
+		<footer class="footer" id="footer">
+			<div class="footer__main">
+				<div class="container">
+					<div class="footer__wrapper">
+						<div class="footer__block">
+							<div class="footer__info">
+								<h3 class="footer__title">БанкротБаза.ру</h3>
+								<p class="footer__description">Агрегатор торгов по банкротству, торгов по приватизации государственного имущества, торгов арестованного имущества и конфиската, реализуемого судебными приставами, торгов коммерческих и залогового имущества банков</p>
+							</div>
+						</div>
+						<div class="footer__block">
+							<div class="footer__nav">
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="#" class="footer__link modal-btn" data-id="modal-help-request">Поддержка пользователей</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link modal-btn" data-id="modal-emails-offers">Рекламодателям</a>
+									</li>
+								</ul>
+								<ul class="footer__list">
+									<li class="footer__item">
+										<a href="#" class="footer__link">Частые вопросы</a>
+									</li>
+									<li class="footer__item">
+										<a href="#" class="footer__link">Правила оплаты и возврата</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer__block">
+							<a href="#" class="footer__btn btn btn--orange">Выбрать лот</a>
+							<div class="c-socnav footer__socnav">
+								<ul class="c-socnav__list">
+									<li class="c-socnav__item">
+										<a href="#" class="c-socnav__link">
+											<svg class="c-socnav__icon">
+												<use xlink:href="img/sprite.svg#icon-ok"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="c-socnav__item">
+										<a href="#" class="c-socnav__link">
+											<svg class="c-socnav__icon">
+												<use xlink:href="img/sprite.svg#icon-vk"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="container">
+					<div class="footer__wrapper footer__wrapper--center">
+						<div class="footer__bottom-block">
+							<span class="footer__text">2023</span>
+						</div>
+						<div class="footer__bottom-block">
+							<a href="#" class="footer__text">Политика обработки данных</a>
+						</div>
+						<div class="footer__bottom-block">
+							<span class="footer__text">Принимаем к оплате</span>
+						</div>
+						<div class="footer__bottom-block">
+							<div class="footer__payments">
+								<picture class="footer__payment">
+									<img src="img/visa.svg" width="83" height="27.5" alt="VISA">
+								</picture>
+								<picture class="footer__payment">
+									<img src="img/mastercard.svg" width="46" height="27.5" alt="Mastercard">
+								</picture>
+								<picture class="footer__payment">
+									<img src="img/mir.svg" width="97" height="27.5" alt="МИР">
+								</picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end of footer -->
+	</div>
+	<!-- end of wrapper -->
+	<!-- scripts -->
+	<script src="js/vendor.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

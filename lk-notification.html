@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Банкрот База - Обучающие материалы</title>
-	<meta property="og:title" content="Банкрот База - Обучающие материалы">
+	<title>Банкрот База - Уведомления</title>
+	<meta property="og:title" content="Банкрот База - Уведомления">
 	<meta property="og:description" content="Описание">
 	<meta property="og:url" content="/">
-	<meta property="og:site_name" content="Банкрот База - Обучающие материалы">
+	<meta property="og:site_name" content="Банкрот База - Уведомления">
 	<!-- styles -->
 	<link rel="stylesheet" href="css/vendor.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
@@ -96,12 +96,6 @@
 											<a href="#" class="c-menu__link">Правила оплаты и возврата</a>
 										</li>
 									</ul>
-								</div>
-								<div class="c-menu__block c-menu__block--mobile c-menu__block--border">
-									<div class="c-menu__buttons">
-										<a href="#" class="c-menu__link">Войти</a>
-										<a href="#" class="c-menu__btn btn btn--border">Регистрация</a>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -273,9 +267,73 @@
 								</div>
 							</div>
 						</div>
-						<div class="header__buttons">
-							<a href="#" class="header__link">Войти</a>
-							<a href="#" class="header__btn btn btn--border">Регистрация</a>
+						<div class="c-user header__user" id="c-user">
+							<a href="#" class="c-user__trigger" id="c-user-trigger">
+								<span class="c-user__title">petrov4565@gmail.com</span>
+								<picture class="c-user__img">
+									<img src="img/c-user.svg" alt="АП">
+								</picture>
+							</a>
+							<div class="c-user__dropdown">
+								<div class="c-user__container">
+									<div class="c-user__top">
+										<picture class="c-user__img">
+											<img src="img/c-user.svg" alt="АП">
+										</picture>
+										<div class="c-user__group">
+											<span class="c-user__title">petrov4565@gmail.com</span>
+											<span class="c-user__status">Базовый тариф</span>
+										</div>
+									</div>
+									<div class="c-user__main">
+										<ul class="c-user__list">
+											<li class="c-user__item">
+												<a href="#" class="c-user__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-favorites"></use>
+													</svg>
+													<span>Избранные лоты</span>
+												</a>
+											</li>
+											<li class="c-user__item">
+												<a href="#" class="c-user__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-email-bold"></use>
+													</svg>
+													<span>Мои уведомления</span>
+												</a>
+											</li>
+											<li class="c-user__item">
+												<a href="#" class="c-user__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-time"></use>
+													</svg>
+													<span>Недавно просмотренные лоты</span>
+												</a>
+											</li>
+											<li class="c-user__item">
+												<a href="#" class="c-user__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-card"></use>
+													</svg>
+													<span>Банк панель</span>
+												</a>
+											</li>
+											<li class="c-user__item">
+												<a href="#" class="c-user__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-settings"></use>
+													</svg>
+													<span>Настройки аккаунта</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="c-user__bottom">
+										<a href="#" class="c-user__btn btn btn--grey">Выйти</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -284,186 +342,267 @@
 		<!-- end of header -->
 		<!-- content -->
 		<div class="wrapper__content">
-			<!-- breadcrumb -->
-			<div class="breadcrumb" aria-label="Breadcrumb">
+			<!-- lk -->
+			<div class="lk" id="lk">
 				<div class="container">
-					<nav class="breadcrumb__nav">
-						<ol class="breadcrumb__list">
-							<li class="breadcrumb__item">
-								<a href="index.html" class="breadcrumb__link">Главная</a>
-							</li>
-							<li class="breadcrumb__item">
-								<a href="educational-materials.html" class="breadcrumb__link">Обучающие материалы</a>
-							</li>
-						</ol>
-					</nav>
-				</div>
-			</div>
-			<!-- end of breadcrumb -->
-			<!-- education materials -->
-			<section class="materials" id="materials">
-				<div class="container">
-					<div class="section-info">
-						<div class="section-info__wrapper">
-							<div class="section-info__body">
-								<h1 class="section-info__heading">Обучающие материалы</h1>
-								<p class="section-info__description">Делимся полезными материалами по торгам и работе с площадкой</p>
+					<div class="lk__wrap">
+						<div class="lk__left">
+							<div class="lk-profile lk__profile">
+								<div class="lk-profile__wrapper">
+									<picture class="lk-profile__img">
+										<img src="img/c-user.svg" alt="АП">
+									</picture>
+									<div class="lk-profile__body">
+										<a href="#" class="lk-profile__name is--verified">
+											<span>info@bankrotbaza.ru1</span>
+										</a>
+										<span class="lk-profile__help">Пользователь</span>
+									</div>
+								</div>
+								<div class="lk-profile__info">
+									<div class="lk-profile__inner">
+										<span class="lk-profile__value lk-profile__value--grey">Email</span>
+										<span class="lk-profile__value">dfgfgsdcs@mail.ru</span>
+									</div>
+									<div class="lk-profile__inner">
+										<span class="lk-profile__value lk-profile__value--grey">Тариф</span>
+										<span class="lk-profile__value">Базовый тариф</span>
+									</div>
+								</div>
 							</div>
-							<picture class="section-info__img section-info__img--second">
-								<img src="img/section-info-education.jpg" alt="Image">
-							</picture>
-						</div>
-					</div>
-					<div class="section-tags">
-						<ul class="section-tags__list">
-							<li class="section-tags__item is--active">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
+							<div class="lk-nav lk__nav">
+								<button class="lk-nav__trigger">
+									<span>Меню профиля</span>
 									<svg>
-										<use xlink:href="img/sprite.svg#icon-close"></use>
+										<use xlink:href="img/sprite.svg#icon-caret"></use>
 									</svg>
 								</button>
-							</li>
-							<li class="section-tags__item">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-								</button>
-							</li>
-							<li class="section-tags__item">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-								</button>
-							</li>
-							<li class="section-tags__item">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-								</button>
-							</li>
-							<li class="section-tags__item">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-								</button>
-							</li>
-							<li class="section-tags__item">
-								<button class="section-tags__option">
-									<span>Недвижимость</span>
-								</button>
-							</li>
-						</ul>
-					</div>
-					<div class="materials__wrap">
-						<div class="materials__wrapper">
-							<div class="materials__left">
-								<h2 class="materials__heading">Особенности подбора лотов</h2>
-								<ol class="materials__list">
-									<li class="materials__item">
-										<div class="materials__elem is--open">
-											<a href="#" class="materials__link materials__link--dropdown">Особенности подбора транспорта и спецтехники</a>
-											<ul class="materials__sublist">
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта</a>
-												</li>
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пунктаЗаголовок пунктаЗаголовок пункта</a>
-												</li>
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пункта</a>
-												</li>
-											</ul>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Особенности подбора и анализа частного жилья и земельных участков (дома, дачи, земельные участки)</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Особенности подбора, осмотра и участия в торгах за квартиры</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
-										</div>
-									</li>
-								</ol>
-							</div>
-							<div class="materials__right">
-								<div class="materials__content content">
-									<picture>
-										<img src="img/materials.jpg" alt="Image">
-									</picture>
-									<h3>Особенности подбора <br>транспорта и спецтехники</h3>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-								</div>
+								<nav class="lk-nav__nav">
+									<ul class="lk-nav__list">
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-favorites.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-favorites"></use>
+													</svg>
+													<span>Избранное</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<button class="lk-nav__link lk-nav__link--trigger">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-basket"></use>
+													</svg>
+													<span>Мои заказы</span>
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-caret"></use>
+													</svg>
+												</button>
+												<ul class="lk-nav__sublist">
+													<li class="lk-nav__item">
+														<div class="lk-nav__elem">
+															<a href="lk-cadastral-report.html" class="lk-nav__link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-compass"></use>
+																</svg>
+																<span>Отчеты по кад. номеру</span>
+															</a>
+														</div>
+													</li>
+													<li class="lk-nav__item">
+														<div class="lk-nav__elem">
+															<a href="lk-auto-report.html" class="lk-nav__link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-list"></use>
+																</svg>
+																<span>Отчеты по авто</span>
+															</a>
+														</div>
+													</li>
+													<li class="lk-nav__item">
+														<div class="lk-nav__elem">
+															<a href="lk-extracts.html" class="lk-nav__link">
+																<svg>
+																	<use xlink:href="img/sprite.svg#icon-document"></use>
+																</svg>
+																<span>Выписки из ЕГРЮЛ/ЕГРИП</span>
+															</a>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-tariff.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-flash"></use>
+													</svg>
+													<span>Тариф</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-notes.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-notes"></use>
+													</svg>
+													<span>Заметки</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-subscriptions.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-bell-ringing"></use>
+													</svg>
+													<span>Подписки на обновления</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem is--active">
+												<a href="lk-notifications.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-email-bold"></use>
+													</svg>
+													<span>Уведомления</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-recently-viewed.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-clock"></use>
+													</svg>
+													<span>Недавно просмотренные</span>
+												</a>
+											</div>
+										</li>
+										<li class="lk-nav__item">
+											<div class="lk-nav__elem">
+												<a href="lk-settings.html" class="lk-nav__link">
+													<svg>
+														<use xlink:href="img/sprite.svg#icon-settings"></use>
+													</svg>
+													<span>Настройки аккаунта</span>
+												</a>
+											</div>
+										</li>
+									</ul>
+								</nav>
 							</div>
 						</div>
-						<div class="materials__wrapper">
-							<div class="materials__left">
-								<h2 class="materials__heading">Особенности подбора лотов</h2>
-								<ol class="materials__list">
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link is--active">Особенности подбора транспорта и спецтехники</a>
-											<ul class="materials__sublist">
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта</a>
-												</li>
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пунктаЗаголовок пунктаЗаголовок пункта</a>
-												</li>
-												<li class="materials__item">
-													<a href="#" class="materials__link">Заголовок пункта Заголовок пунктаЗаголовок пункта</a>
-												</li>
-											</ul>
+						<div class="lk__right">
+							<div class="lk__main">
+								<div class="lk__top">
+									<div class="lk__group">
+										<h1 class="lk__heading">Уведомления</h1>
+									</div>
+								</div>
+								<div class="lk-tabs lk__tabs">
+									<div class="lk-tabs__scroll custom-scroll" data-simplebar>
+										<ul class="lk-tabs__list">
+											<li class="lk-tabs__item is--active">
+												<button class="lk-tabs__tab">Лоты</button>
+											</li>
+											<li class="lk-tabs__item">
+												<button class="lk-tabs__tab">Прочие сообщения</button>
+											</li>
+										</ul>
+									</div>
+									<div class="lk-tabs__wrapper is--active">
+										<div class="lk-notifications">
+											<a href="#" class="lk-notifications__item">
+												<svg class="lk-notifications__icon">
+													<use xlink:href="img/sprite.svg#icon-email"></use>
+												</svg>
+												<div class="lk-notifications__body">
+													<span class="lk-notifications__title">Окончание приёма документов завтра</span>
+													<span class="lk-notifications__help">03.03.23</span>
+												</div>
+											</a>
+											<a href="#" class="lk-notifications__item">
+												<svg class="lk-notifications__icon">
+													<use xlink:href="img/sprite.svg#icon-email"></use>
+												</svg>
+												<div class="lk-notifications__body">
+													<span class="lk-notifications__title">Окончание приёма документов завтра</span>
+													<span class="lk-notifications__help">03.03.23</span>
+												</div>
+											</a>
+											<a href="#" class="lk-notifications__item">
+												<svg class="lk-notifications__icon">
+													<use xlink:href="img/sprite.svg#icon-email"></use>
+												</svg>
+												<div class="lk-notifications__body">
+													<span class="lk-notifications__title">Окончание приёма документов завтра</span>
+													<span class="lk-notifications__help">03.03.23</span>
+												</div>
+											</a>
 										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Особенности подбора и анализа частного жилья и земельных участков (дома, дачи, земельные участки)</a>
+									</div>
+									<div class="lk-tabs__wrapper">
+										<div class="lk-notifications">
+											<a href="#" class="lk-notifications__item">
+												<svg class="lk-notifications__icon">
+													<use xlink:href="img/sprite.svg#icon-email"></use>
+												</svg>
+												<div class="lk-notifications__body">
+													<span class="lk-notifications__title">Окончание приёма документов завтра</span>
+													<span class="lk-notifications__help">03.03.23</span>
+												</div>
+											</a>
+											<a href="#" class="lk-notifications__item">
+												<svg class="lk-notifications__icon">
+													<use xlink:href="img/sprite.svg#icon-email"></use>
+												</svg>
+												<div class="lk-notifications__body">
+													<span class="lk-notifications__title">Окончание приёма документов завтра</span>
+													<span class="lk-notifications__help">03.03.23</span>
+												</div>
+											</a>
+											<a href="#" class="lk-notifications__item">
+												<svg class="lk-notifications__icon">
+													<use xlink:href="img/sprite.svg#icon-email"></use>
+												</svg>
+												<div class="lk-notifications__body">
+													<span class="lk-notifications__title">Окончание приёма документов завтра</span>
+													<span class="lk-notifications__help">03.03.23</span>
+												</div>
+											</a>
+											<a href="#" class="lk-notifications__item">
+												<svg class="lk-notifications__icon">
+													<use xlink:href="img/sprite.svg#icon-email"></use>
+												</svg>
+												<div class="lk-notifications__body">
+													<span class="lk-notifications__title">Окончание приёма документов завтра</span>
+													<span class="lk-notifications__help">03.03.23</span>
+												</div>
+											</a>
+											<a href="#" class="lk-notifications__item">
+												<svg class="lk-notifications__icon">
+													<use xlink:href="img/sprite.svg#icon-email"></use>
+												</svg>
+												<div class="lk-notifications__body">
+													<span class="lk-notifications__title">Окончание приёма документов завтра</span>
+													<span class="lk-notifications__help">03.03.23</span>
+												</div>
+											</a>
 										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Особенности подбора, осмотра и участия в торгах за квартиры</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
-										</div>
-									</li>
-									<li class="materials__item">
-										<div class="materials__elem">
-											<a href="#" class="materials__link">Как заработать на товарных остатках – особенности категории</a>
-										</div>
-									</li>
-								</ol>
-							</div>
-							<div class="materials__right">
-								<div class="materials__content content">
-									<picture>
-										<img src="img/materials.jpg" alt="Image">
-									</picture>
-									<h3>Особенности подбора <br>транспорта и спецтехники</h3>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
-									<p>В своём стремлении улучшить пользовательский опыт мы упускаем, что диаграммы связей описаны максимально подробно. В частности, синтетическое тестирование, в своём классическом представлении, допускает внедрение экспериментов, поражающих по своей масштабности и грандиозности. Не следует, однако, забывать, что консультация с широким активом требует от нас анализа анализа существующих паттернов поведения.</p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- end of education materials -->
+			</div>
+			<!-- end of lk -->
 		</div>
 		<!-- end of content -->
 		<!-- footer -->
