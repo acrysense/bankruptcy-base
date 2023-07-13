@@ -1757,7 +1757,7 @@
 									</li>
 								</ul>
 							</div>
-							<div class="search-info search__info">
+							<div class="search-info search__info search__info--indent">
 								<div class="search-info__wrapper">
 									<svg class="search-info__icon">
 										<use xlink:href="img/sprite.svg#icon-info-circle"></use>
@@ -1767,7 +1767,7 @@
 											<h3 class="search-info__title">Как приобрести автомобили с торгов</h3>
 											<p class="search-info__description">Купить автомобили (конфискат) должников с торгов по банкротству или арестованного имущества с большим дисконтом можно самостоятельно через регистрацию на ЭТП либо через профессионального брокера. Найти подходящий аукцион можно на нашем агрегаторе торгов. Продажа конфиската происходит через процедуру электронных торгов с допуском всех желающих участников.</p>
 										</div>
-										<div class="search-info__block">
+										<div class="search-info__block search-info__block--center">
 											<h3 class="search-info__title">Краткая инструкция</h3>
 											<div class="search-instructions search-info__instructions">
 												<div class="search-instructions__wrapper">
@@ -2393,7 +2393,8 @@
 							<a href="#" class="report-order__link">Какая информация будет в отчётах?</a>
 							<a href="#" class="report-order__link">Зачем заказывать отчет?</a>
 						</div>
-						<a href="#" class="report-order__btn btn btn--orange modal-fixed-btn">Заказать</a>
+						<a href="#" class="report-order__btn modal__wide-btn btn btn--orange modal-fixed-btn">Заказать</a>
+						<p class="report-order__description">Нажимая на кнопку заказа Вы принимаете <a href="#">условия публичной оферты</a></p>
 					</div>
 				</div>
 			</div>
@@ -2418,7 +2419,7 @@
 								<div class="report-order__item-inner">
 									<div class="report-order__left">
 										<div class="report-order__controls">
-											<input type="radio" id="report-order-01" class="report-order__input" name="report-order" checked>
+											<input type="radio" id="report-vin-01" class="report-order__input" name="report-vin" checked>
 											<span class="report-order__checked"></span>
 										</div>
 										<div class="report-order__body">
@@ -2469,7 +2470,8 @@
 						</article>
 					</div>
 					<div class="report-order">
-						<a href="#" class="report-order__btn btn btn--orange modal-fixed-btn">Заказать</a>
+						<a href="#" class="report-order__btn modal__wide-btn btn btn--orange modal-fixed-btn">Заказать</a>
+						<p class="report-order__description">Нажимая на кнопку заказа Вы принимаете <a href="#">условия публичной оферты</a></p>
 					</div>
 				</div>
 			</div>
@@ -2557,7 +2559,7 @@
 							</label>
 						</div>
 						<a href="#" class="tariff-selection__link modal-btn" data-id="modal-premium-features">Возможности на Премиуме</a>
-						<a href="#" class="tariff-selection__btn btn modal-fixed-btn modal-btn" data-id="modal-emails-send">Оформить</a>
+						<a href="#" class="tariff-selection__btn btn btn--orange modal__wide-btn modal-fixed-btn modal-btn" data-id="modal-emails-send">Оформить</a>
 					</div>
 				</div>
 			</div>
@@ -2831,7 +2833,7 @@
 							</div>
 						</div>
 						<div class="premium-features__bottom">
-							<a href="#" class="premium-features__btn btn btn--orange modal-visible modal-btn" data-id="modal-tariff-selection">К выбору тарифов</a>
+							<a href="#" class="premium-features__btn btn btn--orange modal-fixed-btn modal-btn" data-id="modal-tariff-selection">К выбору тарифов</a>
 						</div>
 					</div>
 				</div>
@@ -2997,7 +2999,7 @@
 							</article>
 						</div>
 						<div class="registration-benefits__controls">
-							<a href="#" class="registration-benefits__btn btn btn--orange">Зарегистрироваться</a>
+							<a href="#" class="registration-benefits__btn btn btn--orange modal-fixed-btn">Зарегистрироваться</a>
 							<a href="#" class="registration-benefits__btn btn btn--border modal__close">Позже</a>
 						</div>
 					</div>
@@ -4263,10 +4265,16 @@
 		<a href="#" class="modal-sticky-block__btn btn btn--orange">Заказать</a>
 	</div>
 	<div class="modal-sticky-block" data-id="modal-tariff-selection">
-		<a href="#" class="modal-sticky-block__btn btn modal-btn" data-id="modal-emails-send">Оформить</a>
+		<a href="#" class="modal-sticky-block__btn btn btn--orange modal-btn" data-id="modal-emails-send">Оформить</a>
 	</div>
 	<div class="modal-sticky-block" data-id="modal-buy-lot">
 		<a href="#" class="modal-sticky-block__btn btn btn--orange modal-btn" data-id="modal-tariff-selection">Узнать стоимость</a>
+	</div>
+	<div class="modal-sticky-block modal-sticky-block--sm" data-id="modal-premium-features">
+		<a href="#" class="modal-sticky-block__btn btn btn--orange modal-btn" data-id="modal-tariff-selection">К выбору тарифов</a>
+	</div>
+	<div class="modal-sticky-block" data-id="modal-registration-benefits">
+		<a href="register.html" class="modal-sticky-block__btn btn btn--orange">Зарегистрироваться</a>
 	</div>
 	<div class="modal-sticky-block" data-id="modal-info-tin">
 		<div class="modal-sticky-block__wrapper">
